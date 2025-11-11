@@ -51,7 +51,7 @@ python3 tagfix.py
 
 ### Steps
 
-1. Enter the directory path containing your audio files.
+1. Enter the directory path containing your audio files or drag and drop the folder.
 2. Select which metadata fields to edit from the setup menu.
 
    * Includes: Cover, Lyrics, Title, Artist, Album, Album Artist, Genre, Date, Track Number, Disc Number, Comment.
