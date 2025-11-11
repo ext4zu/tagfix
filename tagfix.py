@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 """
-Audio Metadata Editor - Adding Cover
+Audio Metadata Editor - Complete Version
 Supports FLAC, MP3, M4A, OGG, OPUS, WMA, and WAV formats.
+Includes Album Cover (option 1) with online/local selection and popup preview.
 """
 import os
 import sys
@@ -29,15 +30,16 @@ except ImportError:
 # ===================== SETTINGS =====================
 AVAILABLE_TAGS = {
     "1": "cover",
-    "2": "title",
-    "3": "artist",
-    "4": "album",
-    "5": "albumartist",
-    "6": "genre",
-    "7": "date",
-    "8": "tracknumber",
-    "9": "discnumber",
-    "10": "comment"
+    "2": "lyrics",
+    "3": "title",
+    "4": "artist",
+    "5": "album",
+    "6": "albumartist",
+    "7": "genre",
+    "8": "date",
+    "9": "tracknumber",
+    "10": "discnumber",
+    "11": "comment"
 }
 
 GLOBAL_TAGS = {"artist", "albumartist", "album", "date", "genre"}
@@ -142,6 +144,9 @@ def set_tag_value(audio, tag: str, value: str, filepath: str) -> bool:
                     audio.tags[tag_class.__name__] = tag_class(encoding=3, lang='eng', desc='', text=value)
                 else:
                     audio.tags[tag_class.__name__] = tag_class(encoding=3, text=value)
+            elif tag == 'lyrics':
+                from mutagen.id3 import USLT
+                audio.tags['USLT::eng'] = USLT(encoding=3, lang='eng', desc='', text=value)
             return True
         elif ext == '.m4a':
             mp4_tag = MP4_TAG_MAP.get(tag)
@@ -150,9 +155,14 @@ def set_tag_value(audio, tag: str, value: str, filepath: str) -> bool:
                     audio.tags[mp4_tag] = [(int(value), 0)]
                 else:
                     audio.tags[mp4_tag] = [value]
+            elif tag == 'lyrics':
+                audio.tags['\xa9lyr'] = [value]
             return True
         else:
-            audio[tag] = [value]
+            if tag == 'lyrics':
+                audio['lyrics'] = [value]
+            else:
+                audio[tag] = [value]
             return True
     except Exception as e:
         print(f"  Warning: Could not set {tag}: {e}")
@@ -397,17 +407,212 @@ def process_album_cover(audio_folder: str):
     
     print(f"Album cover embedded into {len(audio_files)} file(s).")
 
+# ===================== LYRICS FUNCTIONS =====================
+def find_lyrics_files(base_dir: str) -> List[str]:
+    """Recursively find all lyrics files in directory."""
+    base_dir = os.path.expanduser(base_dir.strip().strip('"').strip("'"))
+    if not os.path.exists(base_dir):
+        print(f"Error: Directory '{base_dir}' does not exist.")
+        return []
+    if not os.path.isdir(base_dir):
+        print(f"Error: '{base_dir}' is not a directory.")
+        return []
+    
+    lyrics_files = []
+    for root, _, files in os.walk(base_dir):
+        for file in files:
+            if os.path.splitext(file.lower())[1] in ('.lrc', '.txt'):
+                lyrics_files.append(os.path.join(root, file))
+    return sorted(lyrics_files)
+
+def display_lyrics_files(lyrics_files: List[str], max_display: int = 10):
+    """Display lyrics files with limit."""
+    total = len(lyrics_files)
+    display_count = min(max_display, total)
+    
+    print(f"\nFound {total} lyrics file(s):")
+    print("-" * 60)
+    for i in range(display_count):
+        filename = os.path.basename(lyrics_files[i])
+        print(f"  {filename}")
+    
+    if total > max_display:
+        print(f"  ... and {total - max_display} more file(s)")
+    print("-" * 60)
+
+def search_lyrics_files(lyrics_files: List[str], search_term: str) -> List[str]:
+    """Search lyrics files by filename match."""
+    search_term = search_term.lower().strip()
+    matches = []
+    for filepath in lyrics_files:
+        filename = os.path.basename(filepath).lower()
+        if search_term in filename:
+            matches.append(filepath)
+    return matches
+
+def process_lyrics(audio_folder: str):
+    """Handle lyrics embedding and/or file renaming."""
+    audio_files = find_audio_files(audio_folder)
+    if not audio_files:
+        print("No audio files found in the folder.")
+        return
+    
+    print(f"\nFound {len(audio_files)} audio file(s).")
+    print("\nLyrics Options:")
+    print("  [1] Embed lyrics file into audio metadata")
+    print("  [2] Rename lyrics file to match song filename")
+    print("  [3] Do both (embed + rename)")
+    print("  [b] Back to setup menu")
+    
+    while True:
+        choice = input("\nYour choice: ").strip().lower()
+        if choice in ('1', '2', '3', 'b'):
+            break
+    
+    if choice == 'b':
+        return
+    
+    # Get lyrics directory
+    while True:
+        lyrics_dir = input("\nEnter lyrics directory path (or 'b' to go back): ").strip()
+        if lyrics_dir.lower() == 'b':
+            return
+        
+        lyrics_files = find_lyrics_files(lyrics_dir)
+        if lyrics_files:
+            break
+        print("No lyrics files found in directory. Try again.")
+    
+    # Display available lyrics files
+    display_lyrics_files(lyrics_files)
+    
+    # Search for lyrics file
+    selected_lyrics_path = None
+    while True:
+        search_term = input("\nEnter song title to search (or 'b' to go back): ").strip()
+        if search_term.lower() == 'b':
+            return
+        
+        if not search_term:
+            print("Please enter a search term.")
+            continue
+        
+        matches = search_lyrics_files(lyrics_files, search_term)
+        
+        if not matches:
+            print(f"No lyrics files found matching '{search_term}'. Try again.")
+            continue
+        
+        print(f"\nFound {len(matches)} matching file(s):")
+        for idx, filepath in enumerate(matches, start=1):
+            print(f"  [{idx}] {os.path.basename(filepath)}")
+        print("  [0] Search again")
+        
+        while True:
+            try:
+                file_choice = input("\nSelect lyrics file number: ").strip()
+                if file_choice == '0':
+                    break
+                file_idx = int(file_choice) - 1
+                if 0 <= file_idx < len(matches):
+                    selected_lyrics_path = matches[file_idx]
+                    break
+                else:
+                    print("Invalid selection. Try again.")
+            except ValueError:
+                print("Invalid input. Enter a number.")
+        
+        if selected_lyrics_path:
+            break
+    
+    # Read lyrics content
+    try:
+        with open(selected_lyrics_path, 'r', encoding='utf-8') as f:
+            lyrics_content = f.read()
+    except Exception as e:
+        print(f"Error reading lyrics file: {e}")
+        return
+    
+    print(f"\nLyrics file loaded: {os.path.basename(selected_lyrics_path)}")
+    print(f"Size: {len(lyrics_content)} characters")
+    
+    # Option 1 or 3: Embed lyrics
+    if choice in ('1', '3'):
+        embedded_count = 0
+        for filepath in audio_files:
+            audio = load_audio_file(filepath)
+            if audio is None:
+                continue
+            
+            if set_tag_value(audio, 'lyrics', lyrics_content, filepath):
+                audio.save()
+                embedded_count += 1
+        
+        print(f"\nLyrics embedded into {embedded_count} file(s).")
+    
+    # Option 2 or 3: Rename lyrics file
+    if choice in ('2', '3'):
+        if len(audio_files) == 1:
+            # Single file: rename to match
+            audio_file = audio_files[0]
+            audio_dir = os.path.dirname(audio_file)
+            audio_name = os.path.splitext(os.path.basename(audio_file))[0]
+            lyrics_ext = os.path.splitext(selected_lyrics_path)[1]
+            new_lyrics_path = os.path.join(audio_dir, f"{audio_name}{lyrics_ext}")
+            
+            try:
+                import shutil
+                shutil.copy2(selected_lyrics_path, new_lyrics_path)
+                print(f"\nLyrics file copied to: {new_lyrics_path}")
+            except Exception as e:
+                print(f"Error copying lyrics file: {e}")
+        else:
+            # Multiple files: ask which one to match
+            print("\nMultiple audio files found. Select which song to match:")
+            for idx, filepath in enumerate(audio_files, start=1):
+                print(f"  [{idx}] {os.path.basename(filepath)}")
+            print("  [0] Skip renaming")
+            
+            while True:
+                try:
+                    file_choice = input("\nSelect file number: ").strip()
+                    if file_choice == '0':
+                        break
+                    file_idx = int(file_choice) - 1
+                    if 0 <= file_idx < len(audio_files):
+                        audio_file = audio_files[file_idx]
+                        audio_dir = os.path.dirname(audio_file)
+                        audio_name = os.path.splitext(os.path.basename(audio_file))[0]
+                        lyrics_ext = os.path.splitext(selected_lyrics_path)[1]
+                        new_lyrics_path = os.path.join(audio_dir, f"{audio_name}{lyrics_ext}")
+                        
+                        try:
+                            import shutil
+                            shutil.copy2(selected_lyrics_path, new_lyrics_path)
+                            print(f"\nLyrics file copied to: {new_lyrics_path}")
+                        except Exception as e:
+                            print(f"Error copying lyrics file: {e}")
+                        break
+                    else:
+                        print("Invalid selection. Try again.")
+                except ValueError:
+                    print("Invalid input. Enter a number.")
+    
+    print("\nLyrics processing complete.")
+
+
 # ===================== SETUP MENU =====================
 def setup_menu(audio_files: List[str]) -> Tuple[List[str], Dict[str,str], List[str]]:
     print("\n" + "=" * 60)
     print("Setup Menu - Select Metadata Fields to Edit")
     print("=" * 60)
     print("\nAvailable Tags:")
-    print("  [1] Cover          [6] Genre")
-    print("  [2] Title          [7] Date")
-    print("  [3] Artist         [8] Track Number")
-    print("  [4] Album          [9] Disc Number")
-    print("  [5] Album Artist   [10] Comment")
+    print("  [1] Cover          [7] Genre")
+    print("  [2] Lyrics         [8] Date")
+    print("  [3] Title          [9] Track Number")
+    print("  [4] Artist         [10] Disc Number")
+    print("  [5] Album          [11] Comment")
+    print("  [6] Album Artist")
     print("\nInstructions: Enter numbers separated by spaces (e.g., 1 2 4)")
     print("              Type 'b' to go back to main menu")
     
@@ -428,6 +633,8 @@ def setup_menu(audio_files: List[str]) -> Tuple[List[str], Dict[str,str], List[s
     
     for tag in selected_tags:
         if tag == 'cover':
+            continue
+        if tag == 'lyrics':
             continue
         
         display_metadata_analysis(metadata_map, tag, audio_files)
@@ -566,6 +773,9 @@ def main_loop() -> None:
         
         if "cover" in selected_tags:
             process_album_cover(directory)
+        
+        if "lyrics" in selected_tags:
+            process_lyrics(directory)
         
         edit_audio_files(audio_files, selected_tags, global_values, per_file_tags)
 
