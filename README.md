@@ -23,17 +23,17 @@ Or via system package manager:
 * Fedora:
   
   ```bash
-  sudo dnf install python-mutagen python3-Pillow python-musicbrainzngs
+  sudo dnf install python-mutagen python3-Pillow python-musicbrainzngs python3-tkinter
 
 * Arch Linux / Manjaro:
   
   ```bash
-  sudo pacman -S python-mutagen python-pillow python-musicbrainzngs
+  sudo pacman -S python-mutagen python-pillow python-musicbrainzngs tk
 
 * Debian / Ubuntu:
   
   ```bash
-  sudo apt install python3-mutagen python3-pil python-musicbrainzngs
+  sudo apt install python3-mutagen python3-pil python-musicbrainzngs python3-tk
   
 * Windows users just use ```pip```
 
