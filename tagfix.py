@@ -7,6 +7,7 @@ Supports FLAC, MP3, M4A, OGG, OPUS, WMA, and WAV formats.
 import os
 import sys
 import tempfile
+import shutil
 import requests
 from PIL import Image, ImageTk
 import tkinter as tk
@@ -20,6 +21,27 @@ from mutagen.asf import ASF
 from mutagen.id3 import ID3, TIT2, TPE1, TALB, TPE2, TCON, TDRC, TRCK, TPOS, COMM, APIC
 from typing import List, Dict, Tuple, Optional
 from collections import defaultdict
+
+import subprocess
+
+try:
+    from pydub import AudioSegment
+    PYDUB_AVAILABLE = True
+except ImportError as e:
+    PYDUB_AVAILABLE = False
+    # Check if ffmpeg is available as fallback
+    try:
+        subprocess.run(['ffmpeg', '-version'], stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
+        FFMPEG_AVAILABLE = True
+    except:
+        FFMPEG_AVAILABLE = False
+except Exception as e:
+    PYDUB_AVAILABLE = False
+    try:
+        subprocess.run(['ffmpeg', '-version'], stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
+        FFMPEG_AVAILABLE = True
+    except:
+        FFMPEG_AVAILABLE = False
 
 try:
     import musicbrainzngs
@@ -39,7 +61,8 @@ AVAILABLE_TAGS = {
     "8": "date",
     "9": "tracknumber",
     "10": "discnumber",
-    "11": "comment"
+    "11": "comment",
+    "12": "convert_to_wav"
 }
 
 GLOBAL_TAGS = {"artist", "albumartist", "album", "date", "genre"}
@@ -167,6 +190,193 @@ def set_tag_value(audio, tag: str, value: str, filepath: str) -> bool:
     except Exception as e:
         print(f"  Warning: Could not set {tag}: {e}")
         return False
+
+# ===================== WAV CONVERSION =====================
+def convert_to_wav(directory: str) -> None:
+    """Convert all audio files in directory to WAV format in a subfolder"""
+    if not PYDUB_AVAILABLE and not FFMPEG_AVAILABLE:
+        print("\nError: Neither pydub nor ffmpeg is available. Cannot convert to WAV.")
+        print("Install ffmpeg with: sudo dnf install ffmpeg")
+        return
+    
+    dir_path = os.path.expanduser(directory.strip().strip('"').strip("'"))
+    if not os.path.exists(dir_path) or not os.path.isdir(dir_path):
+        print(f"Error: Invalid directory '{dir_path}'")
+        return
+    
+    folder_name = os.path.basename(dir_path)
+    wav_folder = os.path.join(dir_path, f"{folder_name} - wav")
+    
+    # Create output folder
+    try:
+        os.makedirs(wav_folder, exist_ok=True)
+    except Exception as e:
+        print(f"Error creating output folder: {e}")
+        return
+    
+    # Get all audio files recursively (excluding existing WAV files)
+    audio_extensions = {'.mp3', '.flac', '.m4a', '.ogg', '.opus', '.wma', '.aac'}
+    audio_files = []
+    for root, _, files in os.walk(dir_path):
+        # Skip the output folder itself
+        if root.startswith(wav_folder):
+            continue
+        for file in files:
+            if os.path.splitext(file.lower())[1] in audio_extensions:
+                audio_files.append(os.path.join(root, file))
+    
+    # Get redundant files recursively (cover images and lyrics)
+    redundant_extensions = {'.jpg', '.jpeg', '.png', '.gif', '.bmp', '.lrc', '.txt'}
+    redundant_files = []
+    for root, _, files in os.walk(dir_path):
+        # Skip the output folder itself
+        if root.startswith(wav_folder):
+            continue
+        for file in files:
+            if os.path.splitext(file.lower())[1] in redundant_extensions:
+                redundant_files.append(os.path.join(root, file))
+    
+    if not audio_files:
+        print("No audio files found to convert.")
+        return
+    
+    print(f"\nFound {len(audio_files)} audio file(s) to convert")
+    print(f"Found {len(redundant_files)} additional file(s) to copy")
+    print(f"Output folder: {wav_folder}\n")
+    
+    converted = 0
+    failed = []
+    
+    # Convert audio files
+    for idx, audio_file in enumerate(audio_files, 1):
+        # Get relative path from base directory
+        rel_path = os.path.relpath(audio_file, dir_path)
+        filename = os.path.basename(audio_file)
+        print(f"[{idx}/{len(audio_files)}] Converting: {rel_path}")
+        
+        try:
+            # Preserve directory structure in output
+            output_dir = os.path.join(wav_folder, os.path.dirname(rel_path))
+            os.makedirs(output_dir, exist_ok=True)
+            
+            output_file = os.path.join(output_dir, f"{os.path.splitext(filename)[0]}.wav")
+            
+            if PYDUB_AVAILABLE:
+                # Use pydub method
+                audio = AudioSegment.from_file(audio_file)
+                audio.export(
+                    output_file,
+                    format='wav',
+                    parameters=["-ar", str(audio.frame_rate)]
+                )
+            else:
+                # Use ffmpeg directly
+                subprocess.run([
+                    'ffmpeg', '-i', audio_file,
+                    '-acodec', 'pcm_s16le',
+                    '-y',  # Overwrite output file
+                    output_file
+                ], stdout=subprocess.PIPE, stderr=subprocess.PIPE, check=True)
+            
+            # Copy metadata from original file
+            try:
+                original_tags = load_audio_file(audio_file)
+                if original_tags:
+                    wav_tags = load_audio_file(output_file)
+                    if wav_tags:
+                        # Copy all available tags
+                        for tag in ['title', 'artist', 'album', 'albumartist', 
+                                   'date', 'genre', 'comment', 'tracknumber', 'discnumber']:
+                            try:
+                                value = get_tag_value(original_tags, tag, audio_file)
+                                if value:
+                                    set_tag_value(wav_tags, tag, value, output_file)
+                            except:
+                                pass
+                        
+                        # Copy artwork for formats that support it
+                        try:
+                            ext = os.path.splitext(audio_file.lower())[1]
+                            if ext == '.mp3':
+                                if hasattr(original_tags, 'tags') and original_tags.tags:
+                                    for tag in original_tags.tags.values():
+                                        if isinstance(tag, APIC):
+                                            if not hasattr(wav_tags, 'tags') or wav_tags.tags is None:
+                                                wav_tags.add_tags()
+                                            wav_tags.tags.add(tag)
+                                            break
+                            elif ext == '.flac':
+                                pictures = original_tags.pictures
+                                if pictures:
+                                    # WAV with ID3 can store pictures
+                                    if not hasattr(wav_tags, 'tags') or wav_tags.tags is None:
+                                        wav_tags.add_tags()
+                                    pic = pictures[0]
+                                    wav_tags.tags.add(APIC(
+                                        encoding=3,
+                                        mime=pic.mime,
+                                        type=pic.type,
+                                        desc=pic.desc,
+                                        data=pic.data
+                                    ))
+                            elif ext == '.m4a':
+                                if 'covr' in original_tags.tags:
+                                    cover_data = original_tags.tags['covr'][0]
+                                    if not hasattr(wav_tags, 'tags') or wav_tags.tags is None:
+                                        wav_tags.add_tags()
+                                    wav_tags.tags.add(APIC(
+                                        encoding=3,
+                                        mime='image/jpeg',
+                                        type=3,
+                                        desc='Cover',
+                                        data=bytes(cover_data)
+                                    ))
+                        except:
+                            pass
+                        
+                        wav_tags.save()
+            except Exception as e:
+                print(f"  Warning: Metadata copy failed - {e}")
+            
+            converted += 1
+            print(f"  ✓ Converted successfully")
+            
+        except Exception as e:
+            failed.append(f"{rel_path}: {str(e)}")
+            print(f"  ✗ Conversion failed - {e}")
+    
+    # Copy redundant files
+    print(f"\nCopying additional files...")
+    for redundant_file in redundant_files:
+        try:
+            # Get relative path and preserve directory structure
+            rel_path = os.path.relpath(redundant_file, dir_path)
+            output_dir = os.path.join(wav_folder, os.path.dirname(rel_path))
+            os.makedirs(output_dir, exist_ok=True)
+            
+            output_path = os.path.join(output_dir, os.path.basename(redundant_file))
+            shutil.copy2(redundant_file, output_path)
+            print(f"  ✓ Copied: {rel_path}")
+        except Exception as e:
+            rel_path = os.path.relpath(redundant_file, dir_path)
+            failed.append(f"{rel_path}: {str(e)}")
+            print(f"  ✗ Failed to copy {rel_path}: {e}")
+    
+    # Show results
+    print("\n" + "=" * 60)
+    print("Conversion Complete")
+    print("=" * 60)
+    print(f"Converted: {converted} audio file(s)")
+    print(f"Copied: {len(redundant_files)} additional file(s)")
+    print(f"Output folder: {wav_folder}")
+    
+    if failed:
+        print(f"\nFailed ({len(failed)}):")
+        for failure in failed[:5]:
+            print(f"  - {failure}")
+        if len(failed) > 5:
+            print(f"  ... and {len(failed) - 5} more")
+    print("=" * 60)
 
 # ===================== METADATA ANALYSIS =====================
 def analyze_metadata(audio_files: List[str], selected_tags: List[str]) -> Dict[str, Dict]:
@@ -340,6 +550,9 @@ def process_album_cover(audio_folder: str):
             local_path = input("Enter local image path (or 'b' to go back): ").strip()
             if local_path.lower() == 'b':
                 return
+            # Clean up drag-and-drop quotes
+            local_path = local_path.strip('"').strip("'")
+            local_path = os.path.expanduser(local_path)
             if os.path.exists(local_path) and os.path.isfile(local_path):
                 ext = os.path.splitext(local_path)[1].lower()
                 if ext in ('.jpg', '.jpeg', '.png', '.bmp', '.gif'):
@@ -561,7 +774,6 @@ def process_lyrics(audio_folder: str):
             new_lyrics_path = os.path.join(audio_dir, f"{audio_name}{lyrics_ext}")
             
             try:
-                import shutil
                 shutil.copy2(selected_lyrics_path, new_lyrics_path)
                 print(f"\nLyrics file copied to: {new_lyrics_path}")
             except Exception as e:
@@ -587,7 +799,6 @@ def process_lyrics(audio_folder: str):
                         new_lyrics_path = os.path.join(audio_dir, f"{audio_name}{lyrics_ext}")
                         
                         try:
-                            import shutil
                             shutil.copy2(selected_lyrics_path, new_lyrics_path)
                             print(f"\nLyrics file copied to: {new_lyrics_path}")
                         except Exception as e:
@@ -612,7 +823,7 @@ def setup_menu(audio_files: List[str]) -> Tuple[List[str], Dict[str,str], List[s
     print("  [3] Title          [9] Track Number")
     print("  [4] Artist         [10] Disc Number")
     print("  [5] Album          [11] Comment")
-    print("  [6] Album Artist")
+    print("  [6] Album Artist   [12] Convert to WAV")
     print("\nInstructions: Enter numbers separated by spaces (e.g., 1 2 4)")
     print("              Type 'b' to go back to main menu")
     
@@ -629,12 +840,17 @@ def setup_menu(audio_files: List[str]) -> Tuple[List[str], Dict[str,str], List[s
     
     global_values = {}
     per_file_tags = []
-    metadata_map = analyze_metadata(audio_files, selected_tags)
+    
+    # Filter out special tags for metadata analysis
+    metadata_tags = [tag for tag in selected_tags if tag not in ['cover', 'lyrics', 'convert_to_wav']]
+    metadata_map = analyze_metadata(audio_files, metadata_tags)
     
     for tag in selected_tags:
         if tag == 'cover':
             continue
         if tag == 'lyrics':
+            continue
+        if tag == 'convert_to_wav':
             continue
         
         display_metadata_analysis(metadata_map, tag, audio_files)
@@ -776,6 +992,9 @@ def main_loop() -> None:
         
         if "lyrics" in selected_tags:
             process_lyrics(directory)
+        
+        if "convert_to_wav" in selected_tags:
+            convert_to_wav(directory)
         
         edit_audio_files(audio_files, selected_tags, global_values, per_file_tags)
 
