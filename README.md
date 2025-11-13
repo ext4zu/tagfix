@@ -11,6 +11,7 @@ Includes album cover embedding and lyrics management (embed/rename).
 * Python 3.8 or later
 * Tkinter
 * Mutagen library
+* FFmpeg (for WAV conversion)
 * Pillow library (for album cover handling)
 * Optional: musicbrainzngs (for online album cover search)
 
