@@ -738,11 +738,11 @@ def edit_audio_files(audio_files: List[str], selected_tags: List[str],
 
 # ===================== MAIN LOOP =====================
 def main_loop() -> None:
-    print("=" * 35)
+    print("=" * 30)
     print("tagfix - Audio Metadata Editor")
     
     while True:
-        print("=" * 35)
+        print("=" * 30)
         print("\n")
         print("Main Menu")
         print("=" * 9)
