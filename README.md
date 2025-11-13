@@ -1,4 +1,4 @@
-# tagfix - Audio Batch Metadata Editor
+# tagfix - Cli-Based Audio Batch Metadata Editor
 
 A command-line and interactive tool for batch editing and organizing audio metadata.
 Supports FLAC, MP3, M4A, OGG, OPUS, WMA, and WAV formats using Mutagen.
