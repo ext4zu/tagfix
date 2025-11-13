@@ -738,21 +738,21 @@ def edit_audio_files(audio_files: List[str], selected_tags: List[str],
 
 # ===================== MAIN LOOP =====================
 def main_loop() -> None:
-    print("=" * 60)
-    print("Audio Metadata Editor - Complete Version")
-    print("=" * 60)
+    print("=" * 35)
+    print("tagfix - Audio Metadata Editor")
     
     while True:
-        print("\n" + "=" * 60)
+        print("=" * 35)
+        print("\n")
         print("Main Menu")
-        print("=" * 60)
-        print("Enter directory path to begin")
+        print("=" * 9)
+        print("\nDrag and drop or enter folder's path to begin")
         print("Type 'e' to exit")
         
         directory = input("\nDirectory: ").strip()
         
         if directory.lower() == 'e':
-            print("Exiting...")
+            print("Goodbye!")
             break
         
         if not directory:
@@ -783,5 +783,5 @@ if __name__ == "__main__":
     try:
         main_loop()
     except KeyboardInterrupt:
-        print("\nExiting...")
+        print("\nGoodbye!")
         sys.exit(0)
