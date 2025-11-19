@@ -6,7 +6,7 @@
 
 A modern, beautiful web-based audio metadata editor with Material You design.
 
-![TagFix Interface](https://via.placeholder.com/800x450/6750A4/FFFFFF?text=TagFix+Material+You+Interface)
+![TagFix Interface](https://github.com/k44yn3/tagfix/tree/27f15287d6d253aeda4cde064c68eb515b9b2e4e/screenshots)
 
 ## Features
 
