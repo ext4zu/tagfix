@@ -1,5 +1,3 @@
-"""markdown
-
 ![Python](https://img.shields.io/badge/python-3.7+-blue.svg)
 ![License](https://img.shields.io/badge/license-MIT-green.svg)
 
@@ -7,7 +5,6 @@
 
 A modern, beautiful web-based audio metadata editor with Material You design.
 
-![TagFix Interface](https://github.com/k44yn3/tagfix/tree/27f15287d6d253aeda4cde064c68eb515b9b2e4e/screenshots)
 
 ## Features
 
@@ -61,20 +58,28 @@ pip install -r requirements.txt
   - Option A (chocolatey):
     - Install Chocolatey if you don't have it: https://chocolatey.org/install
     - Then run (in an elevated Command Prompt or PowerShell):
+      ```bash
       choco install ffmpeg -y
+      ```
     - Ensure ffmpeg is available on PATH (restart terminal if needed).
   - Option B (manual):
     - Download a static build from https://ffmpeg.org/download.html#windows or https://www.gyan.dev/ffmpeg/builds/
     - Extract and add the `bin` folder to your PATH (System Properties → Environment Variables → Path → Edit).
 
 - Ubuntu/Debian:
+  ```bash
   sudo apt install ffmpeg
+  ```
 
 - Fedora:
+  ```bash
   sudo dnf install ffmpeg
+  ```
 
 - macOS:
+  ```bash
   brew install ffmpeg
+  ```
 
 ### 2. Run the Application
 
@@ -89,7 +94,7 @@ Then open your browser to: **http://127.0.0.1:5000**
 python tagfix.py
 ```
 
-## 📖 Usage
+## Usage
 
 1. **Enter a folder path** in the input field (e.g., `/home/user/Music` or `C:\Users\YourName\Music`)
 2. **Click Scan** to load all audio files
@@ -102,13 +107,11 @@ python tagfix.py
 ## Screenshots
 
 ### Light Mode
-![Light Mode](https://via.placeholder.com/800x450/FFFBFE/1C1B1F?text=Light+Mode)
+![Light Mode](https://github.com/k44yn3/tagfix/blob/c9decf1d492c8e0358754f652e131b4ac7dd603a/screenshots/LightMode.png)
 
 ### Dark Mode
-![Dark Mode](https://via.placeholder.com/800x450/1C1B1F/E6E1E5?text=Dark+Mode)
+![Dark Mode](https://github.com/k44yn3/tagfix/blob/a1191ea1444fbb861beb63ac92d0673360ed705c/screenshots/DarkMode.png)
 
-### Editing Metadata
-![Editing](https://via.placeholder.com/800x450/EADDFF/21005D?text=Metadata+Editing)
 
 ## Technology Stack
 
@@ -138,17 +141,3 @@ Contributions are welcome! Feel free to:
 ## License
 
 MIT License - See [LICENSE](LICENSE) file for details
-
-## Acknowledgments
-
-- Material Design 3 by Google
-- Mutagen library for audio metadata handling
-- Flask framework for the web backend
-
-## Contact
-
-For questions or support, please open an issue on GitHub.
-
----
-
-"""
