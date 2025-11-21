@@ -9,7 +9,6 @@ A powerful audio metadata editor supporting FLAC, MP3, M4A, OGG, OPUS, WMA, and 
 Pre-built binaries are available for:
 - **Windows** (Portable .zip)
 - **Linux** (Portable .zip)
-- **Linux** (Portable .zip)
 
 ## Features
 
@@ -58,21 +57,7 @@ pip install -r requirements.txt
 
 ## Credits
 
-TagFix is built with open-source software:
-
-**Flutter Packages:**
-- audiotags
-- file_picker
-- provider
-- window_manager
-- path_provider
-- http
-- google_fonts
-- desktop_drop
-- image
-
-**Python Libraries:**
-- Flask
-- mutagen
-- Pillow
-- requests
+- Flutter
+- FFmpeg
+- MusicBrainz
+- Lrclib
