@@ -8,6 +8,12 @@ env/
 venv/
 ENV/
 build/
+flutter_app/build/
+flutter_app/.dart_tool/
+flutter_app/.packages
+flutter_app/.flutter-plugins/
+flutter_app/.flutter-plugins-dependencies
+flutter_app/.metadata
 develop-eggs/
 dist/
 downloads/
@@ -21,6 +27,7 @@ sdist/
 var/
 wheels/
 *.egg-info/
+pubspec.lock
 .installed.cfg
 *.egg
 
@@ -33,7 +40,19 @@ wheels/
 
 # OS
 .DS_Store
+# Android generated files
+flutter_app/android/.gradle/
+flutter_app/android/app/build/
+flutter_app/android/app/.cxx/
+flutter_app/android/app/.gradle/
+flutter_app/android/app/.idea/
+flutter_app/android/app/.settings/
 Thumbs.db
+# iOS generated files (if added)
+flutter_app/ios/Pods/
+flutter_app/ios/.symlinks/
+flutter_app/ios/Flutter/Flutter.framework/
+flutter_app/ios/Flutter/engine/
 
 # Test files
 test_*.py
