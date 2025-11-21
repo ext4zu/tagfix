@@ -43,7 +43,7 @@ cd "$PLATFORM"
 if [ "$PLATFORM" = "linux" ]; then
     echo "[Linux] Downloading ffmpeg..."
 
-    wget -q --show-progress https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz
+    curl -L -o ffmpeg-release-amd64-static.tar.xz https://johnvansickle.com/ffmpeg/releases/ffmpeg-release-amd64-static.tar.xz
 
     mkdir temp_extract
     tar -xf ffmpeg-release-amd64-static.tar.xz -C temp_extract
@@ -68,7 +68,7 @@ fi
 if [ "$PLATFORM" = "windows" ]; then
     echo "[Windows] Downloading ffmpeg..."
 
-    wget -q --show-progress https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-win64-gpl.zip
+    curl -L -o ffmpeg-master-latest-win64-gpl.zip https://github.com/BtbN/FFmpeg-Builds/releases/download/latest/ffmpeg-master-latest-win64-gpl.zip
 
     unzip -q -j ffmpeg-master-latest-win64-gpl.zip "*/bin/ffmpeg.exe"
     rm -f ffmpeg-master-latest-win64-gpl.zip
@@ -83,7 +83,7 @@ fi
 if [ "$PLATFORM" = "macos" ]; then
     echo "[macOS] Downloading ffmpeg..."
 
-    wget -q --show-progress https://evermeet.cx/ffmpeg/getrelease/ffmpeg/zip -O ffmpeg.zip
+    curl -L -o ffmpeg.zip https://evermeet.cx/ffmpeg/getrelease/ffmpeg/zip
     unzip -q ffmpeg.zip
 
     rm -f ffmpeg.zip
