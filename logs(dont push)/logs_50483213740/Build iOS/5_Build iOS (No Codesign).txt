@@ -1,0 +1,862 @@
+﻿2025-11-21T13:57:09.1177880Z ##[group]Run flutter build ios --release --no-codesign --verbose
+2025-11-21T13:57:09.1178800Z [36;1mflutter build ios --release --no-codesign --verbose[0m
+2025-11-21T13:57:09.1267940Z shell: /bin/bash -e {0}
+2025-11-21T13:57:09.1268320Z env:
+2025-11-21T13:57:09.1268650Z   FLUTTER_ROOT: /Users/runner/hostedtoolcache/flutter/stable-3.38.2-arm64
+2025-11-21T13:57:09.1269030Z   PUB_CACHE: /Users/runner/.pub-cache
+2025-11-21T13:57:09.1269300Z ##[endgroup]
+2025-11-21T13:57:09.6439200Z [  +60 ms] executing: sysctl hw.optional.arm64
+2025-11-21T13:57:09.6836450Z [  +31 ms] Exit code 0 from: sysctl hw.optional.arm64
+2025-11-21T13:57:09.7263690Z [        ] hw.optional.arm64: 1
+2025-11-21T13:57:09.7270520Z [  +16 ms] Artifact Instance of 'MaterialFonts' is not required, skipping update.
+2025-11-21T13:57:09.7382010Z [  +41 ms] Artifact Instance of 'GradleWrapper' is not required, skipping update.
+2025-11-21T13:57:09.7489600Z [        ] Artifact Instance of 'AndroidGenSnapshotArtifacts' is not required, skipping update.
+2025-11-21T13:57:09.7596540Z [        ] Artifact Instance of 'AndroidInternalBuildArtifacts' is not required, skipping update.
+2025-11-21T13:57:09.7713760Z [        ] Artifact Instance of 'IOSEngineArtifacts' is not required, skipping update.
+2025-11-21T13:57:09.7821870Z [        ] Artifact Instance of 'FlutterWebSdk' is not required, skipping update.
+2025-11-21T13:57:09.7923310Z [   +1 ms] Artifact Instance of 'LegacyCanvasKitRemover' is not required, skipping update.
+2025-11-21T13:57:09.8024800Z [        ] Artifact Instance of 'FlutterSdk' is not required, skipping update.
+2025-11-21T13:57:09.8122120Z [        ] Artifact Instance of 'WindowsEngineArtifacts' is not required, skipping update.
+2025-11-21T13:57:09.8223680Z [        ] Artifact Instance of 'MacOSEngineArtifacts' is not required, skipping update.
+2025-11-21T13:57:09.8327340Z [        ] Artifact Instance of 'LinuxEngineArtifacts' is not required, skipping update.
+2025-11-21T13:57:09.8351770Z [        ] Artifact Instance of 'LinuxFuchsiaSDKArtifacts' is not required, skipping update.
+2025-11-21T13:57:09.8388200Z [        ] Artifact Instance of 'MacOSFuchsiaSDKArtifacts' is not required, skipping update.
+2025-11-21T13:57:09.8393540Z [        ] Artifact Instance of 'FlutterRunnerSDKArtifacts' is not required, skipping update.
+2025-11-21T13:57:09.8523670Z [        ] Artifact Instance of 'FlutterRunnerDebugSymbols' is not required, skipping update.
+2025-11-21T13:57:09.8548850Z [        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+2025-11-21T13:57:09.8549520Z [        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+2025-11-21T13:57:09.8550280Z [        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+2025-11-21T13:57:09.8550820Z [        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+2025-11-21T13:57:09.8551370Z [        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+2025-11-21T13:57:09.8551860Z [        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+2025-11-21T13:57:09.8552380Z [        ] Artifact Instance of 'FontSubsetArtifacts' is not required, skipping update.
+2025-11-21T13:57:09.8552880Z [        ] Artifact Instance of 'PubDependencies' is not required, skipping update.
+2025-11-21T13:57:09.8553440Z [   +8 ms] Artifact Instance of 'AndroidGenSnapshotArtifacts' is not required, skipping update.
+2025-11-21T13:57:09.8554030Z [        ] Artifact Instance of 'AndroidInternalBuildArtifacts' is not required, skipping update.
+2025-11-21T13:57:09.8554550Z [        ] Artifact Instance of 'IOSEngineArtifacts' is not required, skipping update.
+2025-11-21T13:57:09.8555050Z [        ] Artifact Instance of 'FlutterWebSdk' is not required, skipping update.
+2025-11-21T13:57:09.8555560Z [        ] Artifact Instance of 'FlutterEngineStamp' is not required, skipping update.
+2025-11-21T13:57:09.8556080Z [        ] Artifact Instance of 'LegacyCanvasKitRemover' is not required, skipping update.
+2025-11-21T13:57:09.8558110Z [   +1 ms] Artifact Instance of 'WindowsEngineArtifacts' is not required, skipping update.
+2025-11-21T13:57:09.8558820Z [        ] Artifact Instance of 'MacOSEngineArtifacts' is not required, skipping update.
+2025-11-21T13:57:09.8559330Z [        ] Artifact Instance of 'LinuxEngineArtifacts' is not required, skipping update.
+2025-11-21T13:57:09.8559850Z [        ] Artifact Instance of 'LinuxFuchsiaSDKArtifacts' is not required, skipping update.
+2025-11-21T13:57:09.8560370Z [        ] Artifact Instance of 'MacOSFuchsiaSDKArtifacts' is not required, skipping update.
+2025-11-21T13:57:09.8560990Z [        ] Artifact Instance of 'FlutterRunnerSDKArtifacts' is not required, skipping update.
+2025-11-21T13:57:09.8561560Z [        ] Artifact Instance of 'FlutterRunnerDebugSymbols' is not required, skipping update.
+2025-11-21T13:57:09.8562060Z [  +39 ms] Artifact Instance of 'MaterialFonts' is not required, skipping update.
+2025-11-21T13:57:09.8562530Z [        ] Artifact Instance of 'GradleWrapper' is not required, skipping update.
+2025-11-21T13:57:09.8563040Z [        ] Artifact Instance of 'AndroidGenSnapshotArtifacts' is not required, skipping update.
+2025-11-21T13:57:09.8563600Z [        ] Artifact Instance of 'AndroidInternalBuildArtifacts' is not required, skipping update.
+2025-11-21T13:57:09.8564200Z [   +3 ms] Artifact Instance of 'FlutterWebSdk' is not required, skipping update.
+2025-11-21T13:57:09.8564850Z [        ] Artifact Instance of 'FlutterEngineStamp' is not required, skipping update.
+2025-11-21T13:57:09.8565420Z [        ] Artifact Instance of 'LegacyCanvasKitRemover' is not required, skipping update.
+2025-11-21T13:57:09.8566310Z [        ] Artifact Instance of 'FlutterSdk' is not required, skipping update.
+2025-11-21T13:57:09.8566940Z [        ] Artifact Instance of 'WindowsEngineArtifacts' is not required, skipping update.
+2025-11-21T13:57:09.8567660Z [        ] Artifact Instance of 'MacOSEngineArtifacts' is not required, skipping update.
+2025-11-21T13:57:09.8568290Z [        ] Artifact Instance of 'LinuxEngineArtifacts' is not required, skipping update.
+2025-11-21T13:57:09.8569390Z [        ] Artifact Instance of 'LinuxFuchsiaSDKArtifacts' is not required, skipping update.
+2025-11-21T13:57:09.8570100Z [        ] Artifact Instance of 'MacOSFuchsiaSDKArtifacts' is not required, skipping update.
+2025-11-21T13:57:09.8570730Z [        ] Artifact Instance of 'FlutterRunnerSDKArtifacts' is not required, skipping update.
+2025-11-21T13:57:09.8571390Z [        ] Artifact Instance of 'FlutterRunnerDebugSymbols' is not required, skipping update.
+2025-11-21T13:57:09.8572140Z [        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+2025-11-21T13:57:09.8572710Z [        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+2025-11-21T13:57:09.8573500Z [        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+2025-11-21T13:57:09.8574290Z [        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+2025-11-21T13:57:09.8575170Z [        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+2025-11-21T13:57:09.8575770Z [        ] Artifact Instance of 'IosUsbArtifacts' is not required, skipping update.
+2025-11-21T13:57:09.8576380Z [        ] Artifact Instance of 'FontSubsetArtifacts' is not required, skipping update.
+2025-11-21T13:57:09.8577070Z [        ] Artifact Instance of 'PubDependencies' is not required, skipping update.
+2025-11-21T13:57:09.8577610Z [   +8 ms] Skipping pub get: version match.
+2025-11-21T13:57:09.8894830Z [  +96 ms] Found plugin window_manager at /Users/runner/.pub-cache/hosted/pub.dev/window_manager-0.3.9/
+2025-11-21T13:57:09.8997640Z [  +10 ms] Found plugin screen_retriever at /Users/runner/.pub-cache/hosted/pub.dev/screen_retriever-0.1.9/
+2025-11-21T13:57:09.9245610Z [  +15 ms] Found plugin path_provider at /Users/runner/.pub-cache/hosted/pub.dev/path_provider-2.1.5/
+2025-11-21T13:57:09.9355580Z [   +2 ms] Found plugin path_provider_windows at /Users/runner/.pub-cache/hosted/pub.dev/path_provider_windows-2.3.0/
+2025-11-21T13:57:09.9460420Z [  +10 ms] Found plugin path_provider_linux at /Users/runner/.pub-cache/hosted/pub.dev/path_provider_linux-2.2.1/
+2025-11-21T13:57:09.9564830Z [   +3 ms] Found plugin path_provider_foundation at /Users/runner/.pub-cache/hosted/pub.dev/path_provider_foundation-2.4.1/
+2025-11-21T13:57:09.9665490Z [   +3 ms] Found plugin path_provider_android at /Users/runner/.pub-cache/hosted/pub.dev/path_provider_android-2.2.15/
+2025-11-21T13:57:09.9769780Z [  +36 ms] Found plugin file_picker at /Users/runner/.pub-cache/hosted/pub.dev/file_picker-8.3.7/
+2025-11-21T13:57:09.9973140Z [  +19 ms] Found plugin flutter_plugin_android_lifecycle at /Users/runner/.pub-cache/hosted/pub.dev/flutter_plugin_android_lifecycle-2.0.26/
+2025-11-21T13:57:10.0075720Z [   +8 ms] Found plugin desktop_drop at /Users/runner/.pub-cache/hosted/pub.dev/desktop_drop-0.4.4/
+2025-11-21T13:57:10.0119060Z [  +10 ms] Found plugin audiotags at /Users/runner/.pub-cache/hosted/pub.dev/audiotags-1.4.5/
+2025-11-21T13:57:10.0755790Z [  +63 ms] Found plugin window_manager at /Users/runner/.pub-cache/hosted/pub.dev/window_manager-0.3.9/
+2025-11-21T13:57:10.0790000Z [   +2 ms] Found plugin screen_retriever at /Users/runner/.pub-cache/hosted/pub.dev/screen_retriever-0.1.9/
+2025-11-21T13:57:10.0856370Z [   +7 ms] Found plugin path_provider at /Users/runner/.pub-cache/hosted/pub.dev/path_provider-2.1.5/
+2025-11-21T13:57:10.0870720Z [   +1 ms] Found plugin path_provider_windows at /Users/runner/.pub-cache/hosted/pub.dev/path_provider_windows-2.3.0/
+2025-11-21T13:57:10.0900980Z [   +3 ms] Found plugin path_provider_linux at /Users/runner/.pub-cache/hosted/pub.dev/path_provider_linux-2.2.1/
+2025-11-21T13:57:10.0916210Z [   +1 ms] Found plugin path_provider_foundation at /Users/runner/.pub-cache/hosted/pub.dev/path_provider_foundation-2.4.1/
+2025-11-21T13:57:10.0921680Z [        ] Found plugin path_provider_android at /Users/runner/.pub-cache/hosted/pub.dev/path_provider_android-2.2.15/
+2025-11-21T13:57:10.1025730Z [  +10 ms] Found plugin file_picker at /Users/runner/.pub-cache/hosted/pub.dev/file_picker-8.3.7/
+2025-11-21T13:57:10.1046470Z [   +2 ms] Found plugin flutter_plugin_android_lifecycle at /Users/runner/.pub-cache/hosted/pub.dev/flutter_plugin_android_lifecycle-2.0.26/
+2025-11-21T13:57:10.1057140Z [   +1 ms] Found plugin desktop_drop at /Users/runner/.pub-cache/hosted/pub.dev/desktop_drop-0.4.4/
+2025-11-21T13:57:10.1071480Z [   +1 ms] Found plugin audiotags at /Users/runner/.pub-cache/hosted/pub.dev/audiotags-1.4.5/
+2025-11-21T13:57:10.1182130Z [  +10 ms] Skipping generating web_plugin_registrant.dart because it is up-to-date.
+2025-11-21T13:57:10.1653860Z [  +46 ms] Found plugin window_manager at /Users/runner/.pub-cache/hosted/pub.dev/window_manager-0.3.9/
+2025-11-21T13:57:10.1669290Z [   +1 ms] Found plugin screen_retriever at /Users/runner/.pub-cache/hosted/pub.dev/screen_retriever-0.1.9/
+2025-11-21T13:57:10.1714380Z [   +4 ms] Found plugin path_provider at /Users/runner/.pub-cache/hosted/pub.dev/path_provider-2.1.5/
+2025-11-21T13:57:10.1743850Z [   +2 ms] Found plugin path_provider_windows at /Users/runner/.pub-cache/hosted/pub.dev/path_provider_windows-2.3.0/
+2025-11-21T13:57:10.1810110Z [   +6 ms] Found plugin path_provider_linux at /Users/runner/.pub-cache/hosted/pub.dev/path_provider_linux-2.2.1/
+2025-11-21T13:57:10.1836350Z [   +2 ms] Found plugin path_provider_foundation at /Users/runner/.pub-cache/hosted/pub.dev/path_provider_foundation-2.4.1/
+2025-11-21T13:57:10.1855040Z [   +1 ms] Found plugin path_provider_android at /Users/runner/.pub-cache/hosted/pub.dev/path_provider_android-2.2.15/
+2025-11-21T13:57:10.1966630Z [  +11 ms] Found plugin file_picker at /Users/runner/.pub-cache/hosted/pub.dev/file_picker-8.3.7/
+2025-11-21T13:57:10.1997270Z [   +2 ms] Found plugin flutter_plugin_android_lifecycle at /Users/runner/.pub-cache/hosted/pub.dev/flutter_plugin_android_lifecycle-2.0.26/
+2025-11-21T13:57:10.2032310Z [   +3 ms] Found plugin desktop_drop at /Users/runner/.pub-cache/hosted/pub.dev/desktop_drop-0.4.4/
+2025-11-21T13:57:10.2072480Z [   +3 ms] Found plugin audiotags at /Users/runner/.pub-cache/hosted/pub.dev/audiotags-1.4.5/
+2025-11-21T13:57:10.2172850Z [  +10 ms] Generating /Users/runner/work/tagfix/tagfix/flutter_app/android/app/src/main/java/io/flutter/plugins/GeneratedPluginRegistrant.java
+2025-11-21T13:57:10.2225580Z [   +1 ms] Skipping generating GeneratedPluginRegistrant.java because it is up-to-date.
+2025-11-21T13:57:10.2327600Z [   +8 ms] Skipping generating generated_plugin_registrant.h because it is up-to-date.
+2025-11-21T13:57:10.2428980Z [        ] Skipping generating generated_plugin_registrant.cc because it is up-to-date.
+2025-11-21T13:57:10.2531900Z [   +1 ms] Skipping generating generated_plugins.cmake because it is up-to-date.
+2025-11-21T13:57:10.2650480Z [   +1 ms] Skipping generating generated_plugin_registrant.h because it is up-to-date.
+2025-11-21T13:57:10.2752910Z [        ] Skipping generating generated_plugin_registrant.cc because it is up-to-date.
+2025-11-21T13:57:10.2856280Z [        ] Skipping generating generated_plugins.cmake because it is up-to-date.
+2025-11-21T13:57:10.2959860Z [   +1 ms] Skipping generating GeneratedPluginRegistrant.h because it is up-to-date.
+2025-11-21T13:57:10.3062730Z [        ] Skipping generating GeneratedPluginRegistrant.m because it is up-to-date.
+2025-11-21T13:57:10.3165550Z [        ] Skipping generating GeneratedPluginRegistrant.swift because it is up-to-date.
+2025-11-21T13:57:10.3267010Z [  +24 ms] executing: sysctl hw.optional.arm64
+2025-11-21T13:57:10.3350110Z [  +14 ms] Exit code 0 from: sysctl hw.optional.arm64
+2025-11-21T13:57:10.3392680Z [        ] hw.optional.arm64: 1
+2025-11-21T13:57:10.3396290Z [        ] executing: /usr/bin/arch -arm64e xcrun xcodebuild -version
+2025-11-21T13:57:10.4041330Z [ +127 ms] Exit code 0 from: /usr/bin/arch -arm64e xcrun xcodebuild -version
+2025-11-21T13:57:10.4042470Z [        ] Xcode 16.4
+2025-11-21T13:57:10.4043020Z            Build version 16F6
+2025-11-21T13:57:10.4224900Z [  +18 ms] Warning: Building for device with codesigning disabled. You will have to manually codesign before deploying to device.
+2025-11-21T13:57:10.4318370Z [   +9 ms] executing: [/Users/runner/work/tagfix/tagfix/flutter_app/ios/] /usr/bin/arch -arm64e xcrun xcodebuild -list
+2025-11-21T13:57:15.0376830Z [+4601 ms] Command line invocation:
+2025-11-21T13:57:15.0479610Z                /Applications/Xcode_16.4.app/Contents/Developer/usr/bin/xcodebuild -list
+2025-11-21T13:57:15.0585750Z 
+2025-11-21T13:57:15.0709600Z            Information about project "Runner":
+2025-11-21T13:57:15.0812870Z                Targets:
+2025-11-21T13:57:15.0918590Z                    Runner
+2025-11-21T13:57:15.1041100Z                    RunnerTests
+2025-11-21T13:57:15.1150540Z 
+2025-11-21T13:57:15.1179780Z                Build Configurations:
+2025-11-21T13:57:15.1281400Z                    Debug
+2025-11-21T13:57:15.1383610Z                    Release
+2025-11-21T13:57:15.1427470Z                    Profile
+2025-11-21T13:57:15.1517040Z 
+2025-11-21T13:57:15.1537630Z                If no build configuration is specified and -scheme is not passed then "Release" is used.
+2025-11-21T13:57:15.1567130Z 
+2025-11-21T13:57:15.1580380Z                Schemes:
+2025-11-21T13:57:15.1582510Z                    Runner
+2025-11-21T13:57:15.1585130Z [   +8 ms] executing: [/Users/runner/work/tagfix/tagfix/flutter_app/ios/Runner.xcodeproj/] /usr/bin/arch -arm64e xcrun xcodebuild -project /Users/runner/work/tagfix/tagfix/flutter_app/ios/Runner.xcodeproj -scheme Runner -configuration Release -destination generic/platform=iOS -showBuildSettings BUILD_DIR=/Users/runner/work/tagfix/tagfix/flutter_app/build/ios
+2025-11-21T13:57:15.1692990Z [        ] executing: [/Users/runner/work/tagfix/tagfix/flutter_app/ios/Runner.xcodeproj/] /usr/bin/arch -arm64e xcrun xcodebuild -project /Users/runner/work/tagfix/tagfix/flutter_app/ios/Runner.xcodeproj -scheme Runner -configuration Release -destination generic/platform=iOS -showBuildSettings BUILD_DIR=/Users/runner/work/tagfix/tagfix/flutter_app/build/ios
+2025-11-21T13:57:19.0391560Z [+3831 ms] Command line invocation:
+2025-11-21T13:57:19.0510520Z                /Applications/Xcode_16.4.app/Contents/Developer/usr/bin/xcodebuild -project /Users/runner/work/tagfix/tagfix/flutter_app/ios/Runner.xcodeproj -scheme Runner -configuration Release -destination generic/platform=iOS -showBuildSettings BUILD_DIR=/Users/runner/work/tagfix/tagfix/flutter_app/build/ios
+2025-11-21T13:57:19.0628800Z 
+2025-11-21T13:57:19.0800680Z            Build settings from command line:
+2025-11-21T13:57:19.0934330Z                BUILD_DIR = /Users/runner/work/tagfix/tagfix/flutter_app/build/ios
+2025-11-21T13:57:19.2836450Z 
+2025-11-21T13:57:19.2991240Z            Build settings for action build and target Runner:
+2025-11-21T13:57:19.3093830Z                ACTION = build
+2025-11-21T13:57:19.3221910Z                AD_HOC_CODE_SIGNING_ALLOWED = NO
+2025-11-21T13:57:19.3828850Z                AGGREGATE_TRACKED_DOMAINS = YES
+2025-11-21T13:57:19.4520360Z                ALLOW_BUILD_REQUEST_OVERRIDES = NO
+2025-11-21T13:57:19.4778530Z                ALLOW_TARGET_PLATFORM_SPECIALIZATION = NO
+2025-11-21T13:57:19.5021410Z                ALTERNATE_GROUP = staff
+2025-11-21T13:57:19.5420900Z                ALTERNATE_MODE = u+w,go-w,a+rX
+2025-11-21T13:57:19.5732770Z                ALTERNATE_OWNER = runner
+2025-11-21T13:57:19.6490090Z                ALTERNATIVE_DISTRIBUTION_WEB = NO
+2025-11-21T13:57:19.7057970Z                ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO
+2025-11-21T13:57:19.7291030Z                ALWAYS_SEARCH_USER_PATHS = NO
+2025-11-21T13:57:19.7420850Z                ALWAYS_USE_SEPARATE_HEADERMAPS = NO
+2025-11-21T13:57:19.7534100Z                APPLICATION_EXTENSION_API_ONLY = NO
+2025-11-21T13:57:19.7641650Z                APPLY_RULES_IN_COPY_FILES = NO
+2025-11-21T13:57:19.7778560Z                APPLY_RULES_IN_COPY_HEADERS = NO
+2025-11-21T13:57:19.7879920Z                APP_SHORTCUTS_ENABLE_FLEXIBLE_MATCHING = YES
+2025-11-21T13:57:19.7980380Z                ARCHS = arm64
+2025-11-21T13:57:19.8085050Z                ARCHS_STANDARD = arm64
+2025-11-21T13:57:19.8196030Z                ARCHS_STANDARD_32_64_BIT = armv7 arm64
+2025-11-21T13:57:19.8296330Z                ARCHS_STANDARD_32_BIT = armv7
+2025-11-21T13:57:19.8400490Z                ARCHS_STANDARD_64_BIT = arm64
+2025-11-21T13:57:19.8505000Z                ARCHS_STANDARD_INCLUDING_64_BIT = arm64
+2025-11-21T13:57:19.8636660Z                ARCHS_UNIVERSAL_IPHONE_OS = armv7 arm64
+2025-11-21T13:57:19.8834170Z                ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon
+2025-11-21T13:57:19.8982550Z                ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES
+2025-11-21T13:57:19.9086620Z                AUTOMATICALLY_MERGE_DEPENDENCIES = NO
+2025-11-21T13:57:19.9244140Z                AVAILABLE_PLATFORMS = android appletvos appletvsimulator driverkit iphoneos iphonesimulator macosx qnx watchos watchsimulator xros xrsimulator
+2025-11-21T13:57:19.9378600Z                BITCODE_GENERATION_MODE = marker
+2025-11-21T13:57:19.9501970Z [   +1 ms] .gitignore does not ignore Swift Package Manager build directories, updating.
+2025-11-21T13:57:19.9503070Z                BUILD_ACTIVE_RESOURCES_ONLY = NO
+2025-11-21T13:57:19.9636810Z                BUILD_COMPONENTS = headers build
+2025-11-21T13:57:19.9755360Z                BUILD_DIR = /Users/runner/work/tagfix/tagfix/flutter_app/build/ios
+2025-11-21T13:57:19.9858450Z                BUILD_LIBRARY_FOR_DISTRIBUTION = NO
+2025-11-21T13:57:19.9964010Z                BUILD_ROOT = /Users/runner/Library/Developer/Xcode/DerivedData/Runner-btbhgfzdxuodwifqaxhqxmqztnps/Build/Products
+2025-11-21T13:57:20.0068500Z                BUILD_STYLE = 
+2025-11-21T13:57:20.0185120Z                BUILD_VARIANTS = normal
+2025-11-21T13:57:20.0304930Z                BUILT_PRODUCTS_DIR = /Users/runner/work/tagfix/tagfix/flutter_app/build/ios/Release-iphoneos
+2025-11-21T13:57:20.0425410Z                BUNDLE_CONTENTS_FOLDER_PATH_deep = Contents/
+2025-11-21T13:57:20.0577800Z                BUNDLE_EXECUTABLE_FOLDER_NAME_deep = MacOS
+2025-11-21T13:57:20.0680070Z                BUNDLE_EXTENSIONS_FOLDER_PATH = Extensions
+2025-11-21T13:57:20.0782680Z                BUNDLE_FORMAT = shallow
+2025-11-21T13:57:20.0890920Z                BUNDLE_FRAMEWORKS_FOLDER_PATH = Frameworks
+2025-11-21T13:57:20.1011300Z                BUNDLE_PLUGINS_FOLDER_PATH = PlugIns
+2025-11-21T13:57:20.1112770Z                BUNDLE_PRIVATE_HEADERS_FOLDER_PATH = PrivateHeaders
+2025-11-21T13:57:20.1251240Z                BUNDLE_PUBLIC_HEADERS_FOLDER_PATH = Headers
+2025-11-21T13:57:20.1353270Z                CACHE_ROOT = /var/folders/6c/pzd640_546q6_yfn24r65c_40000gn/C/com.apple.DeveloperTools/16.4-16F6/Xcode
+2025-11-21T13:57:20.1462360Z                CCHROOT = /var/folders/6c/pzd640_546q6_yfn24r65c_40000gn/C/com.apple.DeveloperTools/16.4-16F6/Xcode
+2025-11-21T13:57:20.1571270Z                CHMOD = /bin/chmod
+2025-11-21T13:57:20.1691460Z                CHOWN = /usr/sbin/chown
+2025-11-21T13:57:20.1692340Z                CLANG_ANALYZER_NONNULL = YES
+2025-11-21T13:57:20.1797810Z                CLANG_CACHE_FINE_GRAINED_OUTPUTS = YES
+2025-11-21T13:57:20.1919950Z                CLANG_CXX_LANGUAGE_STANDARD = gnu++0x
+2025-11-21T13:57:20.2021330Z                CLANG_CXX_LIBRARY = libc++
+2025-11-21T13:57:20.2127790Z                CLANG_ENABLE_EXPLICIT_MODULES = YES
+2025-11-21T13:57:20.2229250Z                CLANG_ENABLE_MODULES = YES
+2025-11-21T13:57:20.2335860Z                CLANG_ENABLE_OBJC_ARC = YES
+2025-11-21T13:57:20.2439460Z                CLANG_MODULES_BUILD_SESSION_FILE = /Users/runner/Library/Developer/Xcode/DerivedData/ModuleCache.noindex/Session.modulevalidation
+2025-11-21T13:57:20.2540820Z                CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES
+2025-11-21T13:57:20.2643160Z                CLANG_WARN_BOOL_CONVERSION = YES
+2025-11-21T13:57:20.2745700Z                CLANG_WARN_COMMA = YES
+2025-11-21T13:57:20.2847810Z                CLANG_WARN_CONSTANT_CONVERSION = YES
+2025-11-21T13:57:20.2949190Z                CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES
+2025-11-21T13:57:20.3056400Z                CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR
+2025-11-21T13:57:20.3167000Z                CLANG_WARN_EMPTY_BODY = YES
+2025-11-21T13:57:20.3268270Z                CLANG_WARN_ENUM_CONVERSION = YES
+2025-11-21T13:57:20.3379280Z                CLANG_WARN_INFINITE_RECURSION = YES
+2025-11-21T13:57:20.3485310Z                CLANG_WARN_INT_CONVERSION = YES
+2025-11-21T13:57:20.3587550Z                CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES
+2025-11-21T13:57:20.3697350Z                CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES
+2025-11-21T13:57:20.3815290Z                CLANG_WARN_OBJC_LITERAL_CONVERSION = YES
+2025-11-21T13:57:20.3917450Z                CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR
+2025-11-21T13:57:20.4018710Z                CLANG_WARN_RANGE_LOOP_ANALYSIS = YES
+2025-11-21T13:57:20.4123400Z                CLANG_WARN_STRICT_PROTOTYPES = YES
+2025-11-21T13:57:20.4227430Z                CLANG_WARN_SUSPICIOUS_MOVE = YES
+2025-11-21T13:57:20.4351040Z                CLANG_WARN_UNREACHABLE_CODE = YES
+2025-11-21T13:57:20.4452390Z                CLANG_WARN__DUPLICATE_METHOD_MATCH = YES
+2025-11-21T13:57:20.4555410Z                CLASS_FILE_DIR = /Users/runner/Library/Developer/Xcode/DerivedData/Runner-btbhgfzdxuodwifqaxhqxmqztnps/Build/Intermediates.noindex/Runner.build/Release-iphoneos/Runner.build/JavaClasses
+2025-11-21T13:57:20.4662360Z                CLEAN_PRECOMPS = YES
+2025-11-21T13:57:20.4763950Z                CLONE_HEADERS = NO
+2025-11-21T13:57:20.4870190Z                COCOAPODS_PARALLEL_CODE_SIGN = true
+2025-11-21T13:57:20.4977740Z                CODESIGNING_FOLDER_PATH = /Users/runner/work/tagfix/tagfix/flutter_app/build/ios/Release-iphoneos/Runner.app
+2025-11-21T13:57:20.5039180Z                CODE_SIGNING_ALLOWED = YES
+2025-11-21T13:57:20.5176640Z                CODE_SIGNING_REQUIRED = YES
+2025-11-21T13:57:20.5280690Z                CODE_SIGN_CONTEXT_CLASS = XCiPhoneOSCodeSignContext
+2025-11-21T13:57:20.5386990Z                CODE_SIGN_IDENTITY = iPhone Developer
+2025-11-21T13:57:20.5492110Z                CODE_SIGN_INJECT_BASE_ENTITLEMENTS = YES
+2025-11-21T13:57:20.5628350Z                COLOR_DIAGNOSTICS = NO
+2025-11-21T13:57:20.5745470Z                COMBINE_HIDPI_IMAGES = NO
+2025-11-21T13:57:20.5852470Z                COMPILATION_CACHE_CAS_PATH = /Users/runner/Library/Developer/Xcode/DerivedData/CompilationCache.noindex
+2025-11-21T13:57:20.5954160Z                COMPILATION_CACHE_KEEP_CAS_DIRECTORY = YES
+2025-11-21T13:57:20.6069490Z                COMPILER_INDEX_STORE_ENABLE = Default
+2025-11-21T13:57:20.6196000Z                COMPOSITE_SDK_DIRS = /Users/runner/Library/Developer/Xcode/DerivedData/Runner-btbhgfzdxuodwifqaxhqxmqztnps/Build/Intermediates.noindex/CompositeSDKs
+2025-11-21T13:57:20.6329940Z                COMPRESS_PNG_FILES = YES
+2025-11-21T13:57:20.6431530Z                CONFIGURATION = Release
+2025-11-21T13:57:20.6540130Z                CONFIGURATION_BUILD_DIR = /Users/runner/work/tagfix/tagfix/flutter_app/build/ios/Release-iphoneos
+2025-11-21T13:57:20.6574560Z                CONFIGURATION_TEMP_DIR = /Users/runner/Library/Developer/Xcode/DerivedData/Runner-btbhgfzdxuodwifqaxhqxmqztnps/Build/Intermediates.noindex/Runner.build/Release-iphoneos
+2025-11-21T13:57:20.6644960Z                CONTENTS_FOLDER_PATH = Runner.app
+2025-11-21T13:57:20.6785920Z                CONTENTS_FOLDER_PATH_SHALLOW_BUNDLE_NO = Runner.app/Contents
+2025-11-21T13:57:20.6887270Z                CONTENTS_FOLDER_PATH_SHALLOW_BUNDLE_YES = Runner.app
+2025-11-21T13:57:20.6992680Z                COPYING_PRESERVES_HFS_DATA = NO
+2025-11-21T13:57:20.7096560Z                COPY_HEADERS_RUN_UNIFDEF = NO
+2025-11-21T13:57:20.7202320Z                COPY_PHASE_STRIP = NO
+2025-11-21T13:57:20.7305180Z                CORRESPONDING_SIMULATOR_PLATFORM_DIR = /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform
+2025-11-21T13:57:20.7407930Z                CORRESPONDING_SIMULATOR_PLATFORM_NAME = iphonesimulator
+2025-11-21T13:57:20.7576100Z                CORRESPONDING_SIMULATOR_SDK_DIR = /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneSimulator.platform/Developer/SDKs/iPhoneSimulator18.5.sdk
+2025-11-21T13:57:20.7680930Z                CORRESPONDING_SIMULATOR_SDK_NAME = iphonesimulator18.5
+2025-11-21T13:57:20.7782910Z                CP = /bin/cp
+2025-11-21T13:57:20.7907710Z                CREATE_INFOPLIST_SECTION_IN_BINARY = NO
+2025-11-21T13:57:20.8024150Z                CURRENT_ARCH = undefined_arch
+2025-11-21T13:57:20.8141610Z                CURRENT_PROJECT_VERSION = 1
+2025-11-21T13:57:20.8262520Z                CURRENT_VARIANT = normal
+2025-11-21T13:57:20.8365070Z                DART_OBFUSCATION = false
+2025-11-21T13:57:20.8467840Z                DEAD_CODE_STRIPPING = YES
+2025-11-21T13:57:20.8569880Z                DEBUGGING_SYMBOLS = YES
+2025-11-21T13:57:20.8572790Z                DEBUG_INFORMATION_FORMAT = dwarf-with-dsym
+2025-11-21T13:57:20.8674090Z                DEBUG_INFORMATION_VERSION = compiler-default
+2025-11-21T13:57:20.8776600Z                DEFAULT_COMPILER = com.apple.compilers.llvm.clang.1_0
+2025-11-21T13:57:20.9036060Z                DEFAULT_DEXT_INSTALL_PATH = /System/Library/DriverExtensions
+2025-11-21T13:57:20.9043410Z                DEFAULT_KEXT_INSTALL_PATH = /System/Library/Extensions
+2025-11-21T13:57:20.9154310Z                DEFINES_MODULE = NO
+2025-11-21T13:57:20.9259140Z                DEPLOYMENT_LOCATION = NO
+2025-11-21T13:57:20.9360400Z                DEPLOYMENT_POSTPROCESSING = NO
+2025-11-21T13:57:20.9492740Z                DEPLOYMENT_TARGET_SETTING_NAME = IPHONEOS_DEPLOYMENT_TARGET
+2025-11-21T13:57:20.9607890Z                DEPLOYMENT_TARGET_SUGGESTED_VALUES = 12.0 12.1 12.2 12.3 12.4 13.0 13.1 13.2 13.3 13.4 13.5 13.6 14.0 14.1 14.2 14.3 14.4 14.5 14.6 14.7 15.0 15.1 15.2 15.3 15.4 15.5 15.6 16.0 16.1 16.2 16.3 16.4 16.5 16.6 17.0 17.1 17.2 17.3 17.4 17.5 17.6 18.0 18.1 18.2 18.3 18.4 18.5
+2025-11-21T13:57:20.9709730Z                DERIVED_FILES_DIR = /Users/runner/Library/Developer/Xcode/DerivedData/Runner-btbhgfzdxuodwifqaxhqxmqztnps/Build/Intermediates.noindex/Runner.build/Release-iphoneos/Runner.build/DerivedSources
+2025-11-21T13:57:20.9814830Z                DERIVED_FILE_DIR = /Users/runner/Library/Developer/Xcode/DerivedData/Runner-btbhgfzdxuodwifqaxhqxmqztnps/Build/Intermediates.noindex/Runner.build/Release-iphoneos/Runner.build/DerivedSources
+2025-11-21T13:57:20.9920790Z                DERIVED_SOURCES_DIR = /Users/runner/Library/Developer/Xcode/DerivedData/Runner-btbhgfzdxuodwifqaxhqxmqztnps/Build/Intermediates.noindex/Runner.build/Release-iphoneos/Runner.build/DerivedSources
+2025-11-21T13:57:21.0025550Z                DERIVE_MACCATALYST_PRODUCT_BUNDLE_IDENTIFIER = NO
+2025-11-21T13:57:21.0150820Z                DEVELOPER_APPLICATIONS_DIR = /Applications/Xcode_16.4.app/Contents/Developer/Applications
+2025-11-21T13:57:21.0253130Z                DEVELOPER_BIN_DIR = /Applications/Xcode_16.4.app/Contents/Developer/usr/bin
+2025-11-21T13:57:21.0362480Z                DEVELOPER_DIR = /Applications/Xcode_16.4.app/Contents/Developer
+2025-11-21T13:57:21.0487710Z                DEVELOPER_FRAMEWORKS_DIR = /Applications/Xcode_16.4.app/Contents/Developer/Library/Frameworks
+2025-11-21T13:57:21.0603560Z                DEVELOPER_FRAMEWORKS_DIR_QUOTED = /Applications/Xcode_16.4.app/Contents/Developer/Library/Frameworks
+2025-11-21T13:57:21.0714300Z                DEVELOPER_LIBRARY_DIR = /Applications/Xcode_16.4.app/Contents/Developer/Library
+2025-11-21T13:57:21.0832380Z                DEVELOPER_SDK_DIR = /Applications/Xcode_16.4.app/Contents/Developer/Platforms/MacOSX.platform/Developer/SDKs
+2025-11-21T13:57:21.0937360Z                DEVELOPER_TOOLS_DIR = /Applications/Xcode_16.4.app/Contents/Developer/Tools
+2025-11-21T13:57:21.1046160Z                DEVELOPER_USR_DIR = /Applications/Xcode_16.4.app/Contents/Developer/usr
+2025-11-21T13:57:21.1146580Z                DEVELOPMENT_LANGUAGE = en
+2025-11-21T13:57:21.1250670Z                DIAGNOSE_MISSING_TARGET_DEPENDENCIES = YES
+2025-11-21T13:57:21.1353230Z                DIFF = /usr/bin/diff
+2025-11-21T13:57:21.1452920Z                DOCUMENTATION_FOLDER_PATH = Runner.app/en.lproj/Documentation
+2025-11-21T13:57:21.1790200Z                DONT_GENERATE_INFOPLIST_FILE = NO
+2025-11-21T13:57:21.1790600Z                DSTROOT = /tmp/Runner.dst
+2025-11-21T13:57:21.1791090Z                DT_TOOLCHAIN_DIR = /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain
+2025-11-21T13:57:21.1796820Z                DWARF_DSYM_FILE_NAME = Runner.app.dSYM
+2025-11-21T13:57:21.1828170Z                DWARF_DSYM_FILE_SHOULD_ACCOMPANY_PRODUCT = NO
+2025-11-21T13:57:21.1828920Z                DWARF_DSYM_FOLDER_PATH = /Users/runner/work/tagfix/tagfix/flutter_app/build/ios/Release-iphoneos
+2025-11-21T13:57:21.1829320Z                DYNAMIC_LIBRARY_EXTENSION = dylib
+2025-11-21T13:57:21.1829600Z                EAGER_COMPILATION_ALLOW_SCRIPTS = NO
+2025-11-21T13:57:21.1829920Z                EAGER_LINKING = NO
+2025-11-21T13:57:21.1831460Z                EFFECTIVE_PLATFORM_NAME = -iphoneos
+2025-11-21T13:57:21.1831820Z                EMBEDDED_CONTENT_CONTAINS_SWIFT = NO
+2025-11-21T13:57:21.1832190Z                EMBEDDED_PROFILE_NAME = embedded.mobileprovision
+2025-11-21T13:57:21.1832500Z                EMBED_ASSET_PACKS_IN_PRODUCT_BUNDLE = NO
+2025-11-21T13:57:21.1832860Z                ENABLE_APP_SANDBOX = NO
+2025-11-21T13:57:21.1833110Z                ENABLE_BITCODE = NO
+2025-11-21T13:57:21.1833780Z                ENABLE_CODE_COVERAGE = YES
+2025-11-21T13:57:21.1834760Z                ENABLE_DEBUG_DYLIB = YES
+2025-11-21T13:57:21.1835430Z                ENABLE_DEFAULT_HEADER_SEARCH_PATHS = YES
+2025-11-21T13:57:21.1836100Z                ENABLE_DEFAULT_SEARCH_PATHS = YES
+2025-11-21T13:57:21.1836840Z                ENABLE_HARDENED_RUNTIME = NO
+2025-11-21T13:57:21.1837530Z                ENABLE_HEADER_DEPENDENCIES = YES
+2025-11-21T13:57:21.1838160Z                ENABLE_INCOMING_NETWORK_CONNECTIONS = NO
+2025-11-21T13:57:21.1838810Z                ENABLE_NS_ASSERTIONS = NO
+2025-11-21T13:57:21.1839390Z                ENABLE_ON_DEMAND_RESOURCES = YES
+2025-11-21T13:57:21.1940930Z                ENABLE_OUTGOING_NETWORK_CONNECTIONS = NO
+2025-11-21T13:57:21.1944460Z                ENABLE_RESOURCE_ACCESS_AUDIO_INPUT = NO
+2025-11-21T13:57:21.1946200Z                ENABLE_RESOURCE_ACCESS_BLUETOOTH = NO
+2025-11-21T13:57:21.1946840Z                ENABLE_RESOURCE_ACCESS_CALENDARS = NO
+2025-11-21T13:57:21.1953160Z                ENABLE_RESOURCE_ACCESS_CAMERA = NO
+2025-11-21T13:57:21.1955090Z                ENABLE_RESOURCE_ACCESS_CONTACTS = NO
+2025-11-21T13:57:21.1955720Z                ENABLE_RESOURCE_ACCESS_LOCATION = NO
+2025-11-21T13:57:21.1956570Z                ENABLE_RESOURCE_ACCESS_PRINTING = NO
+2025-11-21T13:57:21.1957120Z                ENABLE_RESOURCE_ACCESS_USB = NO
+2025-11-21T13:57:21.1957780Z                ENABLE_SDK_IMPORTS = NO
+2025-11-21T13:57:21.1958690Z                ENABLE_STRICT_OBJC_MSGSEND = YES
+2025-11-21T13:57:21.1959470Z                ENABLE_TESTABILITY = NO
+2025-11-21T13:57:21.1959940Z                ENABLE_TESTING_SEARCH_PATHS = NO
+2025-11-21T13:57:21.1960370Z                ENABLE_USER_SCRIPT_SANDBOXING = NO
+2025-11-21T13:57:21.1962290Z                ENFORCE_VALID_ARCHS = YES
+2025-11-21T13:57:21.1962870Z                ENTITLEMENTS_ALLOWED = YES
+2025-11-21T13:57:21.1963500Z                ENTITLEMENTS_DESTINATION = Signature
+2025-11-21T13:57:21.1964200Z                ENTITLEMENTS_REQUIRED = NO
+2025-11-21T13:57:21.1964950Z                EXCLUDED_ARCHS = armv7
+2025-11-21T13:57:21.1965470Z                EXCLUDED_INSTALLSRC_SUBDIRECTORY_PATTERNS = .DS_Store .svn .git .hg CVS
+2025-11-21T13:57:21.1970040Z                EXCLUDED_RECURSIVE_SEARCH_PATH_SUBDIRECTORIES = *.nib *.lproj *.framework *.gch *.xcode* *.xcassets (*) .DS_Store CVS .svn .git .hg *.pbproj *.pbxproj
+2025-11-21T13:57:21.1977450Z                EXECUTABLES_FOLDER_PATH = Runner.app/Executables
+2025-11-21T13:57:21.1977810Z                EXECUTABLE_FOLDER_PATH = Runner.app
+2025-11-21T13:57:21.1980790Z                EXECUTABLE_FOLDER_PATH_SHALLOW_BUNDLE_NO = Runner.app/MacOS
+2025-11-21T13:57:21.1981280Z                EXECUTABLE_FOLDER_PATH_SHALLOW_BUNDLE_YES = Runner.app
+2025-11-21T13:57:21.1983510Z                EXECUTABLE_NAME = Runner
+2025-11-21T13:57:21.1984990Z                EXECUTABLE_PATH = Runner.app/Runner
+2025-11-21T13:57:21.1985310Z                EXTENSIONS_FOLDER_PATH = Runner.app/Extensions
+2025-11-21T13:57:21.1986070Z                FILE_LIST = /Users/runner/Library/Developer/Xcode/DerivedData/Runner-btbhgfzdxuodwifqaxhqxmqztnps/Build/Intermediates.noindex/Runner.build/Release-iphoneos/Runner.build/Objects/LinkFileList
+2025-11-21T13:57:21.1987190Z                FIXED_FILES_DIR = /Users/runner/Library/Developer/Xcode/DerivedData/Runner-btbhgfzdxuodwifqaxhqxmqztnps/Build/Intermediates.noindex/Runner.build/Release-iphoneos/Runner.build/FixedFiles
+2025-11-21T13:57:21.1988950Z                FLUTTER_APPLICATION_PATH = /Users/runner/work/tagfix/tagfix/flutter_app
+2025-11-21T13:57:21.1991840Z                FLUTTER_BUILD_DIR = build
+2025-11-21T13:57:21.1992140Z                FLUTTER_BUILD_NAME = 1.0.0
+2025-11-21T13:57:21.1992400Z                FLUTTER_BUILD_NUMBER = 1
+2025-11-21T13:57:21.1994610Z                FLUTTER_ROOT = /Users/runner/hostedtoolcache/flutter/stable-3.38.2-arm64
+2025-11-21T13:57:21.1995090Z                FLUTTER_TARGET = lib/main.dart
+2025-11-21T13:57:21.1995410Z                FRAMEWORKS_FOLDER_PATH = Runner.app/Frameworks
+2025-11-21T13:57:21.1995720Z                FRAMEWORK_FLAG_PREFIX = -framework
+2025-11-21T13:57:21.1996200Z                FRAMEWORK_SEARCH_PATHS = /Users/runner/work/tagfix/tagfix/flutter_app/build/ios/Release-iphoneos 
+2025-11-21T13:57:21.1996600Z                FRAMEWORK_VERSION = A
+2025-11-21T13:57:21.1996860Z                FULL_PRODUCT_NAME = Runner.app
+2025-11-21T13:57:21.1997180Z                FUSE_BUILD_PHASES = YES
+2025-11-21T13:57:21.1999260Z                FUSE_BUILD_SCRIPT_PHASES = NO
+2025-11-21T13:57:21.1999510Z                GCC3_VERSION = 3.3
+2025-11-21T13:57:21.1999780Z                GCC_C_LANGUAGE_STANDARD = gnu99
+2025-11-21T13:57:21.2000610Z                GCC_DYNAMIC_NO_PIC = NO
+2025-11-21T13:57:21.2001370Z                GCC_INLINES_ARE_PRIVATE_EXTERN = YES
+2025-11-21T13:57:21.2001670Z                GCC_NO_COMMON_BLOCKS = YES
+2025-11-21T13:57:21.2002010Z                GCC_PFE_FILE_C_DIALECTS = c objective-c c++ objective-c++
+2025-11-21T13:57:21.2002380Z                GCC_SYMBOLS_PRIVATE_EXTERN = YES
+2025-11-21T13:57:21.2002670Z                GCC_THUMB_SUPPORT = YES
+2025-11-21T13:57:21.2005100Z                GCC_TREAT_WARNINGS_AS_ERRORS = NO
+2025-11-21T13:57:21.2006280Z                GCC_VERSION = com.apple.compilers.llvm.clang.1_0
+2025-11-21T13:57:21.2006760Z                GCC_VERSION_IDENTIFIER = com_apple_compilers_llvm_clang_1_0
+2025-11-21T13:57:21.2007100Z                GCC_WARN_64_TO_32_BIT_CONVERSION = YES
+2025-11-21T13:57:21.2008430Z                GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR
+2025-11-21T13:57:21.2009980Z                GCC_WARN_UNDECLARED_SELECTOR = YES
+2025-11-21T13:57:21.2010320Z                GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE
+2025-11-21T13:57:21.2010620Z                GCC_WARN_UNUSED_FUNCTION = YES
+2025-11-21T13:57:21.2011370Z                GCC_WARN_UNUSED_VARIABLE = YES
+2025-11-21T13:57:21.2012100Z                GENERATED_MODULEMAP_DIR = /Users/runner/Library/Developer/Xcode/DerivedData/Runner-btbhgfzdxuodwifqaxhqxmqztnps/Build/Intermediates.noindex/GeneratedModuleMaps-iphoneos
+2025-11-21T13:57:21.2015600Z                GENERATE_INFOPLIST_FILE = NO
+2025-11-21T13:57:21.2016000Z                GENERATE_INTERMEDIATE_TEXT_BASED_STUBS = YES
+2025-11-21T13:57:21.2016250Z                GENERATE_MASTER_OBJECT_FILE = NO
+2025-11-21T13:57:21.2016540Z                GENERATE_PKGINFO_FILE = YES
+2025-11-21T13:57:21.2017030Z                GENERATE_PROFILING_CODE = NO
+2025-11-21T13:57:21.2017320Z                GENERATE_TEXT_BASED_STUBS = NO
+2025-11-21T13:57:21.2018420Z                GID = 20
+2025-11-21T13:57:21.2019770Z                GROUP = staff
+2025-11-21T13:57:21.2020260Z                HEADERMAP_INCLUDES_FLAT_ENTRIES_FOR_TARGET_BEING_BUILT = YES
+2025-11-21T13:57:21.2022620Z                HEADERMAP_INCLUDES_FRAMEWORK_ENTRIES_FOR_ALL_PRODUCT_TYPES = YES
+2025-11-21T13:57:21.2026710Z                HEADERMAP_INCLUDES_FRAMEWORK_ENTRIES_FOR_TARGETS_NOT_BEING_BUILT = YES
+2025-11-21T13:57:21.2027130Z                HEADERMAP_INCLUDES_NONPUBLIC_NONPRIVATE_HEADERS = YES
+2025-11-21T13:57:21.2027480Z                HEADERMAP_INCLUDES_PROJECT_HEADERS = YES
+2025-11-21T13:57:21.2027820Z                HEADERMAP_USES_FRAMEWORK_PREFIX_ENTRIES = YES
+2025-11-21T13:57:21.2028160Z                HEADERMAP_USES_VFS = NO
+2025-11-21T13:57:21.2028640Z                HEADER_SEARCH_PATHS = /Users/runner/work/tagfix/tagfix/flutter_app/build/ios/Release-iphoneos/include 
+2025-11-21T13:57:21.2029140Z                HIDE_BITCODE_SYMBOLS = YES
+2025-11-21T13:57:21.2029330Z                HOME = /Users/runner
+2025-11-21T13:57:21.2031020Z                HOST_ARCH = arm64
+2025-11-21T13:57:21.2032090Z                HOST_PLATFORM = macosx
+2025-11-21T13:57:21.2033390Z                ICONV = /usr/bin/iconv
+2025-11-21T13:57:21.2033690Z                IMPLICIT_DEPENDENCY_DOMAIN = default
+2025-11-21T13:57:21.2033990Z                INFOPLIST_ENABLE_CFBUNDLEICONS_MERGE = YES
+2025-11-21T13:57:21.2035750Z                INFOPLIST_EXPAND_BUILD_SETTINGS = YES
+2025-11-21T13:57:21.2037470Z                INFOPLIST_FILE = Runner/Info.plist
+2025-11-21T13:57:21.2038200Z                INFOPLIST_OUTPUT_FORMAT = binary
+2025-11-21T13:57:21.2040400Z                INFOPLIST_PATH = Runner.app/Info.plist
+2025-11-21T13:57:21.2040750Z                INFOPLIST_PREPROCESS = NO
+2025-11-21T13:57:21.2041070Z                INFOSTRINGS_PATH = Runner.app/en.lproj/InfoPlist.strings
+2025-11-21T13:57:21.2041380Z                INLINE_PRIVATE_FRAMEWORKS = NO
+2025-11-21T13:57:21.2041690Z                INSTALLAPI_IGNORE_SKIP_INSTALL = YES
+2025-11-21T13:57:21.2041950Z                INSTALLHDRS_COPY_PHASE = NO
+2025-11-21T13:57:21.2042730Z                INSTALLHDRS_SCRIPT_PHASE = NO
+2025-11-21T13:57:21.2043010Z                INSTALL_DIR = /tmp/Runner.dst/Applications
+2025-11-21T13:57:21.2043360Z                INSTALL_GROUP = staff
+2025-11-21T13:57:21.2043660Z                INSTALL_MODE_FLAG = u+w,go-w,a+rX
+2025-11-21T13:57:21.2045440Z                INSTALL_OWNER = runner
+2025-11-21T13:57:21.2046690Z                INSTALL_PATH = /Applications
+2025-11-21T13:57:21.2047220Z                INSTALL_ROOT = /tmp/Runner.dst
+2025-11-21T13:57:21.2047760Z                IPHONEOS_DEPLOYMENT_TARGET = 12.0
+2025-11-21T13:57:21.2048410Z                IS_UNOPTIMIZED_BUILD = NO
+2025-11-21T13:57:21.2049330Z                JAVAC_DEFAULT_FLAGS = -J-Xms64m -J-XX:NewSize=4M -J-Dfile.encoding=UTF8
+2025-11-21T13:57:21.2050980Z                JAVA_APP_STUB = /System/Library/Frameworks/JavaVM.framework/Resources/MacOS/JavaApplicationStub
+2025-11-21T13:57:21.2052640Z                JAVA_ARCHIVE_CLASSES = YES
+2025-11-21T13:57:21.2053330Z                JAVA_ARCHIVE_TYPE = JAR
+2025-11-21T13:57:21.2054060Z                JAVA_COMPILER = /usr/bin/javac
+2025-11-21T13:57:21.2054900Z                JAVA_FOLDER_PATH = Runner.app/Java
+2025-11-21T13:57:21.2055590Z                JAVA_FRAMEWORK_RESOURCES_DIRS = Resources
+2025-11-21T13:57:21.2056260Z                JAVA_JAR_FLAGS = cv
+2025-11-21T13:57:21.2056910Z                JAVA_SOURCE_SUBDIR = .
+2025-11-21T13:57:21.2057190Z                JAVA_USE_DEPENDENCIES = YES
+2025-11-21T13:57:21.2057410Z                JAVA_ZIP_FLAGS = -urg
+2025-11-21T13:57:21.2057640Z                JIKES_DEFAULT_FLAGS = +E +OLDCSO
+2025-11-21T13:57:21.2058160Z                KASAN_CFLAGS_CLASSIC = -DKASAN=1 -DKASAN_CLASSIC=1 -fsanitize=address -mllvm -asan-globals-live-support -mllvm -asan-force-dynamic-shadow
+2025-11-21T13:57:21.2059450Z                KASAN_CFLAGS_TBI = -DKASAN=1 -DKASAN_TBI=1 -fsanitize=kernel-hwaddress -mllvm -hwasan-recover=0 -mllvm -hwasan-instrument-atomics=0 -mllvm -hwasan-instrument-stack=1 -mllvm -hwasan-generate-tags-with-calls=1 -mllvm -hwasan-instrument-with-calls=1 -mllvm -hwasan-use-short-granules=0 -mllvm -hwasan-memory-access-callback-prefix=__asan_
+2025-11-21T13:57:21.2061120Z                KASAN_DEFAULT_CFLAGS = -DKASAN=1 -DKASAN_CLASSIC=1 -fsanitize=address -mllvm -asan-globals-live-support -mllvm -asan-force-dynamic-shadow
+2025-11-21T13:57:21.2061570Z                KEEP_PRIVATE_EXTERNS = NO
+2025-11-21T13:57:21.2062380Z                LD_DEPENDENCY_INFO_FILE = /Users/runner/Library/Developer/Xcode/DerivedData/Runner-btbhgfzdxuodwifqaxhqxmqztnps/Build/Intermediates.noindex/Runner.build/Release-iphoneos/Runner.build/Objects-normal/undefined_arch/Runner_dependency_info.dat
+2025-11-21T13:57:21.2063160Z                LD_EXPORT_SYMBOLS = YES
+2025-11-21T13:57:21.2063340Z                LD_GENERATE_MAP_FILE = NO
+2025-11-21T13:57:21.2064080Z                LD_MAP_FILE_PATH = /Users/runner/Library/Developer/Xcode/DerivedData/Runner-btbhgfzdxuodwifqaxhqxmqztnps/Build/Intermediates.noindex/Runner.build/Release-iphoneos/Runner.build/Runner-LinkMap-normal-undefined_arch.txt
+2025-11-21T13:57:21.2064830Z                LD_NO_PIE = NO
+2025-11-21T13:57:21.2065040Z                LD_QUOTE_LINKER_ARGUMENTS_FOR_COMPILER_DRIVER = YES
+2025-11-21T13:57:21.2065320Z                LD_RUNPATH_SEARCH_PATHS =  @executable_path/Frameworks
+2025-11-21T13:57:21.2066490Z                LD_RUNPATH_SEARCH_PATHS_YES = @loader_path/../Frameworks
+2025-11-21T13:57:21.2067290Z                LD_SHARED_CACHE_ELIGIBLE = Automatic
+2025-11-21T13:57:21.2067930Z                LD_WARN_DUPLICATE_LIBRARIES = NO
+2025-11-21T13:57:21.2068520Z                LD_WARN_UNUSED_DYLIBS = NO
+2025-11-21T13:57:21.2069660Z                LEGACY_DEVELOPER_DIR = /Applications/Xcode_16.4.app/Contents/PlugIns/Xcode3Core.ideplugin/Contents/SharedSupport/Developer
+2025-11-21T13:57:21.2071680Z                LEX = lex
+2025-11-21T13:57:21.2072300Z                LIBRARY_DEXT_INSTALL_PATH = /Library/DriverExtensions
+2025-11-21T13:57:21.2073070Z                LIBRARY_FLAG_NOSPACE = YES
+2025-11-21T13:57:21.2073740Z                LIBRARY_FLAG_PREFIX = -l
+2025-11-21T13:57:21.2074000Z                LIBRARY_KEXT_INSTALL_PATH = /Library/Extensions
+2025-11-21T13:57:21.2074430Z                LIBRARY_SEARCH_PATHS = /Users/runner/work/tagfix/tagfix/flutter_app/build/ios/Release-iphoneos 
+2025-11-21T13:57:21.2074820Z                LINKER_DISPLAYS_MANGLED_NAMES = NO
+2025-11-21T13:57:21.2075590Z                LINK_FILE_LIST_normal_arm64 = /Users/runner/Library/Developer/Xcode/DerivedData/Runner-btbhgfzdxuodwifqaxhqxmqztnps/Build/Intermediates.noindex/Runner.build/Release-iphoneos/Runner.build/Objects-normal/arm64/Runner.LinkFileList
+2025-11-21T13:57:21.2076420Z                LINK_OBJC_RUNTIME = YES
+2025-11-21T13:57:21.2076630Z                LINK_WITH_STANDARD_LIBRARIES = YES
+2025-11-21T13:57:21.2076900Z                LLVM_TARGET_TRIPLE_OS_VERSION = ios12.0
+2025-11-21T13:57:21.2077160Z                LLVM_TARGET_TRIPLE_VENDOR = apple
+2025-11-21T13:57:21.2078120Z                LM_AUX_CONST_METADATA_LIST_PATH_normal_arm64 = /Users/runner/Library/Developer/Xcode/DerivedData/Runner-btbhgfzdxuodwifqaxhqxmqztnps/Build/Intermediates.noindex/Runner.build/Release-iphoneos/Runner.build/Objects-normal/arm64/Runner.SwiftConstValuesFileList
+2025-11-21T13:57:21.2079000Z                LOCALIZATION_EXPORT_SUPPORTED = YES
+2025-11-21T13:57:21.2079230Z                LOCALIZATION_PREFERS_STRING_CATALOGS = NO
+2025-11-21T13:57:21.2079500Z                LOCALIZED_RESOURCES_FOLDER_PATH = Runner.app/en.lproj
+2025-11-21T13:57:21.2079890Z                LOCALIZED_STRING_MACRO_NAMES = NSLocalizedString CFCopyLocalizedString
+2025-11-21T13:57:21.2080230Z                LOCALIZED_STRING_SWIFTUI_SUPPORT = YES
+2025-11-21T13:57:21.2080530Z                LOCAL_ADMIN_APPS_DIR = /Applications/Utilities
+2025-11-21T13:57:21.2080780Z                LOCAL_APPS_DIR = /Applications
+2025-11-21T13:57:21.2081030Z                LOCAL_DEVELOPER_DIR = /Library/Developer
+2025-11-21T13:57:21.2081250Z                LOCAL_LIBRARY_DIR = /Library
+2025-11-21T13:57:21.2081520Z                LOCROOT = /Users/runner/work/tagfix/tagfix/flutter_app/ios
+2025-11-21T13:57:21.2082160Z                LOCSYMROOT = /Users/runner/work/tagfix/tagfix/flutter_app/ios
+2025-11-21T13:57:21.2082460Z                MACH_O_TYPE = mh_execute
+2025-11-21T13:57:21.2082690Z                MAC_OS_X_PRODUCT_BUILD_VERSION = 24G231
+2025-11-21T13:57:21.2082960Z                MAC_OS_X_VERSION_ACTUAL = 150701
+2025-11-21T13:57:21.2083220Z                MAC_OS_X_VERSION_MAJOR = 150000
+2025-11-21T13:57:21.2083430Z                MAC_OS_X_VERSION_MINOR = 150700
+2025-11-21T13:57:21.2083630Z                MAKE_MERGEABLE = NO
+2025-11-21T13:57:21.2083810Z                MERGEABLE_LIBRARY = NO
+2025-11-21T13:57:21.2084000Z                MERGED_BINARY_TYPE = none
+2025-11-21T13:57:21.2084200Z                MERGE_LINKED_LIBRARIES = NO
+2025-11-21T13:57:21.2084400Z                METAL_LIBRARY_FILE_BASE = default
+2025-11-21T13:57:21.2084830Z                METAL_LIBRARY_OUTPUT_DIR = /Users/runner/work/tagfix/tagfix/flutter_app/build/ios/Release-iphoneos/Runner.app
+2025-11-21T13:57:21.2085250Z                MODULES_FOLDER_PATH = Runner.app/Modules
+2025-11-21T13:57:21.2085610Z                MODULE_CACHE_DIR = /Users/runner/Library/Developer/Xcode/DerivedData/ModuleCache.noindex
+2025-11-21T13:57:21.2085950Z                MTL_ENABLE_DEBUG_INFO = NO
+2025-11-21T13:57:21.2086150Z                NATIVE_ARCH = arm64
+2025-11-21T13:57:21.2086320Z                NATIVE_ARCH_32_BIT = arm
+2025-11-21T13:57:21.2086500Z                NATIVE_ARCH_64_BIT = arm64
+2025-11-21T13:57:21.2086690Z                NATIVE_ARCH_ACTUAL = arm64
+2025-11-21T13:57:21.2086890Z                NO_COMMON = YES
+2025-11-21T13:57:21.2087520Z                OBJECT_FILE_DIR = /Users/runner/Library/Developer/Xcode/DerivedData/Runner-btbhgfzdxuodwifqaxhqxmqztnps/Build/Intermediates.noindex/Runner.build/Release-iphoneos/Runner.build/Objects
+2025-11-21T13:57:21.2088620Z                OBJECT_FILE_DIR_normal = /Users/runner/Library/Developer/Xcode/DerivedData/Runner-btbhgfzdxuodwifqaxhqxmqztnps/Build/Intermediates.noindex/Runner.build/Release-iphoneos/Runner.build/Objects-normal
+2025-11-21T13:57:21.2089790Z                OBJROOT = /Users/runner/Library/Developer/Xcode/DerivedData/Runner-btbhgfzdxuodwifqaxhqxmqztnps/Build/Intermediates.noindex
+2025-11-21T13:57:21.2090300Z                ONLY_ACTIVE_ARCH = NO
+2025-11-21T13:57:21.2090510Z                OS = MACOS
+2025-11-21T13:57:21.2090700Z                OSAC = /usr/bin/osacompile
+2025-11-21T13:57:21.2090960Z                PACKAGE_CONFIG = .dart_tool/package_config.json
+2025-11-21T13:57:21.2091300Z                PACKAGE_TYPE = com.apple.package-type.wrapper.application
+2025-11-21T13:57:21.2091610Z                PASCAL_STRINGS = YES
+2025-11-21T13:57:21.2096770Z                PATH = /Applications/Xcode_16.4.app/Contents/SharedFrameworks/SwiftBuild.framework/Versions/A/PlugIns/SWBBuildService.bundle/Contents/PlugIns/SWBUniversalPlatformPlugin.bundle/Contents/Frameworks/SWBUniversalPlatform.framework/Resources:/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin:/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/local/bin:/Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/libexec:/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/bin:/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/usr/local/bin:/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin:/Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/local/bin:/Applications/Xcode_16.4.app/Contents/Developer/usr/bin:/Applications/Xcode_16.4.app/Contents/Developer/usr/local/bin:/Users/runner/.pub-cache/bin:/Users/runner/hostedtoolcache/flutter/stable-3.38.2-arm64/bin/cache/dart-sdk/bin:/Users/runner/hostedtoolcache/flutter/stable-3.38.2-arm64/bin:/opt/homebrew/lib/ruby/gems/3.3.0/bin:/opt/homebrew/opt/ruby@3.3/bin:/Users/runner/.local/bin:/opt/homebrew/bin:/opt/homebrew/sbin:/Users/runner/.cargo/bin:/usr/local/opt/curl/bin:/usr/local/bin:/usr/local/sbin:/Users/runner/bin:/Users/runner/.yarn/bin:/Users/runner/Library/Android/sdk/tools:/Users/runner/Library/Android/sdk/platform-tools:/Library/Frameworks/Python.framework/Versions/Current/bin:/Library/Frameworks/Mono.framework/Versions/Current/Commands:/usr/bin:/bin:/usr/sbin:/sbin:/Users/runner/.dotnet/tools
+2025-11-21T13:57:21.2114750Z                PATH_PREFIXES_EXCLUDED_FROM_HEADER_DEPENDENCIES = /usr/include /usr/local/include /System/Library/Frameworks /System/Library/PrivateFrameworks /Applications/Xcode_16.4.app/Contents/Developer/Headers /Applications/Xcode_16.4.app/Contents/Developer/SDKs /Applications/Xcode_16.4.app/Contents/Developer/Platforms
+2025-11-21T13:57:21.2117670Z                PBDEVELOPMENTPLIST_PATH = Runner.app/pbdevelopment.plist
+2025-11-21T13:57:21.2119990Z                PER_ARCH_MODULE_FILE_DIR = /Users/runner/Library/Developer/Xcode/DerivedData/Runner-btbhgfzdxuodwifqaxhqxmqztnps/Build/Intermediates.noindex/Runner.build/Release-iphoneos/Runner.build/Objects-normal/undefined_arch
+2025-11-21T13:57:21.2123490Z                PER_ARCH_OBJECT_FILE_DIR = /Users/runner/Library/Developer/Xcode/DerivedData/Runner-btbhgfzdxuodwifqaxhqxmqztnps/Build/Intermediates.noindex/Runner.build/Release-iphoneos/Runner.build/Objects-normal/undefined_arch
+2025-11-21T13:57:21.2126900Z                PER_VARIANT_OBJECT_FILE_DIR = /Users/runner/Library/Developer/Xcode/DerivedData/Runner-btbhgfzdxuodwifqaxhqxmqztnps/Build/Intermediates.noindex/Runner.build/Release-iphoneos/Runner.build/Objects-normal
+2025-11-21T13:57:21.2131070Z                PKGINFO_FILE_PATH = /Users/runner/Library/Developer/Xcode/DerivedData/Runner-btbhgfzdxuodwifqaxhqxmqztnps/Build/Intermediates.noindex/Runner.build/Release-iphoneos/Runner.build/PkgInfo
+2025-11-21T13:57:21.2132940Z                PKGINFO_PATH = Runner.app/PkgInfo
+2025-11-21T13:57:21.2134260Z                PLATFORM_DEVELOPER_APPLICATIONS_DIR = /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Applications
+2025-11-21T13:57:21.2137570Z                PLATFORM_DEVELOPER_BIN_DIR = /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/bin
+2025-11-21T13:57:21.2139390Z                PLATFORM_DEVELOPER_LIBRARY_DIR = /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library
+2025-11-21T13:57:21.2141130Z                PLATFORM_DEVELOPER_SDK_DIR = /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs
+2025-11-21T13:57:21.2142840Z                PLATFORM_DEVELOPER_TOOLS_DIR = /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Tools
+2025-11-21T13:57:21.2144590Z                PLATFORM_DEVELOPER_USR_DIR = /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr
+2025-11-21T13:57:21.2146050Z                PLATFORM_DIR = /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform
+2025-11-21T13:57:21.2146990Z                PLATFORM_DISPLAY_NAME = iOS
+2025-11-21T13:57:21.2147540Z                PLATFORM_FAMILY_NAME = iOS
+2025-11-21T13:57:21.2148050Z                PLATFORM_NAME = iphoneos
+2025-11-21T13:57:21.2148610Z                PLATFORM_PREFERRED_ARCH = arm64
+2025-11-21T13:57:21.2149220Z                PLATFORM_PRODUCT_BUILD_VERSION = 22F76
+2025-11-21T13:57:21.2149890Z                PLATFORM_REQUIRES_SWIFT_AUTOLINK_EXTRACT = NO
+2025-11-21T13:57:21.2150540Z                PLATFORM_REQUIRES_SWIFT_MODULEWRAP = NO
+2025-11-21T13:57:21.2151140Z                PLIST_FILE_OUTPUT_FORMAT = binary
+2025-11-21T13:57:21.2151720Z                PLUGINS_FOLDER_PATH = Runner.app/PlugIns
+2025-11-21T13:57:21.2152410Z                PRECOMPS_INCLUDE_HEADERS_FROM_BUILT_PRODUCTS_DIR = YES
+2025-11-21T13:57:21.2154400Z                PRECOMP_DESTINATION_DIR = /Users/runner/Library/Developer/Xcode/DerivedData/Runner-btbhgfzdxuodwifqaxhqxmqztnps/Build/Intermediates.noindex/Runner.build/Release-iphoneos/Runner.build/PrefixHeaders
+2025-11-21T13:57:21.2157190Z                PRIVATE_HEADERS_FOLDER_PATH = Runner.app/PrivateHeaders
+2025-11-21T13:57:21.2159800Z                PROCESSED_INFOPLIST_PATH = /Users/runner/Library/Developer/Xcode/DerivedData/Runner-btbhgfzdxuodwifqaxhqxmqztnps/Build/Intermediates.noindex/Runner.build/Release-iphoneos/Runner.build/Objects-normal/undefined_arch/Processed-Info.plist
+2025-11-21T13:57:21.2162110Z                PRODUCT_BUNDLE_IDENTIFIER = com.example.flutterApp
+2025-11-21T13:57:21.2162740Z                PRODUCT_BUNDLE_PACKAGE_TYPE = APPL
+2025-11-21T13:57:21.2163300Z                PRODUCT_MODULE_NAME = Runner
+2025-11-21T13:57:21.2163790Z                PRODUCT_NAME = Runner
+2025-11-21T13:57:21.2164640Z                PRODUCT_SETTINGS_PATH = /Users/runner/work/tagfix/tagfix/flutter_app/ios/Runner/Info.plist
+2025-11-21T13:57:21.2165620Z                PRODUCT_TYPE = com.apple.product-type.application
+2025-11-21T13:57:21.2166340Z                PROFILING_CODE = NO
+2025-11-21T13:57:21.2166870Z                PROJECT = Runner
+2025-11-21T13:57:21.2168390Z                PROJECT_DERIVED_FILE_DIR = /Users/runner/Library/Developer/Xcode/DerivedData/Runner-btbhgfzdxuodwifqaxhqxmqztnps/Build/Intermediates.noindex/Runner.build/DerivedSources
+2025-11-21T13:57:21.2170200Z                PROJECT_DIR = /Users/runner/work/tagfix/tagfix/flutter_app/ios
+2025-11-21T13:57:21.2171200Z                PROJECT_FILE_PATH = /Users/runner/work/tagfix/tagfix/flutter_app/ios/Runner.xcodeproj
+2025-11-21T13:57:21.2172550Z                PROJECT_GUID = 18c1723432283e0cc55f10a6dcfd9e02
+2025-11-21T13:57:21.2172860Z                PROJECT_NAME = Runner
+2025-11-21T13:57:21.2173440Z                PROJECT_TEMP_DIR = /Users/runner/Library/Developer/Xcode/DerivedData/Runner-btbhgfzdxuodwifqaxhqxmqztnps/Build/Intermediates.noindex/Runner.build
+2025-11-21T13:57:21.2174300Z                PROJECT_TEMP_ROOT = /Users/runner/Library/Developer/Xcode/DerivedData/Runner-btbhgfzdxuodwifqaxhqxmqztnps/Build/Intermediates.noindex
+2025-11-21T13:57:21.2175550Z                PROVISIONING_PROFILE_REQUIRED = YES
+2025-11-21T13:57:21.2175820Z                PROVISIONING_PROFILE_REQUIRED_YES_YES = YES
+2025-11-21T13:57:21.2176050Z                PROVISIONING_PROFILE_SUPPORTED = YES
+2025-11-21T13:57:21.2176290Z                PUBLIC_HEADERS_FOLDER_PATH = Runner.app/Headers
+2025-11-21T13:57:21.2176560Z                RECOMMENDED_IPHONEOS_DEPLOYMENT_TARGET = 15.0
+2025-11-21T13:57:21.2176820Z                RECURSIVE_SEARCH_PATHS_FOLLOW_SYMLINKS = YES
+2025-11-21T13:57:21.2177050Z                REMOVE_CVS_FROM_RESOURCES = YES
+2025-11-21T13:57:21.2177260Z                REMOVE_GIT_FROM_RESOURCES = YES
+2025-11-21T13:57:21.2177480Z                REMOVE_HEADERS_FROM_EMBEDDED_BUNDLES = YES
+2025-11-21T13:57:21.2177720Z                REMOVE_HG_FROM_RESOURCES = YES
+2025-11-21T13:57:21.2177980Z                REMOVE_STATIC_EXECUTABLES_FROM_EMBEDDED_BUNDLES = YES
+2025-11-21T13:57:21.2178250Z                REMOVE_SVN_FROM_RESOURCES = YES
+2025-11-21T13:57:21.2178480Z                RESCHEDULE_INDEPENDENT_HEADERS_PHASES = YES
+2025-11-21T13:57:21.2179210Z                REZ_COLLECTOR_DIR = /Users/runner/Library/Developer/Xcode/DerivedData/Runner-btbhgfzdxuodwifqaxhqxmqztnps/Build/Intermediates.noindex/Runner.build/Release-iphoneos/Runner.build/ResourceManagerResources
+2025-11-21T13:57:21.2180460Z                REZ_OBJECTS_DIR = /Users/runner/Library/Developer/Xcode/DerivedData/Runner-btbhgfzdxuodwifqaxhqxmqztnps/Build/Intermediates.noindex/Runner.build/Release-iphoneos/Runner.build/ResourceManagerResources/Objects
+2025-11-21T13:57:21.2181280Z                REZ_SEARCH_PATHS = /Users/runner/work/tagfix/tagfix/flutter_app/build/ios/Release-iphoneos 
+2025-11-21T13:57:21.2181620Z                SCAN_ALL_SOURCE_FILES_FOR_INCLUDES = NO
+2025-11-21T13:57:21.2181860Z                SCRIPTS_FOLDER_PATH = Runner.app/Scripts
+2025-11-21T13:57:21.2182330Z                SDKROOT = /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk
+2025-11-21T13:57:21.2183160Z                SDK_DIR = /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk
+2025-11-21T13:57:21.2183820Z                SDK_DIR_iphoneos = /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk
+2025-11-21T13:57:21.2184500Z                SDK_DIR_iphoneos18_5 = /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk
+2025-11-21T13:57:21.2184960Z                SDK_NAME = iphoneos18.5
+2025-11-21T13:57:21.2185170Z                SDK_NAMES = iphoneos18.5
+2025-11-21T13:57:21.2185400Z                SDK_PRODUCT_BUILD_VERSION = 22F76
+2025-11-21T13:57:21.2185680Z                SDK_STAT_CACHE_DIR = /Users/runner/Library/Developer/Xcode/DerivedData
+2025-11-21T13:57:21.2185960Z                SDK_STAT_CACHE_ENABLE = YES
+2025-11-21T13:57:21.2187670Z                SDK_STAT_CACHE_PATH = /Users/runner/Library/Developer/Xcode/DerivedData/SDKStatCaches.noindex/iphoneos18.5-22F76-a529daf784b3616c7c04a36aeb7f5c05.sdkstatcache
+2025-11-21T13:57:21.2189420Z                SDK_VERSION = 18.5
+2025-11-21T13:57:21.2189990Z                SDK_VERSION_ACTUAL = 180500
+2025-11-21T13:57:21.2190550Z                SDK_VERSION_MAJOR = 180000
+2025-11-21T13:57:21.2191090Z                SDK_VERSION_MINOR = 180500
+2025-11-21T13:57:21.2191600Z                SED = /usr/bin/sed
+2025-11-21T13:57:21.2192080Z                SEPARATE_STRIP = NO
+2025-11-21T13:57:21.2192570Z                SEPARATE_SYMBOL_EDIT = NO
+2025-11-21T13:57:21.2193120Z                SET_DIR_MODE_OWNER_GROUP = YES
+2025-11-21T13:57:21.2193690Z                SET_FILE_MODE_OWNER_GROUP = NO
+2025-11-21T13:57:21.2194240Z                SHALLOW_BUNDLE = YES
+2025-11-21T13:57:21.2194740Z                SHALLOW_BUNDLE_TRIPLE = ios
+2025-11-21T13:57:21.2195330Z                SHALLOW_BUNDLE_ios_macabi = NO
+2025-11-21T13:57:21.2197020Z                SHALLOW_BUNDLE_macos = NO
+2025-11-21T13:57:21.2198080Z                SHARED_DERIVED_FILE_DIR = /Users/runner/work/tagfix/tagfix/flutter_app/build/ios/Release-iphoneos/DerivedSources
+2025-11-21T13:57:21.2199790Z                SHARED_FRAMEWORKS_FOLDER_PATH = Runner.app/SharedFrameworks
+2025-11-21T13:57:21.2201640Z                SHARED_PRECOMPS_DIR = /Users/runner/Library/Developer/Xcode/DerivedData/Runner-btbhgfzdxuodwifqaxhqxmqztnps/Build/Intermediates.noindex/PrecompiledHeaders
+2025-11-21T13:57:21.2205640Z                SHARED_SUPPORT_FOLDER_PATH = Runner.app/SharedSupport
+2025-11-21T13:57:21.2206010Z                SKIP_INSTALL = NO
+2025-11-21T13:57:21.2210240Z                SOURCE_ROOT = /Users/runner/work/tagfix/tagfix/flutter_app/ios
+2025-11-21T13:57:21.2210640Z                SRCROOT = /Users/runner/work/tagfix/tagfix/flutter_app/ios
+2025-11-21T13:57:21.2211530Z                STRINGSDATA_DIR = /Users/runner/Library/Developer/Xcode/DerivedData/Runner-btbhgfzdxuodwifqaxhqxmqztnps/Build/Intermediates.noindex/Runner.build/Release-iphoneos/Runner.build/Objects-normal/undefined_arch
+2025-11-21T13:57:21.2213630Z                STRINGSDATA_ROOT = /Users/runner/Library/Developer/Xcode/DerivedData/Runner-btbhgfzdxuodwifqaxhqxmqztnps/Build/Intermediates.noindex/Runner.build/Release-iphoneos/Runner.build
+2025-11-21T13:57:21.2214450Z                STRINGS_FILE_INFOPLIST_RENAME = YES
+2025-11-21T13:57:21.2223430Z                STRINGS_FILE_OUTPUT_ENCODING = binary
+2025-11-21T13:57:21.2223690Z                STRIP_BITCODE_FROM_COPIED_FILES = YES
+2025-11-21T13:57:21.2223900Z                STRIP_INSTALLED_PRODUCT = YES
+2025-11-21T13:57:21.2224090Z                STRIP_STYLE = all
+2025-11-21T13:57:21.2224260Z                STRIP_SWIFT_SYMBOLS = YES
+2025-11-21T13:57:21.2224460Z                SUPPORTED_DEVICE_FAMILIES = 1,2
+2025-11-21T13:57:21.2224660Z                SUPPORTED_PLATFORMS = iphoneos
+2025-11-21T13:57:21.2224860Z                SUPPORTS_MACCATALYST = NO
+2025-11-21T13:57:21.2225090Z                SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES
+2025-11-21T13:57:21.2225640Z                SUPPORTS_ON_DEMAND_RESOURCES = YES
+2025-11-21T13:57:21.2225850Z                SUPPORTS_TEXT_BASED_API = NO
+2025-11-21T13:57:21.2226070Z                SUPPORTS_XR_DESIGNED_FOR_IPHONE_IPAD = YES
+2025-11-21T13:57:21.2226280Z                SUPPRESS_WARNINGS = NO
+2025-11-21T13:57:21.2226480Z                SWIFT_COMPILATION_MODE = wholemodule
+2025-11-21T13:57:21.2226680Z                SWIFT_EMIT_LOC_STRINGS = NO
+2025-11-21T13:57:21.2226950Z                SWIFT_OBJC_BRIDGING_HEADER = Runner/Runner-Bridging-Header.h
+2025-11-21T13:57:21.2227230Z                SWIFT_OPTIMIZATION_LEVEL = -O
+2025-11-21T13:57:21.2227440Z                SWIFT_PLATFORM_TARGET_PREFIX = ios
+2025-11-21T13:57:21.2228240Z                SWIFT_RESPONSE_FILE_PATH_normal_arm64 = /Users/runner/Library/Developer/Xcode/DerivedData/Runner-btbhgfzdxuodwifqaxhqxmqztnps/Build/Intermediates.noindex/Runner.build/Release-iphoneos/Runner.build/Objects-normal/arm64/Runner.SwiftFileList
+2025-11-21T13:57:21.2229090Z                SWIFT_VERSION = 5.0
+2025-11-21T13:57:21.2229480Z                SYMROOT = /Users/runner/Library/Developer/Xcode/DerivedData/Runner-btbhgfzdxuodwifqaxhqxmqztnps/Build/Products
+2025-11-21T13:57:21.2229910Z                SYSTEM_ADMIN_APPS_DIR = /Applications/Utilities
+2025-11-21T13:57:21.2230140Z                SYSTEM_APPS_DIR = /Applications
+2025-11-21T13:57:21.2230380Z                SYSTEM_CORE_SERVICES_DIR = /System/Library/CoreServices
+2025-11-21T13:57:21.2230630Z                SYSTEM_DEMOS_DIR = /Applications/Extras
+2025-11-21T13:57:21.2230960Z                SYSTEM_DEVELOPER_APPS_DIR = /Applications/Xcode_16.4.app/Contents/Developer/Applications
+2025-11-21T13:57:21.2231380Z                SYSTEM_DEVELOPER_BIN_DIR = /Applications/Xcode_16.4.app/Contents/Developer/usr/bin
+2025-11-21T13:57:21.2231870Z                SYSTEM_DEVELOPER_DEMOS_DIR = /Applications/Xcode_16.4.app/Contents/Developer/Applications/Utilities/Built Examples
+2025-11-21T13:57:21.2232640Z                SYSTEM_DEVELOPER_DIR = /Applications/Xcode_16.4.app/Contents/Developer
+2025-11-21T13:57:21.2233050Z                SYSTEM_DEVELOPER_DOC_DIR = /Applications/Xcode_16.4.app/Contents/Developer/ADC Reference Library
+2025-11-21T13:57:21.2233570Z                SYSTEM_DEVELOPER_GRAPHICS_TOOLS_DIR = /Applications/Xcode_16.4.app/Contents/Developer/Applications/Graphics Tools
+2025-11-21T13:57:21.2234110Z                SYSTEM_DEVELOPER_JAVA_TOOLS_DIR = /Applications/Xcode_16.4.app/Contents/Developer/Applications/Java Tools
+2025-11-21T13:57:21.2234660Z                SYSTEM_DEVELOPER_PERFORMANCE_TOOLS_DIR = /Applications/Xcode_16.4.app/Contents/Developer/Applications/Performance Tools
+2025-11-21T13:57:21.2235260Z                SYSTEM_DEVELOPER_RELEASENOTES_DIR = /Applications/Xcode_16.4.app/Contents/Developer/ADC Reference Library/releasenotes
+2025-11-21T13:57:21.2235750Z                SYSTEM_DEVELOPER_TOOLS = /Applications/Xcode_16.4.app/Contents/Developer/Tools
+2025-11-21T13:57:21.2236280Z                SYSTEM_DEVELOPER_TOOLS_DOC_DIR = /Applications/Xcode_16.4.app/Contents/Developer/ADC Reference Library/documentation/DeveloperTools
+2025-11-21T13:57:21.2237280Z                SYSTEM_DEVELOPER_TOOLS_RELEASENOTES_DIR = /Applications/Xcode_16.4.app/Contents/Developer/ADC Reference Library/releasenotes/DeveloperTools
+2025-11-21T13:57:21.2239640Z                SYSTEM_DEVELOPER_USR_DIR = /Applications/Xcode_16.4.app/Contents/Developer/usr
+2025-11-21T13:57:21.2241000Z                SYSTEM_DEVELOPER_UTILITIES_DIR = /Applications/Xcode_16.4.app/Contents/Developer/Applications/Utilities
+2025-11-21T13:57:21.2242110Z                SYSTEM_DEXT_INSTALL_PATH = /System/Library/DriverExtensions
+2025-11-21T13:57:21.2242930Z                SYSTEM_DOCUMENTATION_DIR = /Library/Documentation
+2025-11-21T13:57:21.2243740Z                SYSTEM_EXTENSIONS_FOLDER_PATH = Runner.app/SystemExtensions
+2025-11-21T13:57:21.2244710Z                SYSTEM_EXTENSIONS_FOLDER_PATH_SHALLOW_BUNDLE_NO = Runner.app/Library/SystemExtensions
+2025-11-21T13:57:21.2245880Z                SYSTEM_EXTENSIONS_FOLDER_PATH_SHALLOW_BUNDLE_YES = Runner.app/SystemExtensions
+2025-11-21T13:57:21.2247590Z                SYSTEM_KEXT_INSTALL_PATH = /System/Library/Extensions
+2025-11-21T13:57:21.2248250Z                SYSTEM_LIBRARY_DIR = /System/Library
+2025-11-21T13:57:21.2248820Z                TAPI_DEMANGLE = YES
+2025-11-21T13:57:21.2249570Z                TAPI_ENABLE_PROJECT_HEADERS = NO
+2025-11-21T13:57:21.2250130Z                TAPI_LANGUAGE = objective-c
+2025-11-21T13:57:21.2250690Z                TAPI_LANGUAGE_STANDARD = compiler-default
+2025-11-21T13:57:21.2251270Z                TAPI_USE_SRCROOT = YES
+2025-11-21T13:57:21.2251790Z                TAPI_VERIFY_MODE = Pedantic
+2025-11-21T13:57:21.2252370Z                TARGETED_DEVICE_FAMILY = 1,2
+2025-11-21T13:57:21.2252900Z                TARGETNAME = Runner
+2025-11-21T13:57:21.2253740Z                TARGET_BUILD_DIR = /Users/runner/work/tagfix/tagfix/flutter_app/build/ios/Release-iphoneos
+2025-11-21T13:57:21.2254690Z                TARGET_NAME = Runner
+2025-11-21T13:57:21.2256550Z                TARGET_TEMP_DIR = /Users/runner/Library/Developer/Xcode/DerivedData/Runner-btbhgfzdxuodwifqaxhqxmqztnps/Build/Intermediates.noindex/Runner.build/Release-iphoneos/Runner.build
+2025-11-21T13:57:21.2259410Z                TEMP_DIR = /Users/runner/Library/Developer/Xcode/DerivedData/Runner-btbhgfzdxuodwifqaxhqxmqztnps/Build/Intermediates.noindex/Runner.build/Release-iphoneos/Runner.build
+2025-11-21T13:57:21.2262050Z                TEMP_FILES_DIR = /Users/runner/Library/Developer/Xcode/DerivedData/Runner-btbhgfzdxuodwifqaxhqxmqztnps/Build/Intermediates.noindex/Runner.build/Release-iphoneos/Runner.build
+2025-11-21T13:57:21.2264770Z                TEMP_FILE_DIR = /Users/runner/Library/Developer/Xcode/DerivedData/Runner-btbhgfzdxuodwifqaxhqxmqztnps/Build/Intermediates.noindex/Runner.build/Release-iphoneos/Runner.build
+2025-11-21T13:57:21.2267070Z                TEMP_ROOT = /Users/runner/Library/Developer/Xcode/DerivedData/Runner-btbhgfzdxuodwifqaxhqxmqztnps/Build/Intermediates.noindex
+2025-11-21T13:57:21.2271110Z                TEMP_SANDBOX_DIR = /Users/runner/Library/Developer/Xcode/DerivedData/Runner-btbhgfzdxuodwifqaxhqxmqztnps/Build/Intermediates.noindex/TemporaryTaskSandboxes
+2025-11-21T13:57:21.2273560Z                TEST_FRAMEWORK_SEARCH_PATHS =  /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/Library/Frameworks /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS18.5.sdk/Developer/Library/Frameworks
+2025-11-21T13:57:21.2274760Z                TEST_LIBRARY_SEARCH_PATHS =  /Applications/Xcode_16.4.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/usr/lib
+2025-11-21T13:57:21.2275220Z                TOOLCHAINS = com.apple.dt.toolchain.XcodeDefault
+2025-11-21T13:57:21.2275630Z                TOOLCHAIN_DIR = /Applications/Xcode_16.4.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain
+2025-11-21T13:57:21.2276010Z                TRACK_WIDGET_CREATION = true
+2025-11-21T13:57:21.2276250Z                TREAT_MISSING_BASELINES_AS_TEST_FAILURES = NO
+2025-11-21T13:57:21.2276520Z                TREAT_MISSING_SCRIPT_PHASE_OUTPUTS_AS_ERRORS = NO
+2025-11-21T13:57:21.2276750Z                TREE_SHAKE_ICONS = false
+2025-11-21T13:57:21.2276930Z                UID = 501
+2025-11-21T13:57:21.2277460Z                UNINSTALLED_PRODUCTS_DIR = /Users/runner/Library/Developer/Xcode/DerivedData/Runner-btbhgfzdxuodwifqaxhqxmqztnps/Build/Intermediates.noindex/UninstalledProducts
+2025-11-21T13:57:21.2278090Z                UNLOCALIZED_RESOURCES_FOLDER_PATH = Runner.app
+2025-11-21T13:57:21.2278440Z                UNLOCALIZED_RESOURCES_FOLDER_PATH_SHALLOW_BUNDLE_NO = Runner.app/Resources
+2025-11-21T13:57:21.2278820Z                UNLOCALIZED_RESOURCES_FOLDER_PATH_SHALLOW_BUNDLE_YES = Runner.app
+2025-11-21T13:57:21.2279090Z                UNSTRIPPED_PRODUCT = NO
+2025-11-21T13:57:21.2279270Z                USER = runner
+2025-11-21T13:57:21.2279480Z                USER_APPS_DIR = /Users/runner/Applications
+2025-11-21T13:57:21.2280020Z                USER_LIBRARY_DIR = /Users/runner/Library
+2025-11-21T13:57:21.2280230Z                USE_DYNAMIC_NO_PIC = YES
+2025-11-21T13:57:21.2280410Z                USE_HEADERMAP = YES
+2025-11-21T13:57:21.2280600Z                USE_HEADER_SYMLINKS = NO
+2025-11-21T13:57:21.2280810Z                VALIDATE_DEVELOPMENT_ASSET_PATHS = YES_ERROR
+2025-11-21T13:57:21.2281030Z                VALIDATE_PRODUCT = YES
+2025-11-21T13:57:21.2281230Z                VALID_ARCHS = arm64 arm64e armv7 armv7s
+2025-11-21T13:57:21.2281440Z                VERBOSE_PBXCP = NO
+2025-11-21T13:57:21.2281630Z                VERSIONING_SYSTEM = apple-generic
+2025-11-21T13:57:21.2281860Z                VERSIONPLIST_PATH = Runner.app/version.plist
+2025-11-21T13:57:21.2282120Z                VERSION_INFO_BUILDER = runner
+2025-11-21T13:57:21.2282350Z                VERSION_INFO_FILE = Runner_vers.c
+2025-11-21T13:57:21.2282630Z                VERSION_INFO_STRING = "@(#)PROGRAM:Runner  PROJECT:Runner-1"
+2025-11-21T13:57:21.2283010Z                WORKSPACE_DIR = /Users/runner/work/tagfix/tagfix/flutter_app/ios/Runner.xcodeproj
+2025-11-21T13:57:21.2283320Z                WRAPPER_EXTENSION = app
+2025-11-21T13:57:21.2283520Z                WRAPPER_NAME = Runner.app
+2025-11-21T13:57:21.2283740Z                WRAPPER_SUFFIX = .app
+2025-11-21T13:57:21.2283980Z                WRAP_ASSET_PACKS_IN_SEPARATE_DIRECTORIES = NO
+2025-11-21T13:57:21.2284320Z                XCODE_APP_SUPPORT_DIR = /Applications/Xcode_16.4.app/Contents/Developer/Library/Xcode
+2025-11-21T13:57:21.2284660Z                XCODE_PRODUCT_BUILD_VERSION = 16F6
+2025-11-21T13:57:21.2284860Z                XCODE_VERSION_ACTUAL = 1640
+2025-11-21T13:57:21.2285070Z                XCODE_VERSION_MAJOR = 1600
+2025-11-21T13:57:21.2285320Z                XCODE_VERSION_MINOR = 1640
+2025-11-21T13:57:21.2285580Z                XPCSERVICES_FOLDER_PATH = Runner.app/XPCServices
+2025-11-21T13:57:21.2285960Z                YACC = yacc
+2025-11-21T13:57:21.2286140Z                _DISCOVER_COMMAND_LINE_LINKER_INPUTS = YES
+2025-11-21T13:57:21.2286390Z                _DISCOVER_COMMAND_LINE_LINKER_INPUTS_INCLUDE_WL = YES
+2025-11-21T13:57:21.2286670Z                _WRAPPER_CONTENTS_DIR_SHALLOW_BUNDLE_NO = /Contents
+2025-11-21T13:57:21.2286910Z                _WRAPPER_PARENT_PATH_SHALLOW_BUNDLE_NO = /..
+2025-11-21T13:57:21.2287180Z                _WRAPPER_RESOURCES_DIR_SHALLOW_BUNDLE_NO = /Resources
+2025-11-21T13:57:21.2287430Z                __DIAGNOSE_DEPRECATED_ARCHS = YES
+2025-11-21T13:57:21.2287620Z                __IS_NOT_MACOS = YES
+2025-11-21T13:57:21.2287800Z                __IS_NOT_MACOS_macosx = NO
+2025-11-21T13:57:21.2287990Z                __IS_NOT_SIMULATOR = YES
+2025-11-21T13:57:21.2288200Z                __IS_NOT_SIMULATOR_simulator = NO
+2025-11-21T13:57:21.2288400Z                arch = undefined_arch
+2025-11-21T13:57:21.2288580Z                variant = normal
+2025-11-21T13:57:21.2289060Z [ +182 ms] executing: /usr/bin/plutil -convert xml1 -o - /Users/runner/work/tagfix/tagfix/flutter_app/ios/Runner/Info.plist
+2025-11-21T13:57:21.2289680Z [ +250 ms] Exit code 0 from: /usr/bin/plutil -convert xml1 -o - /Users/runner/work/tagfix/tagfix/flutter_app/ios/Runner/Info.plist
+2025-11-21T13:57:21.2290130Z [        ] <?xml version="1.0" encoding="UTF-8"?>
+2025-11-21T13:57:21.2290580Z            <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+2025-11-21T13:57:21.2290940Z            <plist version="1.0">
+2025-11-21T13:57:21.2291100Z            <dict>
+2025-11-21T13:57:21.2291300Z            	<key>CADisableMinimumFrameDurationOnPhone</key>
+2025-11-21T13:57:21.2291510Z            	<true/>
+2025-11-21T13:57:21.2291660Z            	<key>CFBundleDevelopmentRegion</key>
+2025-11-21T13:57:21.2291880Z            	<string>$(DEVELOPMENT_LANGUAGE)</string>
+2025-11-21T13:57:21.2292100Z            	<key>CFBundleDisplayName</key>
+2025-11-21T13:57:21.2292300Z            	<string>Flutter App</string>
+2025-11-21T13:57:21.2292500Z            	<key>CFBundleExecutable</key>
+2025-11-21T13:57:21.2292830Z            	<string>$(EXECUTABLE_NAME)</string>
+2025-11-21T13:57:21.2293040Z            	<key>CFBundleIdentifier</key>
+2025-11-21T13:57:21.2293270Z            	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+2025-11-21T13:57:21.2293510Z            	<key>CFBundleInfoDictionaryVersion</key>
+2025-11-21T13:57:21.2293710Z            	<string>6.0</string>
+2025-11-21T13:57:21.2293900Z            	<key>CFBundleName</key>
+2025-11-21T13:57:21.2294110Z            	<string>flutter_app</string>
+2025-11-21T13:57:21.2294310Z            	<key>CFBundlePackageType</key>
+2025-11-21T13:57:21.2294490Z            	<string>APPL</string>
+2025-11-21T13:57:21.2294680Z            	<key>CFBundleShortVersionString</key>
+2025-11-21T13:57:21.2294900Z            	<string>$(FLUTTER_BUILD_NAME)</string>
+2025-11-21T13:57:21.2295100Z            	<key>CFBundleSignature</key>
+2025-11-21T13:57:21.2295290Z            	<string>????</string>
+2025-11-21T13:57:21.2295460Z            	<key>CFBundleVersion</key>
+2025-11-21T13:57:21.2295660Z            	<string>$(FLUTTER_BUILD_NUMBER)</string>
+2025-11-21T13:57:21.2295870Z            	<key>LSRequiresIPhoneOS</key>
+2025-11-21T13:57:21.2296060Z            	<true/>
+2025-11-21T13:57:21.2296270Z            	<key>UIApplicationSupportsIndirectInputEvents</key>
+2025-11-21T13:57:21.2296520Z            	<true/>
+2025-11-21T13:57:21.2296690Z            	<key>UILaunchStoryboardName</key>
+2025-11-21T13:57:21.2296930Z            	<string>LaunchScreen</string>
+2025-11-21T13:57:21.2297130Z            	<key>UIMainStoryboardFile</key>
+2025-11-21T13:57:21.2297320Z            	<string>Main</string>
+2025-11-21T13:57:21.2297540Z            	<key>UISupportedInterfaceOrientations</key>
+2025-11-21T13:57:21.2297750Z            	<array>
+2025-11-21T13:57:21.2297940Z            		<string>UIInterfaceOrientationPortrait</string>
+2025-11-21T13:57:21.2298250Z            		<string>UIInterfaceOrientationLandscapeLeft</string>
+2025-11-21T13:57:21.2299230Z            		<string>UIInterfaceOrientationLandscapeRight</string>
+2025-11-21T13:57:21.2300260Z            	</array>
+2025-11-21T13:57:21.2300840Z            	<key>UISupportedInterfaceOrientations~ipad</key>
+2025-11-21T13:57:21.2301510Z            	<array>
+2025-11-21T13:57:21.2301980Z            		<string>UIInterfaceOrientationPortrait</string>
+2025-11-21T13:57:21.2302820Z            		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+2025-11-21T13:57:21.2303640Z            		<string>UIInterfaceOrientationLandscapeLeft</string>
+2025-11-21T13:57:21.2304470Z            		<string>UIInterfaceOrientationLandscapeRight</string>
+2025-11-21T13:57:21.2308780Z            	</array>
+2025-11-21T13:57:21.2308960Z            </dict>
+2025-11-21T13:57:21.2309110Z            </plist>
+2025-11-21T13:57:21.2309330Z [ +517 ms] Building com.example.flutterApp for device (ios-release)...
+2025-11-21T13:57:21.2311690Z [  +49 ms] Updating minimum iOS deployment target to 13.0.
+2025-11-21T13:57:21.2311960Z [        ] Migrating project.pbxproj, replacing:
+2025-11-21T13:57:21.2312210Z [        ]     				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+2025-11-21T13:57:21.2312400Z [        ] with:
+2025-11-21T13:57:21.2312560Z [        ]     				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+2025-11-21T13:57:21.2312770Z [        ] Migrating project.pbxproj, replacing:
+2025-11-21T13:57:21.2313010Z [        ]     				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+2025-11-21T13:57:21.2313210Z [        ] with:
+2025-11-21T13:57:21.2313390Z [        ]     				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+2025-11-21T13:57:21.2314290Z [        ] Migrating project.pbxproj, replacing:
+2025-11-21T13:57:21.2314510Z [        ]     				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+2025-11-21T13:57:21.2314690Z [        ] with:
+2025-11-21T13:57:21.2314840Z [        ]     				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
+2025-11-21T13:57:21.2315040Z [        ] Upgrading project.pbxproj
+2025-11-21T13:57:21.2315550Z [   +5 ms] Migrating AppFrameworkInfo.plist contents
+2025-11-21T13:57:21.2315810Z [        ] Upgrading AppFrameworkInfo.plist
+2025-11-21T13:57:21.2316290Z [   +7 ms] Upgrading Podfile
+2025-11-21T13:57:21.2316650Z [  +47 ms] The Swift Package Manager feature is off. Skipping the migration that adds Swift Package Manager integration...
+2025-11-21T13:57:21.2317040Z [  +10 ms] Migrating Runner.xcscheme contents
+2025-11-21T13:57:21.2317280Z [        ] Upgrading Runner.xcscheme
+2025-11-21T13:57:21.2317600Z [   +1 ms] executing: xattr -r -d com.apple.FinderInfo /Users/runner/work/tagfix/tagfix/flutter_app
+2025-11-21T13:57:21.2318060Z [ +109 ms] Found plugin window_manager at /Users/runner/.pub-cache/hosted/pub.dev/window_manager-0.3.9/
+2025-11-21T13:57:21.2318630Z [        ] Found plugin screen_retriever at /Users/runner/.pub-cache/hosted/pub.dev/screen_retriever-0.1.9/
+2025-11-21T13:57:21.2319130Z [   +1 ms] Found plugin path_provider at /Users/runner/.pub-cache/hosted/pub.dev/path_provider-2.1.5/
+2025-11-21T13:57:21.2319630Z [        ] Found plugin path_provider_windows at /Users/runner/.pub-cache/hosted/pub.dev/path_provider_windows-2.3.0/
+2025-11-21T13:57:21.2320180Z [   +4 ms] Found plugin path_provider_linux at /Users/runner/.pub-cache/hosted/pub.dev/path_provider_linux-2.2.1/
+2025-11-21T13:57:21.2320770Z [   +1 ms] Found plugin path_provider_foundation at /Users/runner/.pub-cache/hosted/pub.dev/path_provider_foundation-2.4.1/
+2025-11-21T13:57:21.2321380Z [   +1 ms] Found plugin path_provider_android at /Users/runner/.pub-cache/hosted/pub.dev/path_provider_android-2.2.15/
+2025-11-21T13:57:21.2321910Z [   +6 ms] Found plugin file_picker at /Users/runner/.pub-cache/hosted/pub.dev/file_picker-8.3.7/
+2025-11-21T13:57:21.2322510Z [   +1 ms] Found plugin flutter_plugin_android_lifecycle at /Users/runner/.pub-cache/hosted/pub.dev/flutter_plugin_android_lifecycle-2.0.26/
+2025-11-21T13:57:21.2323100Z [        ] Found plugin desktop_drop at /Users/runner/.pub-cache/hosted/pub.dev/desktop_drop-0.4.4/
+2025-11-21T13:57:21.2323540Z [        ] Found plugin audiotags at /Users/runner/.pub-cache/hosted/pub.dev/audiotags-1.4.5/
+2025-11-21T13:57:21.2323990Z [   +5 ms] executing: which pod
+2025-11-21T13:57:21.2324180Z [  +13 ms] executing: pod --version
+2025-11-21T13:57:23.8456510Z [+3732 ms] 1.16.2
+2025-11-21T13:57:23.8584410Z [   +2 ms] Running pod install...
+2025-11-21T13:57:24.5054050Z [ +656 ms] Running pod install... (completed in 656ms)
+2025-11-21T13:57:24.5157190Z [   +6 ms] Error running pod install
+2025-11-21T13:57:24.5157530Z [   +1 ms] CocoaPods' output:
+2025-11-21T13:57:24.5258360Z [        ] 
+2025-11-21T13:57:24.5260950Z            ↳
+2025-11-21T13:57:24.5359070Z            #0      throwToolExit (package:flutter_tools/src/base/common.dart:34:3)
+2025-11-21T13:57:24.5359410Z [        ] 
+2025-11-21T13:57:24.5533040Z            #1      CocoaPods._runPodInstall (package:flutter_tools/src/macos/cocoapods.dart:366:7)
+2025-11-21T13:57:24.5533670Z                [!] Invalid `Podfile` file: cannot load such file -- /Users/runner/work/tagfix/tagfix/flutter_app/ios/Flutter/podhelper.rb.
+2025-11-21T13:57:24.5534520Z            <asynchronous suspension>
+2025-11-21T13:57:24.5534710Z 
+2025-11-21T13:57:24.5636300Z            #2      CocoaPods.processPods (package:flutter_tools/src/macos/cocoapods.dart:180:7)
+2025-11-21T13:57:24.5637460Z                 #  from /Users/runner/work/tagfix/tagfix/flutter_app/ios/Podfile:25
+2025-11-21T13:57:24.5737090Z            <asynchronous suspension>
+2025-11-21T13:57:24.5737430Z                 #  -------------------------------------------
+2025-11-21T13:57:24.5841260Z            #3      processPodsIfNeeded (package:flutter_tools/src/macos/cocoapod_utils.dart:87:7)
+2025-11-21T13:57:24.5841690Z                 #  
+2025-11-21T13:57:24.5942670Z            <asynchronous suspension>
+2025-11-21T13:57:24.5943040Z                 >  require File.expand_path(File.join('..', 'Flutter', 'podhelper.rb'), __FILE__)
+2025-11-21T13:57:24.6044270Z            #4      buildXcodeProject (package:flutter_tools/src/ios/mac.dart:313:3)
+2025-11-21T13:57:24.6044660Z                 #  
+2025-11-21T13:57:24.6145480Z            <asynchronous suspension>
+2025-11-21T13:57:24.6146280Z                 #  -------------------------------------------
+2025-11-21T13:57:24.6276290Z            #5      _BuildIOSSubCommand.runCommand (package:flutter_tools/src/commands/build_ios.dart:758:37)
+2025-11-21T13:57:24.6276630Z 
+2025-11-21T13:57:24.6380300Z            <asynchronous suspension>
+2025-11-21T13:57:24.6381630Z                /opt/homebrew/lib/ruby/gems/3.3.0/gems/cocoapods-core-1.16.2/lib/cocoapods-core/podfile.rb:335:in `rescue in block in from_ruby'
+2025-11-21T13:57:24.6487450Z            #6      FlutterCommand.run.<anonymous closure> (package:flutter_tools/src/runner/flutter_command.dart:1559:27)
+2025-11-21T13:57:24.6488650Z                /opt/homebrew/lib/ruby/gems/3.3.0/gems/cocoapods-core-1.16.2/lib/cocoapods-core/podfile.rb:329:in `block in from_ruby'
+2025-11-21T13:57:24.6589910Z            <asynchronous suspension>
+2025-11-21T13:57:24.6590440Z                /opt/homebrew/lib/ruby/gems/3.3.0/gems/cocoapods-core-1.16.2/lib/cocoapods-core/podfile.rb:50:in `instance_eval'
+2025-11-21T13:57:24.6691840Z            #7      AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:154:19)
+2025-11-21T13:57:24.6692430Z                /opt/homebrew/lib/ruby/gems/3.3.0/gems/cocoapods-core-1.16.2/lib/cocoapods-core/podfile.rb:50:in `initialize'
+2025-11-21T13:57:24.6792450Z            <asynchronous suspension>
+2025-11-21T13:57:24.6792900Z                /opt/homebrew/lib/ruby/gems/3.3.0/gems/cocoapods-core-1.16.2/lib/cocoapods-core/podfile.rb:327:in `new'
+2025-11-21T13:57:24.6895750Z            #8      CommandRunner.runCommand (package:args/command_runner.dart:212:13)
+2025-11-21T13:57:24.6896320Z                /opt/homebrew/lib/ruby/gems/3.3.0/gems/cocoapods-core-1.16.2/lib/cocoapods-core/podfile.rb:327:in `from_ruby'
+2025-11-21T13:57:24.7000050Z            <asynchronous suspension>
+2025-11-21T13:57:24.7001870Z                /opt/homebrew/lib/ruby/gems/3.3.0/gems/cocoapods-core-1.16.2/lib/cocoapods-core/podfile.rb:293:in `from_file'
+2025-11-21T13:57:24.7107920Z            #9      FlutterCommandRunner.runCommand.<anonymous closure> (package:flutter_tools/src/runner/flutter_command_runner.dart:487:9)
+2025-11-21T13:57:24.7108660Z                /opt/homebrew/lib/ruby/gems/3.3.0/gems/cocoapods-1.16.2/lib/cocoapods/config.rb:206:in `podfile'
+2025-11-21T13:57:24.7209670Z            <asynchronous suspension>
+2025-11-21T13:57:24.7210510Z                /opt/homebrew/lib/ruby/gems/3.3.0/gems/cocoapods-1.16.2/lib/cocoapods/command.rb:160:in `verify_podfile_exists!'
+2025-11-21T13:57:24.7311010Z            #10     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:154:19)
+2025-11-21T13:57:24.7312390Z                /opt/homebrew/lib/ruby/gems/3.3.0/gems/cocoapods-1.16.2/lib/cocoapods/command/install.rb:46:in `run'
+2025-11-21T13:57:24.7414080Z            <asynchronous suspension>
+2025-11-21T13:57:24.7414530Z                /opt/homebrew/lib/ruby/gems/3.3.0/gems/claide-1.1.0/lib/claide/command.rb:334:in `run'
+2025-11-21T13:57:24.7515920Z            #11     FlutterCommandRunner.runCommand (package:flutter_tools/src/runner/flutter_command_runner.dart:422:5)
+2025-11-21T13:57:24.7516540Z                /opt/homebrew/lib/ruby/gems/3.3.0/gems/cocoapods-1.16.2/lib/cocoapods/command.rb:52:in `run'
+2025-11-21T13:57:24.7617890Z            <asynchronous suspension>
+2025-11-21T13:57:24.7618290Z                /opt/homebrew/lib/ruby/gems/3.3.0/gems/cocoapods-1.16.2/bin/pod:55:in `<top (required)>'
+2025-11-21T13:57:24.7736950Z            #12     run.<anonymous closure>.<anonymous closure> (package:flutter_tools/runner.dart:104:11)
+2025-11-21T13:57:24.7737400Z                /opt/homebrew/lib/ruby/site_ruby/3.3.0/rubygems.rb:319:in `load'
+2025-11-21T13:57:24.7851780Z            <asynchronous suspension>
+2025-11-21T13:57:24.7852210Z                /opt/homebrew/lib/ruby/site_ruby/3.3.0/rubygems.rb:319:in `activate_and_load_bin_path'
+2025-11-21T13:57:24.7954560Z            #13     AppContext.run.<anonymous closure> (package:flutter_tools/src/base/context.dart:154:19)
+2025-11-21T13:57:24.7955440Z                /opt/homebrew/lib/ruby/gems/3.3.0/bin/pod:25:in `<main>'
+2025-11-21T13:57:24.8060000Z            <asynchronous suspension>
+2025-11-21T13:57:24.8060510Z 
+2025-11-21T13:57:24.8162010Z            #14     main (package:flutter_tools/executable.dart:103:3)
+2025-11-21T13:57:24.8162310Z [   +3 ms] "flutter ios" took 14,768ms.
+2025-11-21T13:57:24.8274830Z            <asynchronous suspension>
+2025-11-21T13:57:24.8275140Z [        ] Running 2 shutdown hooks
+2025-11-21T13:57:24.8375210Z 
+2025-11-21T13:57:24.8375530Z [        ] Shutdown hooks complete
+2025-11-21T13:57:24.8476250Z 
+2025-11-21T13:57:24.8476580Z [        ] exiting with code 1
+2025-11-21T13:57:24.8616830Z ##[error]Process completed with exit code 1.

@@ -1,0 +1,26 @@
+﻿2025-11-21T13:56:40.9222694Z ##[group]Run chmod +x flutter_app/download_ffmpeg.sh
+2025-11-21T13:56:40.9223366Z [36;1mchmod +x flutter_app/download_ffmpeg.sh[0m
+2025-11-21T13:56:40.9223884Z [36;1m./flutter_app/download_ffmpeg.sh[0m
+2025-11-21T13:56:40.9271834Z shell: /usr/bin/bash -e {0}
+2025-11-21T13:56:40.9272207Z env:
+2025-11-21T13:56:40.9272615Z   FLUTTER_ROOT: /opt/hostedtoolcache/flutter/stable-3.38.2-x64
+2025-11-21T13:56:40.9273175Z   PUB_CACHE: /home/runner/.pub-cache
+2025-11-21T13:56:40.9273625Z ##[endgroup]
+2025-11-21T13:56:40.9362002Z === TagFix FFmpeg Platform-Aware Download Script ===
+2025-11-21T13:56:40.9362387Z 
+2025-11-21T13:56:40.9387165Z Detected platform: linux
+2025-11-21T13:56:40.9399711Z [Linux] Downloading ffmpeg...
+2025-11-21T13:56:40.9450150Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+2025-11-21T13:56:40.9450801Z                                  Dload  Upload   Total   Spent    Left  Speed
+2025-11-21T13:56:40.9451132Z 
+2025-11-21T13:56:41.5022932Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2025-11-21T13:56:42.1389838Z   0 39.9M    0  367k    0     0   659k      0  0:01:01 --:--:--  0:01:01  659k
+2025-11-21T13:56:42.1390526Z 100 39.9M  100 39.9M    0     0  33.4M      0  0:00:01  0:00:01 --:--:-- 33.4M
+2025-11-21T13:56:44.7529924Z [Linux] ffmpeg ready
+2025-11-21T13:56:44.7530222Z 
+2025-11-21T13:56:44.7530341Z Download completed.
+2025-11-21T13:56:44.7530551Z 
+2025-11-21T13:56:44.7530662Z Binary details:
+2025-11-21T13:56:44.7543263Z -rwxr-xr-x 1 runner runner 77M Aug 23  2024 ffmpeg
+2025-11-21T13:56:44.7545623Z 
+2025-11-21T13:56:44.7545852Z You can now build the Flutter app normally.

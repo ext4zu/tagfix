@@ -1,0 +1,10 @@
+﻿2025-11-21T13:56:27.2263361Z ##[group]Run chmod +x flutter_app/download_ffmpeg.sh
+2025-11-21T13:56:27.2263740Z [36;1mchmod +x flutter_app/download_ffmpeg.sh[0m
+2025-11-21T13:56:27.2264121Z [36;1m# Optional for Android if not using assets/ffmpeg directly[0m
+2025-11-21T13:56:27.2297188Z shell: /usr/bin/bash -e {0}
+2025-11-21T13:56:27.2297431Z env:
+2025-11-21T13:56:27.2297674Z   JAVA_HOME: /opt/hostedtoolcache/Java_Zulu_jdk/17.0.17-10/x64
+2025-11-21T13:56:27.2298065Z   JAVA_HOME_17_X64: /opt/hostedtoolcache/Java_Zulu_jdk/17.0.17-10/x64
+2025-11-21T13:56:27.2298456Z   FLUTTER_ROOT: /opt/hostedtoolcache/flutter/stable-3.38.2-x64
+2025-11-21T13:56:27.2298772Z   PUB_CACHE: /home/runner/.pub-cache
+2025-11-21T13:56:27.2299000Z ##[endgroup]

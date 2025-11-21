@@ -1,0 +1,270 @@
+﻿2025-11-21T13:55:22.4380056Z Current runner version: '2.329.0'
+2025-11-21T13:55:22.4414099Z ##[group]Runner Image Provisioner
+2025-11-21T13:55:22.4415347Z Hosted Compute Agent
+2025-11-21T13:55:22.4416212Z Version: 20251016.436
+2025-11-21T13:55:22.4417296Z Commit: 8ab8ac8bfd662a3739dab9fe09456aba92132568
+2025-11-21T13:55:22.4418420Z Build Date: 2025-10-15T20:44:12Z
+2025-11-21T13:55:22.4419330Z ##[endgroup]
+2025-11-21T13:55:22.4420068Z ##[group]Operating System
+2025-11-21T13:55:22.4420944Z Microsoft Windows Server 2025
+2025-11-21T13:55:22.4421752Z 10.0.26100
+2025-11-21T13:55:22.4422498Z Datacenter
+2025-11-21T13:55:22.4423210Z ##[endgroup]
+2025-11-21T13:55:22.4423967Z ##[group]Runner Image
+2025-11-21T13:55:22.4425063Z Image: windows-2025
+2025-11-21T13:55:22.4425879Z Version: 20251102.77.1
+2025-11-21T13:55:22.4427626Z Included Software: https://github.com/actions/runner-images/blob/win25/20251102.77/images/windows/Windows2025-Readme.md
+2025-11-21T13:55:22.4431471Z Image Release: https://github.com/actions/runner-images/releases/tag/win25%2F20251102.77
+2025-11-21T13:55:22.4433175Z ##[endgroup]
+2025-11-21T13:55:22.4434988Z ##[group]GITHUB_TOKEN Permissions
+2025-11-21T13:55:22.4437547Z Contents: read
+2025-11-21T13:55:22.4438285Z Metadata: read
+2025-11-21T13:55:22.4439000Z Packages: read
+2025-11-21T13:55:22.4439795Z ##[endgroup]
+2025-11-21T13:55:22.4442868Z Secret source: Actions
+2025-11-21T13:55:22.4443970Z Prepare workflow directory
+2025-11-21T13:55:22.4831378Z Prepare all required actions
+2025-11-21T13:55:22.4869741Z Getting action download info
+2025-11-21T13:55:22.7108493Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+2025-11-21T13:55:23.0585960Z Download action repository 'subosito/flutter-action@v2' (SHA:fd55f4c5af5b953cc57a2be44cb082c8f6635e8e)
+2025-11-21T13:55:23.3106815Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2025-11-21T13:55:23.6487321Z Getting action download info
+2025-11-21T13:55:23.7748059Z Download action repository 'actions/cache@v4' (SHA:0057852bfaa89a56745cba8c7296529d2fc39830)
+2025-11-21T13:55:23.9716326Z Complete job name: Build Windows
+2025-11-21T13:55:24.1307292Z ##[group]Run actions/checkout@v4
+2025-11-21T13:55:24.1309249Z with:
+2025-11-21T13:55:24.1309910Z   repository: k44yn3/tagfix
+2025-11-21T13:55:24.1311046Z   token: ***
+2025-11-21T13:55:24.1311690Z   ssh-strict: true
+2025-11-21T13:55:24.1312366Z   ssh-user: git
+2025-11-21T13:55:24.1313053Z   persist-credentials: true
+2025-11-21T13:55:24.1313809Z   clean: true
+2025-11-21T13:55:24.1314499Z   sparse-checkout-cone-mode: true
+2025-11-21T13:55:24.1315347Z   fetch-depth: 1
+2025-11-21T13:55:24.1316031Z   fetch-tags: false
+2025-11-21T13:55:24.1316741Z   show-progress: true
+2025-11-21T13:55:24.1317436Z   lfs: false
+2025-11-21T13:55:24.1318459Z   submodules: false
+2025-11-21T13:55:24.1319241Z   set-safe-directory: true
+2025-11-21T13:55:24.1320306Z ##[endgroup]
+2025-11-21T13:55:24.3080835Z Syncing repository: k44yn3/tagfix
+2025-11-21T13:55:24.3083154Z ##[group]Getting Git version info
+2025-11-21T13:55:24.3084454Z Working directory is 'D:\a\tagfix\tagfix'
+2025-11-21T13:55:24.4135760Z [command]"C:\Program Files\Git\bin\git.exe" version
+2025-11-21T13:55:24.8473485Z git version 2.51.2.windows.1
+2025-11-21T13:55:24.8534554Z ##[endgroup]
+2025-11-21T13:55:24.8558694Z Temporarily overriding HOME='D:\a\_temp\86491e4f-377f-400e-b1ce-71f7e56ed013' before making global git config changes
+2025-11-21T13:55:24.8560824Z Adding repository directory to the temporary git global config as a safe directory
+2025-11-21T13:55:24.8569705Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\tagfix\tagfix
+2025-11-21T13:55:24.9182429Z Deleting the contents of 'D:\a\tagfix\tagfix'
+2025-11-21T13:55:24.9189387Z ##[group]Initializing the repository
+2025-11-21T13:55:24.9199209Z [command]"C:\Program Files\Git\bin\git.exe" init D:\a\tagfix\tagfix
+2025-11-21T13:55:25.0147491Z Initialized empty Git repository in D:/a/tagfix/tagfix/.git/
+2025-11-21T13:55:25.0195529Z [command]"C:\Program Files\Git\bin\git.exe" remote add origin https://github.com/k44yn3/tagfix
+2025-11-21T13:55:25.0848988Z ##[endgroup]
+2025-11-21T13:55:25.0850232Z ##[group]Disabling automatic garbage collection
+2025-11-21T13:55:25.0859864Z [command]"C:\Program Files\Git\bin\git.exe" config --local gc.auto 0
+2025-11-21T13:55:25.1166563Z ##[endgroup]
+2025-11-21T13:55:25.1167700Z ##[group]Setting up auth
+2025-11-21T13:55:25.1179884Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2025-11-21T13:55:25.1497878Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2025-11-21T13:55:26.7636741Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-11-21T13:55:26.7955507Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2025-11-21T13:55:27.3442025Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2025-11-21T13:55:27.3762891Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2025-11-21T13:55:27.9398323Z [command]"C:\Program Files\Git\bin\git.exe" config --local http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+2025-11-21T13:55:27.9729838Z ##[endgroup]
+2025-11-21T13:55:27.9730530Z ##[group]Fetching the repository
+2025-11-21T13:55:27.9744532Z [command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +8186f408067a4688abe1ee4ed097b34858743f2d:refs/tags/v1.0.1
+2025-11-21T13:55:28.9707819Z From https://github.com/k44yn3/tagfix
+2025-11-21T13:55:28.9711719Z  * [new ref]         8186f408067a4688abe1ee4ed097b34858743f2d -> v1.0.1
+2025-11-21T13:55:29.0049546Z ##[endgroup]
+2025-11-21T13:55:29.0049947Z ##[group]Determining the checkout info
+2025-11-21T13:55:29.0052805Z ##[endgroup]
+2025-11-21T13:55:29.0068786Z [command]"C:\Program Files\Git\bin\git.exe" sparse-checkout disable
+2025-11-21T13:55:29.0580008Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all extensions.worktreeConfig
+2025-11-21T13:55:29.0915474Z ##[group]Checking out the ref
+2025-11-21T13:55:29.0926328Z [command]"C:\Program Files\Git\bin\git.exe" checkout --progress --force refs/tags/v1.0.1
+2025-11-21T13:55:29.2026695Z Note: switching to 'refs/tags/v1.0.1'.
+2025-11-21T13:55:29.2027096Z 
+2025-11-21T13:55:29.2027407Z You are in 'detached HEAD' state. You can look around, make experimental
+2025-11-21T13:55:29.2028131Z changes and commit them, and you can discard any commits you make in this
+2025-11-21T13:55:29.2029410Z state without impacting any branches by switching back to a branch.
+2025-11-21T13:55:29.2029955Z 
+2025-11-21T13:55:29.2030247Z If you want to create a new branch to retain commits you create, you may
+2025-11-21T13:55:29.2031847Z do so (now or later) by using -c with the switch command. Example:
+2025-11-21T13:55:29.2032234Z 
+2025-11-21T13:55:29.2032381Z   git switch -c <new-branch-name>
+2025-11-21T13:55:29.2032643Z 
+2025-11-21T13:55:29.2032780Z Or undo this operation with:
+2025-11-21T13:55:29.2033053Z 
+2025-11-21T13:55:29.2033167Z   git switch -
+2025-11-21T13:55:29.2033342Z 
+2025-11-21T13:55:29.2033634Z Turn off this advice by setting config variable advice.detachedHead to false
+2025-11-21T13:55:29.2034072Z 
+2025-11-21T13:55:29.2034196Z HEAD is now at 8186f40 Workflow update
+2025-11-21T13:55:29.2066122Z ##[endgroup]
+2025-11-21T13:55:29.2519528Z [command]"C:\Program Files\Git\bin\git.exe" log -1 --format=%H
+2025-11-21T13:55:29.2799308Z 8186f408067a4688abe1ee4ed097b34858743f2d
+2025-11-21T13:55:29.3297993Z ##[group]Run subosito/flutter-action@v2
+2025-11-21T13:55:29.3298313Z with:
+2025-11-21T13:55:29.3298465Z   channel: stable
+2025-11-21T13:55:29.3298640Z   flutter-version: 3.38.2
+2025-11-21T13:55:29.3298825Z   architecture: X64
+2025-11-21T13:55:29.3298981Z   cache: false
+2025-11-21T13:55:29.3299143Z   pub-cache-path: default
+2025-11-21T13:55:29.3299320Z   dry-run: false
+2025-11-21T13:55:29.3299554Z   git-source: https://github.com/flutter/flutter.git
+2025-11-21T13:55:29.3299798Z ##[endgroup]
+2025-11-21T13:55:29.3580916Z ##[group]Run chmod +x "$GITHUB_ACTION_PATH/setup.sh"
+2025-11-21T13:55:29.3581264Z [36;1mchmod +x "$GITHUB_ACTION_PATH/setup.sh"[0m
+2025-11-21T13:55:29.3599316Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+2025-11-21T13:55:29.3599732Z ##[endgroup]
+2025-11-21T13:55:29.5824193Z ##[group]Run $GITHUB_ACTION_PATH/setup.sh -p \
+2025-11-21T13:55:29.5824525Z [36;1m$GITHUB_ACTION_PATH/setup.sh -p \[0m
+2025-11-21T13:55:29.5825090Z [36;1m  -n '3.38.2' \[0m
+2025-11-21T13:55:29.5825262Z [36;1m  -f '' \[0m
+2025-11-21T13:55:29.5825417Z [36;1m  -a 'X64' \[0m
+2025-11-21T13:55:29.5825569Z [36;1m  -k '' \[0m
+2025-11-21T13:55:29.5825713Z [36;1m  -c '' \[0m
+2025-11-21T13:55:29.5825847Z [36;1m  -l '' \[0m
+2025-11-21T13:55:29.5825996Z [36;1m  -d 'default' \[0m
+2025-11-21T13:55:29.5826276Z [36;1m  -g 'https://github.com/flutter/flutter.git' \[0m
+2025-11-21T13:55:29.5826522Z [36;1m  stable[0m
+2025-11-21T13:55:29.5840264Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+2025-11-21T13:55:29.5840823Z ##[endgroup]
+2025-11-21T13:55:32.6940197Z ##[group]Run $GITHUB_ACTION_PATH/setup.sh \
+2025-11-21T13:55:32.6940481Z [36;1m$GITHUB_ACTION_PATH/setup.sh \[0m
+2025-11-21T13:55:32.6940695Z [36;1m  -n '3.38.2' \[0m
+2025-11-21T13:55:32.6940872Z [36;1m  -a 'x64' \[0m
+2025-11-21T13:55:32.6941127Z [36;1m  -c 'C:\hostedtoolcache\windows\flutter\stable-3.38.2-x64' \[0m
+2025-11-21T13:55:32.6941517Z [36;1m  -d 'C:\Users\runneradmin\AppData\Local\Pub\Cache' \[0m
+2025-11-21T13:55:32.6941767Z [36;1m  stable[0m
+2025-11-21T13:55:32.6955388Z shell: C:\Program Files\Git\bin\bash.EXE --noprofile --norc -e -o pipefail {0}
+2025-11-21T13:55:32.6955726Z ##[endgroup]
+2025-11-21T13:55:35.0821197Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+2025-11-21T13:55:35.0821924Z                                  Dload  Upload   Total   Spent    Left  Speed
+2025-11-21T13:55:35.0822221Z 
+2025-11-21T13:55:35.6657900Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2025-11-21T13:55:36.6663564Z  10 1696M   10  170M    0     0   291M      0  0:00:05 --:--:--  0:00:05  291M
+2025-11-21T13:55:37.6657872Z  27 1696M   27  469M    0     0   296M      0  0:00:05  0:00:01  0:00:04  296M
+2025-11-21T13:55:38.6659008Z  46 1696M   46  789M    0     0   305M      0  0:00:05  0:00:02  0:00:03  305M
+2025-11-21T13:55:39.6662510Z  65 1696M   65 1109M    0     0   309M      0  0:00:05  0:00:03  0:00:02  309M
+2025-11-21T13:55:40.5153414Z  83 1696M   83 1421M    0     0   309M      0  0:00:05  0:00:04  0:00:01  309M
+2025-11-21T13:55:40.5164590Z 100 1696M  100 1696M    0     0   312M      0  0:00:05  0:00:05 --:--:--  314M
+2025-11-21T13:57:16.3751930Z ##[group]Run bash download_ffmpeg.sh
+2025-11-21T13:57:16.3752310Z [36;1mbash download_ffmpeg.sh[0m
+2025-11-21T13:57:16.9664388Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2025-11-21T13:57:16.9664755Z env:
+2025-11-21T13:57:16.9665072Z   FLUTTER_ROOT: C:\hostedtoolcache\windows\flutter\stable-3.38.2-x64
+2025-11-21T13:57:16.9665505Z   PUB_CACHE: C:\Users\runneradmin\AppData\Local\Pub\Cache
+2025-11-21T13:57:16.9665802Z ##[endgroup]
+2025-11-21T13:57:27.1985018Z === TagFix FFmpeg Platform-Aware Download Script ===
+2025-11-21T13:57:27.1987466Z 
+2025-11-21T13:57:27.2441034Z Detected platform: windows
+2025-11-21T13:57:27.2608805Z [Windows] Downloading ffmpeg...
+2025-11-21T13:57:27.2826997Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+2025-11-21T13:57:27.2827650Z                                  Dload  Upload   Total   Spent    Left  Speed
+2025-11-21T13:57:27.2828227Z 
+2025-11-21T13:57:27.3938528Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2025-11-21T13:57:27.6689649Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2025-11-21T13:57:27.6690132Z 
+2025-11-21T13:57:28.1173483Z  19  198M   19 39.3M    0     0   101M      0  0:00:01 --:--:--  0:00:01  101M
+2025-11-21T13:57:28.1189987Z 100  198M  100  198M    0     0   237M      0 --:--:-- --:--:-- --:--:--  354M
+2025-11-21T13:57:29.6608958Z [Windows] ffmpeg ready
+2025-11-21T13:57:29.6609318Z 
+2025-11-21T13:57:29.6609459Z Download completed.
+2025-11-21T13:57:29.6609823Z 
+2025-11-21T13:57:29.6609984Z Binary details:
+2025-11-21T13:57:29.6968976Z -rwxr-xr-x 1 runneradmin 197121 184M Nov 21 12:33 ffmpeg.exe
+2025-11-21T13:57:29.6975046Z 
+2025-11-21T13:57:29.6975480Z You can now build the Flutter app normally.
+2025-11-21T13:57:32.3755862Z ##[group]Run flutter pub get
+2025-11-21T13:57:32.3756187Z [36;1mflutter pub get[0m
+2025-11-21T13:57:32.3816579Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2025-11-21T13:57:32.3816903Z env:
+2025-11-21T13:57:32.3817214Z   FLUTTER_ROOT: C:\hostedtoolcache\windows\flutter\stable-3.38.2-x64
+2025-11-21T13:57:32.3817610Z   PUB_CACHE: C:\Users\runneradmin\AppData\Local\Pub\Cache
+2025-11-21T13:57:32.3818309Z ##[endgroup]
+2025-11-21T13:57:35.0289509Z Building flutter tool... 
+2025-11-21T13:57:35.0325193Z Running pub upgrade... 
+2025-11-21T13:57:35.0684526Z Resolving dependencies...
+2025-11-21T13:57:35.5978096Z Downloading packages...
+2025-11-21T13:57:45.9389847Z Got dependencies.
+2025-11-21T13:58:01.5545267Z Resolving dependencies...
+2025-11-21T13:58:01.9391796Z Downloading packages...
+2025-11-21T13:58:07.5002094Z   async 2.11.0 (2.13.0 available)
+2025-11-21T13:58:07.5002725Z   boolean_selector 2.1.1 (2.1.2 available)
+2025-11-21T13:58:07.5003814Z   build_cli_annotations 2.1.0 (2.1.1 available)
+2025-11-21T13:58:07.5004356Z > characters 1.4.0 (was 1.3.0) (1.4.1 available)
+2025-11-21T13:58:07.5004849Z > clock 1.1.2 (was 1.1.1)
+2025-11-21T13:58:07.5005640Z > collection 1.19.1 (was 1.18.0)
+2025-11-21T13:58:07.5006069Z   cross_file 0.3.4+2 (0.3.5+1 available)
+2025-11-21T13:58:07.5006528Z   desktop_drop 0.4.4 (0.7.0 available)
+2025-11-21T13:58:07.5006907Z > fake_async 1.3.3 (was 1.3.1)
+2025-11-21T13:58:07.5007288Z   ffi 2.1.3 (2.1.4 available)
+2025-11-21T13:58:07.5007651Z   file_picker 8.3.7 (10.3.7 available)
+2025-11-21T13:58:07.5008109Z   flutter_lints 3.0.2 (6.0.0 available)
+2025-11-21T13:58:07.5008609Z   flutter_plugin_android_lifecycle 2.0.26 (2.0.32 available)
+2025-11-21T13:58:07.5009165Z   flutter_rust_bridge 2.7.0 (2.11.1 available)
+2025-11-21T13:58:07.5009651Z   freezed_annotation 2.4.4 (3.1.0 available)
+2025-11-21T13:58:07.5010070Z   google_fonts 6.3.0 (6.3.2 available)
+2025-11-21T13:58:07.5010529Z   http_parser 4.0.2 (4.1.2 available)
+2025-11-21T13:58:07.5010958Z > leak_tracker 11.0.2 (was 10.0.5)
+2025-11-21T13:58:07.5011459Z > leak_tracker_flutter_testing 3.0.10 (was 3.0.5)
+2025-11-21T13:58:07.5012276Z > leak_tracker_testing 3.0.2 (was 3.0.1)
+2025-11-21T13:58:07.5012615Z   lints 3.0.0 (6.0.0 available)
+2025-11-21T13:58:07.5012895Z > matcher 0.12.17 (was 0.12.16+1) (0.12.18 available)
+2025-11-21T13:58:07.5013239Z   material_color_utilities 0.11.1 (0.13.0 available)
+2025-11-21T13:58:07.5013549Z > meta 1.17.0 (was 1.15.0)
+2025-11-21T13:58:07.5013764Z > path 1.9.1 (was 1.9.0)
+2025-11-21T13:58:07.5014035Z   path_provider_android 2.2.15 (2.2.21 available)
+2025-11-21T13:58:07.5014334Z   path_provider_foundation 2.4.1 (2.5.0 available)
+2025-11-21T13:58:07.5014652Z   petitparser 6.0.2 (7.0.1 available)
+2025-11-21T13:58:07.5014922Z   screen_retriever 0.1.9 (0.2.0 available)
+2025-11-21T13:58:07.5015276Z < sky_engine 0.0.0 from sdk flutter (was 0.0.99 from sdk flutter)
+2025-11-21T13:58:07.5015854Z   source_span 1.10.0 (1.10.1 available)
+2025-11-21T13:58:07.5016144Z > stack_trace 1.12.1 (was 1.11.1)
+2025-11-21T13:58:07.5016410Z > stream_channel 2.1.4 (was 2.1.2)
+2025-11-21T13:58:07.5017062Z   string_scanner 1.2.0 (1.4.1 available)
+2025-11-21T13:58:07.5017424Z   term_glyph 1.2.1 (1.2.2 available)
+2025-11-21T13:58:07.5017684Z > test_api 0.7.7 (was 0.7.2) (0.7.8 available)
+2025-11-21T13:58:07.5017981Z > vector_math 2.2.0 (was 2.1.4)
+2025-11-21T13:58:07.5018212Z   vm_service 14.2.4 (15.0.2 available)
+2025-11-21T13:58:07.5018477Z   win32 5.10.1 (5.15.0 available)
+2025-11-21T13:58:07.5018733Z   window_manager 0.3.9 (0.5.1 available)
+2025-11-21T13:58:07.5018975Z   xml 6.5.0 (6.6.1 available)
+2025-11-21T13:58:07.5019259Z Changed 15 dependencies!
+2025-11-21T13:58:07.5019588Z 29 packages have newer versions incompatible with dependency constraints.
+2025-11-21T13:58:07.5020009Z Try `flutter pub outdated` for more information.
+2025-11-21T13:58:08.0388354Z ##[group]Run flutter build windows --release
+2025-11-21T13:58:08.0388749Z [36;1mflutter build windows --release[0m
+2025-11-21T13:58:08.0447170Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2025-11-21T13:58:08.0447505Z env:
+2025-11-21T13:58:08.0447813Z   FLUTTER_ROOT: C:\hostedtoolcache\windows\flutter\stable-3.38.2-x64
+2025-11-21T13:58:08.0448232Z   PUB_CACHE: C:\Users\runneradmin\AppData\Local\Pub\Cache
+2025-11-21T13:58:08.0448904Z ##[endgroup]
+2025-11-21T13:58:54.0042172Z CUSTOMBUILD : error : unable to find directory entry in pubspec.yaml: D:\a\tagfix\tagfix\flutter_app\assets\ffmpeg\linux\ [D:\a\tagfix\tagfix\flutter_app\build\windows\x64\flutter\flutter_assemble.vcxproj]
+2025-11-21T13:58:54.0043695Z Building Windows application...                                 
+2025-11-21T13:58:54.0045791Z CUSTOMBUILD : error : unable to find directory entry in pubspec.yaml: D:\a\tagfix\tagfix\flutter_app\assets\ffmpeg\macos\ [D:\a\tagfix\tagfix\flutter_app\build\windows\x64\flutter\flutter_assemble.vcxproj]
+2025-11-21T13:58:56.8961007Z C:\Program Files\Microsoft Visual Studio\2022\Enterprise\MSBuild\Microsoft\VC\v170\Microsoft.CppCommon.targets(254,5): error MSB8066: Custom build for 'D:\a\tagfix\tagfix\flutter_app\build\windows\x64\CMakeFiles\18ed31d3863e62e65880fe59e0991aac\flutter_windows.dll.rule;D:\a\tagfix\tagfix\flutter_app\build\windows\x64\CMakeFiles\4c38b854f06f32d9d66a22ed92534310\flutter_assemble.rule;D:\a\tagfix\tagfix\flutter_app\windows\flutter\CMakeLists.txt' exited with code -1. [D:\a\tagfix\tagfix\flutter_app\build\windows\x64\flutter\flutter_assemble.vcxproj]
+2025-11-21T13:58:57.0636879Z Building Windows application...                                    47.2s
+2025-11-21T13:58:57.0722057Z Build process failed.
+2025-11-21T13:58:57.1861240Z ##[error]Process completed with exit code 1.
+2025-11-21T13:58:57.2083794Z Post job cleanup.
+2025-11-21T13:58:57.2232285Z Post job cleanup.
+2025-11-21T13:58:57.4578624Z [command]"C:\Program Files\Git\bin\git.exe" version
+2025-11-21T13:58:57.4887638Z git version 2.51.2.windows.1
+2025-11-21T13:58:57.4967092Z Temporarily overriding HOME='D:\a\_temp\ad654ac7-eb45-4d7c-92e4-cfd0eae24053' before making global git config changes
+2025-11-21T13:58:57.4968214Z Adding repository directory to the temporary git global config as a safe directory
+2025-11-21T13:58:57.4982983Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\tagfix\tagfix
+2025-11-21T13:58:57.5325344Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2025-11-21T13:58:57.5638068Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2025-11-21T13:58:58.0665078Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-11-21T13:58:58.0908091Z http.https://github.com/.extraheader
+2025-11-21T13:58:58.0949804Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all http.https://github.com/.extraheader
+2025-11-21T13:58:58.1234107Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2025-11-21T13:58:58.6549947Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2025-11-21T13:58:58.6851885Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2025-11-21T13:58:59.1893508Z Cleaning up orphan processes
+2025-11-21T13:58:59.2082929Z Terminate orphan process: pid (8188) (vctip)

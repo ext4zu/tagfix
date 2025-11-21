@@ -1,0 +1,33 @@
+﻿2025-11-21T13:55:23.0800660Z Current runner version: '2.329.0'
+2025-11-21T13:55:23.0835670Z ##[group]Runner Image Provisioner
+2025-11-21T13:55:23.0836430Z Hosted Compute Agent
+2025-11-21T13:55:23.0836910Z Version: 20251117.445
+2025-11-21T13:55:23.0837480Z Commit: 17780a5d4025a96787933ab442dc95c406773466
+2025-11-21T13:55:23.0838120Z Build Date: 2025-11-17T20:36:01Z
+2025-11-21T13:55:23.0838680Z ##[endgroup]
+2025-11-21T13:55:23.0840150Z ##[group]Operating System
+2025-11-21T13:55:23.0841260Z macOS
+2025-11-21T13:55:23.0842080Z 15.7.1
+2025-11-21T13:55:23.0842830Z 24G231
+2025-11-21T13:55:23.0843640Z ##[endgroup]
+2025-11-21T13:55:23.0844460Z ##[group]Runner Image
+2025-11-21T13:55:23.0845370Z Image: macos-15-arm64
+2025-11-21T13:55:23.0846310Z Version: 20251104.0104
+2025-11-21T13:55:23.0848220Z Included Software: https://github.com/actions/runner-images/blob/macos-15-arm64/20251104.0104/images/macos/macos-15-arm64-Readme.md
+2025-11-21T13:55:23.0851180Z Image Release: https://github.com/actions/runner-images/releases/tag/macos-15-arm64%2F20251104.0104
+2025-11-21T13:55:23.0853190Z ##[endgroup]
+2025-11-21T13:55:23.0855050Z ##[group]GITHUB_TOKEN Permissions
+2025-11-21T13:55:23.0859320Z Contents: read
+2025-11-21T13:55:23.0859820Z Metadata: read
+2025-11-21T13:55:23.0860220Z Packages: read
+2025-11-21T13:55:23.0860660Z ##[endgroup]
+2025-11-21T13:55:23.0862760Z Secret source: Actions
+2025-11-21T13:55:23.0863310Z Prepare workflow directory
+2025-11-21T13:55:23.1170300Z Prepare all required actions
+2025-11-21T13:55:23.1240870Z Getting action download info
+2025-11-21T13:55:23.5537740Z Download action repository 'actions/checkout@v4' (SHA:34e114876b0b11c390a56381ad16ebd13914f8d5)
+2025-11-21T13:55:24.9434480Z Download action repository 'subosito/flutter-action@v2' (SHA:fd55f4c5af5b953cc57a2be44cb082c8f6635e8e)
+2025-11-21T13:55:25.8866970Z Download action repository 'actions/upload-artifact@v4' (SHA:ea165f8d65b6e75b540449e92b4886f43607fa02)
+2025-11-21T13:55:26.1211750Z Getting action download info
+2025-11-21T13:55:26.3035290Z Download action repository 'actions/cache@v4' (SHA:0057852bfaa89a56745cba8c7296529d2fc39830)
+2025-11-21T13:55:26.4340520Z Complete job name: Build iOS

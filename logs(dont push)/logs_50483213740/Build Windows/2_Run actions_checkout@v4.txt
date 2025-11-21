@@ -1,0 +1,75 @@
+﻿2025-11-21T13:55:24.1307208Z ##[group]Run actions/checkout@v4
+2025-11-21T13:55:24.1309236Z with:
+2025-11-21T13:55:24.1309906Z   repository: k44yn3/tagfix
+2025-11-21T13:55:24.1311043Z   token: ***
+2025-11-21T13:55:24.1311687Z   ssh-strict: true
+2025-11-21T13:55:24.1312359Z   ssh-user: git
+2025-11-21T13:55:24.1313050Z   persist-credentials: true
+2025-11-21T13:55:24.1313806Z   clean: true
+2025-11-21T13:55:24.1314496Z   sparse-checkout-cone-mode: true
+2025-11-21T13:55:24.1315344Z   fetch-depth: 1
+2025-11-21T13:55:24.1316015Z   fetch-tags: false
+2025-11-21T13:55:24.1316737Z   show-progress: true
+2025-11-21T13:55:24.1317433Z   lfs: false
+2025-11-21T13:55:24.1318446Z   submodules: false
+2025-11-21T13:55:24.1319234Z   set-safe-directory: true
+2025-11-21T13:55:24.1320299Z ##[endgroup]
+2025-11-21T13:55:24.3080775Z Syncing repository: k44yn3/tagfix
+2025-11-21T13:55:24.3083140Z ##[group]Getting Git version info
+2025-11-21T13:55:24.3084445Z Working directory is 'D:\a\tagfix\tagfix'
+2025-11-21T13:55:24.4135587Z [command]"C:\Program Files\Git\bin\git.exe" version
+2025-11-21T13:55:24.8473137Z git version 2.51.2.windows.1
+2025-11-21T13:55:24.8534494Z ##[endgroup]
+2025-11-21T13:55:24.8558659Z Temporarily overriding HOME='D:\a\_temp\86491e4f-377f-400e-b1ce-71f7e56ed013' before making global git config changes
+2025-11-21T13:55:24.8560819Z Adding repository directory to the temporary git global config as a safe directory
+2025-11-21T13:55:24.8569679Z [command]"C:\Program Files\Git\bin\git.exe" config --global --add safe.directory D:\a\tagfix\tagfix
+2025-11-21T13:55:24.9182360Z Deleting the contents of 'D:\a\tagfix\tagfix'
+2025-11-21T13:55:24.9189364Z ##[group]Initializing the repository
+2025-11-21T13:55:24.9199183Z [command]"C:\Program Files\Git\bin\git.exe" init D:\a\tagfix\tagfix
+2025-11-21T13:55:25.0147398Z Initialized empty Git repository in D:/a/tagfix/tagfix/.git/
+2025-11-21T13:55:25.0195469Z [command]"C:\Program Files\Git\bin\git.exe" remote add origin https://github.com/k44yn3/tagfix
+2025-11-21T13:55:25.0848861Z ##[endgroup]
+2025-11-21T13:55:25.0850226Z ##[group]Disabling automatic garbage collection
+2025-11-21T13:55:25.0859834Z [command]"C:\Program Files\Git\bin\git.exe" config --local gc.auto 0
+2025-11-21T13:55:25.1166493Z ##[endgroup]
+2025-11-21T13:55:25.1167696Z ##[group]Setting up auth
+2025-11-21T13:55:25.1179849Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp core\.sshCommand
+2025-11-21T13:55:25.1497805Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :\""
+2025-11-21T13:55:26.7636638Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-11-21T13:55:26.7955383Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "sh -c \"git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :\""
+2025-11-21T13:55:27.3441963Z [command]"C:\Program Files\Git\bin\git.exe" config --local --name-only --get-regexp ^includeIf\.gitdir:
+2025-11-21T13:55:27.3762824Z [command]"C:\Program Files\Git\bin\git.exe" submodule foreach --recursive "git config --local --show-origin --name-only --get-regexp remote.origin.url"
+2025-11-21T13:55:27.9398231Z [command]"C:\Program Files\Git\bin\git.exe" config --local http.https://github.com/.extraheader "AUTHORIZATION: basic ***"
+2025-11-21T13:55:27.9729786Z ##[endgroup]
+2025-11-21T13:55:27.9730520Z ##[group]Fetching the repository
+2025-11-21T13:55:27.9744502Z [command]"C:\Program Files\Git\bin\git.exe" -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +8186f408067a4688abe1ee4ed097b34858743f2d:refs/tags/v1.0.1
+2025-11-21T13:55:28.9707756Z From https://github.com/k44yn3/tagfix
+2025-11-21T13:55:28.9708515Z  * [new ref]         8186f408067a4688abe1ee4ed097b34858743f2d -> v1.0.1
+2025-11-21T13:55:29.0049507Z ##[endgroup]
+2025-11-21T13:55:29.0049942Z ##[group]Determining the checkout info
+2025-11-21T13:55:29.0052777Z ##[endgroup]
+2025-11-21T13:55:29.0068757Z [command]"C:\Program Files\Git\bin\git.exe" sparse-checkout disable
+2025-11-21T13:55:29.0579945Z [command]"C:\Program Files\Git\bin\git.exe" config --local --unset-all extensions.worktreeConfig
+2025-11-21T13:55:29.0915438Z ##[group]Checking out the ref
+2025-11-21T13:55:29.0926305Z [command]"C:\Program Files\Git\bin\git.exe" checkout --progress --force refs/tags/v1.0.1
+2025-11-21T13:55:29.2026653Z Note: switching to 'refs/tags/v1.0.1'.
+2025-11-21T13:55:29.2027090Z 
+2025-11-21T13:55:29.2027398Z You are in 'detached HEAD' state. You can look around, make experimental
+2025-11-21T13:55:29.2028123Z changes and commit them, and you can discard any commits you make in this
+2025-11-21T13:55:29.2029391Z state without impacting any branches by switching back to a branch.
+2025-11-21T13:55:29.2029901Z 
+2025-11-21T13:55:29.2030242Z If you want to create a new branch to retain commits you create, you may
+2025-11-21T13:55:29.2031832Z do so (now or later) by using -c with the switch command. Example:
+2025-11-21T13:55:29.2032229Z 
+2025-11-21T13:55:29.2032377Z   git switch -c <new-branch-name>
+2025-11-21T13:55:29.2032637Z 
+2025-11-21T13:55:29.2032775Z Or undo this operation with:
+2025-11-21T13:55:29.2033049Z 
+2025-11-21T13:55:29.2033163Z   git switch -
+2025-11-21T13:55:29.2033338Z 
+2025-11-21T13:55:29.2033630Z Turn off this advice by setting config variable advice.detachedHead to false
+2025-11-21T13:55:29.2034068Z 
+2025-11-21T13:55:29.2034192Z HEAD is now at 8186f40 Workflow update
+2025-11-21T13:55:29.2066109Z ##[endgroup]
+2025-11-21T13:55:29.2519484Z [command]"C:\Program Files\Git\bin\git.exe" log -1 --format=%H
+2025-11-21T13:55:29.2799263Z 8186f408067a4688abe1ee4ed097b34858743f2d

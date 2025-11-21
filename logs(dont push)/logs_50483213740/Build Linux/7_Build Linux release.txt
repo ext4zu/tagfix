@@ -1,0 +1,12 @@
+﻿2025-11-21T13:56:50.9487959Z ##[group]Run flutter build linux --release
+2025-11-21T13:56:50.9488302Z [36;1mflutter build linux --release[0m
+2025-11-21T13:56:50.9520535Z shell: /usr/bin/bash -e {0}
+2025-11-21T13:56:50.9520778Z env:
+2025-11-21T13:56:50.9521042Z   FLUTTER_ROOT: /opt/hostedtoolcache/flutter/stable-3.38.2-x64
+2025-11-21T13:56:50.9521423Z   PUB_CACHE: /home/runner/.pub-cache
+2025-11-21T13:56:50.9521673Z ##[endgroup]
+2025-11-21T13:57:21.6426949Z Building Linux application...                                   
+2025-11-21T13:57:21.6436513Z ERROR: Error: unable to find directory entry in pubspec.yaml: /home/runner/work/tagfix/tagfix/flutter_app/assets/ffmpeg/linux/
+2025-11-21T13:57:21.6437918Z ERROR: Error: unable to find directory entry in pubspec.yaml: /home/runner/work/tagfix/tagfix/flutter_app/assets/ffmpeg/windows/
+2025-11-21T13:57:21.6439267Z ERROR: Error: unable to find directory entry in pubspec.yaml: /home/runner/work/tagfix/tagfix/flutter_app/assets/ffmpeg/macos/
+2025-11-21T13:57:24.5247543Z ✓ Built build/linux/x64/release/bundle/flutter_app

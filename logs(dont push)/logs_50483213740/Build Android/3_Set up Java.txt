@@ -1,0 +1,33 @@
+﻿2025-11-21T13:55:28.0012142Z ##[group]Run actions/setup-java@v4
+2025-11-21T13:55:28.0012443Z with:
+2025-11-21T13:55:28.0012619Z   distribution: zulu
+2025-11-21T13:55:28.0012808Z   java-version: 17
+2025-11-21T13:55:28.0012994Z   java-package: jdk
+2025-11-21T13:55:28.0013184Z   check-latest: false
+2025-11-21T13:55:28.0013365Z   server-id: github
+2025-11-21T13:55:28.0013553Z   server-username: GITHUB_ACTOR
+2025-11-21T13:55:28.0013794Z   server-password: GITHUB_TOKEN
+2025-11-21T13:55:28.0014018Z   overwrite-settings: true
+2025-11-21T13:55:28.0014218Z   job-status: success
+2025-11-21T13:55:28.0014514Z   token: ***
+2025-11-21T13:55:28.0014687Z ##[endgroup]
+2025-11-21T13:55:28.2142284Z ##[group]Installed distributions
+2025-11-21T13:55:28.2170314Z Trying to resolve the latest version from remote
+2025-11-21T13:55:28.3309327Z Resolved latest version as 17.0.17+10
+2025-11-21T13:55:28.3310246Z Trying to download...
+2025-11-21T13:55:28.3311159Z Downloading Java 17.0.17+10 (Zulu) from https://cdn.azul.com/zulu/bin/zulu17.62.19-ca-crac-jdk17.0.17-linux_x64.tar.gz ...
+2025-11-21T13:55:29.5277999Z Extracting Java archive...
+2025-11-21T13:55:29.5377794Z [command]/usr/bin/tar xz --warning=no-unknown-keyword --overwrite -C /home/runner/work/_temp/c3484570-5983-483a-bad5-471159f43c28 -f /home/runner/work/_temp/98fc45be-b29a-4acd-a732-d1370aa91a2a
+2025-11-21T13:55:32.3833120Z Java 17.0.17+10 was downloaded
+2025-11-21T13:55:32.3833683Z Setting Java 17.0.17+10 as the default
+2025-11-21T13:55:32.3844590Z Creating toolchains.xml for JDK version 17 from zulu
+2025-11-21T13:55:32.3924866Z Writing to /home/runner/.m2/toolchains.xml
+2025-11-21T13:55:32.3925341Z 
+2025-11-21T13:55:32.3925650Z Java configuration:
+2025-11-21T13:55:32.3925981Z   Distribution: zulu
+2025-11-21T13:55:32.3926295Z   Version: 17.0.17+10
+2025-11-21T13:55:32.3926736Z   Path: /opt/hostedtoolcache/Java_Zulu_jdk/17.0.17-10/x64
+2025-11-21T13:55:32.3927132Z 
+2025-11-21T13:55:32.3928054Z ##[endgroup]
+2025-11-21T13:55:32.3943239Z Creating settings.xml with server-id: github
+2025-11-21T13:55:32.3945105Z Writing to /home/runner/.m2/settings.xml

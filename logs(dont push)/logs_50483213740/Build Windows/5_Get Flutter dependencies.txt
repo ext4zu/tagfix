@@ -1,0 +1,58 @@
+﻿2025-11-21T13:57:32.3755841Z ##[group]Run flutter pub get
+2025-11-21T13:57:32.3756185Z [36;1mflutter pub get[0m
+2025-11-21T13:57:32.3816571Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2025-11-21T13:57:32.3816901Z env:
+2025-11-21T13:57:32.3817211Z   FLUTTER_ROOT: C:\hostedtoolcache\windows\flutter\stable-3.38.2-x64
+2025-11-21T13:57:32.3817607Z   PUB_CACHE: C:\Users\runneradmin\AppData\Local\Pub\Cache
+2025-11-21T13:57:32.3818302Z ##[endgroup]
+2025-11-21T13:57:35.0289471Z Building flutter tool... 
+2025-11-21T13:57:35.0325176Z Running pub upgrade... 
+2025-11-21T13:57:35.0684482Z Resolving dependencies...
+2025-11-21T13:57:35.5978026Z Downloading packages...
+2025-11-21T13:57:45.9389806Z Got dependencies.
+2025-11-21T13:58:01.5545227Z Resolving dependencies...
+2025-11-21T13:58:01.9391757Z Downloading packages...
+2025-11-21T13:58:07.5002055Z   async 2.11.0 (2.13.0 available)
+2025-11-21T13:58:07.5002719Z   boolean_selector 2.1.1 (2.1.2 available)
+2025-11-21T13:58:07.5003191Z   build_cli_annotations 2.1.0 (2.1.1 available)
+2025-11-21T13:58:07.5004352Z > characters 1.4.0 (was 1.3.0) (1.4.1 available)
+2025-11-21T13:58:07.5004843Z > clock 1.1.2 (was 1.1.1)
+2025-11-21T13:58:07.5005625Z > collection 1.19.1 (was 1.18.0)
+2025-11-21T13:58:07.5006065Z   cross_file 0.3.4+2 (0.3.5+1 available)
+2025-11-21T13:58:07.5006524Z   desktop_drop 0.4.4 (0.7.0 available)
+2025-11-21T13:58:07.5006902Z > fake_async 1.3.3 (was 1.3.1)
+2025-11-21T13:58:07.5007284Z   ffi 2.1.3 (2.1.4 available)
+2025-11-21T13:58:07.5007646Z   file_picker 8.3.7 (10.3.7 available)
+2025-11-21T13:58:07.5008105Z   flutter_lints 3.0.2 (6.0.0 available)
+2025-11-21T13:58:07.5008604Z   flutter_plugin_android_lifecycle 2.0.26 (2.0.32 available)
+2025-11-21T13:58:07.5009160Z   flutter_rust_bridge 2.7.0 (2.11.1 available)
+2025-11-21T13:58:07.5009611Z   freezed_annotation 2.4.4 (3.1.0 available)
+2025-11-21T13:58:07.5010066Z   google_fonts 6.3.0 (6.3.2 available)
+2025-11-21T13:58:07.5010523Z   http_parser 4.0.2 (4.1.2 available)
+2025-11-21T13:58:07.5010945Z > leak_tracker 11.0.2 (was 10.0.5)
+2025-11-21T13:58:07.5011454Z > leak_tracker_flutter_testing 3.0.10 (was 3.0.5)
+2025-11-21T13:58:07.5012267Z > leak_tracker_testing 3.0.2 (was 3.0.1)
+2025-11-21T13:58:07.5012612Z   lints 3.0.0 (6.0.0 available)
+2025-11-21T13:58:07.5012893Z > matcher 0.12.17 (was 0.12.16+1) (0.12.18 available)
+2025-11-21T13:58:07.5013237Z   material_color_utilities 0.11.1 (0.13.0 available)
+2025-11-21T13:58:07.5013548Z > meta 1.17.0 (was 1.15.0)
+2025-11-21T13:58:07.5013762Z > path 1.9.1 (was 1.9.0)
+2025-11-21T13:58:07.5014033Z   path_provider_android 2.2.15 (2.2.21 available)
+2025-11-21T13:58:07.5014333Z   path_provider_foundation 2.4.1 (2.5.0 available)
+2025-11-21T13:58:07.5014650Z   petitparser 6.0.2 (7.0.1 available)
+2025-11-21T13:58:07.5014920Z   screen_retriever 0.1.9 (0.2.0 available)
+2025-11-21T13:58:07.5015274Z < sky_engine 0.0.0 from sdk flutter (was 0.0.99 from sdk flutter)
+2025-11-21T13:58:07.5015851Z   source_span 1.10.0 (1.10.1 available)
+2025-11-21T13:58:07.5016136Z > stack_trace 1.12.1 (was 1.11.1)
+2025-11-21T13:58:07.5016407Z > stream_channel 2.1.4 (was 2.1.2)
+2025-11-21T13:58:07.5017056Z   string_scanner 1.2.0 (1.4.1 available)
+2025-11-21T13:58:07.5017421Z   term_glyph 1.2.1 (1.2.2 available)
+2025-11-21T13:58:07.5017682Z > test_api 0.7.7 (was 0.7.2) (0.7.8 available)
+2025-11-21T13:58:07.5017979Z > vector_math 2.2.0 (was 2.1.4)
+2025-11-21T13:58:07.5018210Z   vm_service 14.2.4 (15.0.2 available)
+2025-11-21T13:58:07.5018475Z   win32 5.10.1 (5.15.0 available)
+2025-11-21T13:58:07.5018731Z   window_manager 0.3.9 (0.5.1 available)
+2025-11-21T13:58:07.5018973Z   xml 6.5.0 (6.6.1 available)
+2025-11-21T13:58:07.5019257Z Changed 15 dependencies!
+2025-11-21T13:58:07.5019585Z 29 packages have newer versions incompatible with dependency constraints.
+2025-11-21T13:58:07.5020007Z Try `flutter pub outdated` for more information.

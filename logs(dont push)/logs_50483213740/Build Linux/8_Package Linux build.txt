@@ -1,0 +1,40 @@
+﻿2025-11-21T13:57:24.5397535Z ##[group]Run cd build/linux/x64/release/bundle
+2025-11-21T13:57:24.5398134Z [36;1mcd build/linux/x64/release/bundle[0m
+2025-11-21T13:57:24.5398630Z [36;1mzip -r ../../../../../tagfix-linux.zip .[0m
+2025-11-21T13:57:24.5439056Z shell: /usr/bin/bash -e {0}
+2025-11-21T13:57:24.5439307Z env:
+2025-11-21T13:57:24.5439565Z   FLUTTER_ROOT: /opt/hostedtoolcache/flutter/stable-3.38.2-x64
+2025-11-21T13:57:24.5439915Z   PUB_CACHE: /home/runner/.pub-cache
+2025-11-21T13:57:24.5440149Z ##[endgroup]
+2025-11-21T13:57:24.5910028Z   adding: flutter_app (deflated 75%)
+2025-11-21T13:57:24.5910434Z   adding: lib/ (stored 0%)
+2025-11-21T13:57:24.9653072Z   adding: lib/libapp.so (deflated 61%)
+2025-11-21T13:57:25.0539425Z   adding: lib/libaudiotags.so (deflated 60%)
+2025-11-21T13:57:25.0561532Z   adding: lib/libwindow_manager_plugin.so (deflated 70%)
+2025-11-21T13:57:25.0566986Z   adding: lib/libaudiotags_plugin.so (deflated 76%)
+2025-11-21T13:57:25.0573789Z   adding: lib/libscreen_retriever_plugin.so (deflated 75%)
+2025-11-21T13:57:26.4644170Z   adding: lib/libflutter_linux_gtk.so (deflated 64%)
+2025-11-21T13:57:26.4649664Z   adding: lib/libdesktop_drop_plugin.so (deflated 78%)
+2025-11-21T13:57:26.4650161Z   adding: data/ (stored 0%)
+2025-11-21T13:57:26.4650457Z   adding: data/flutter_assets/ (stored 0%)
+2025-11-21T13:57:26.4653929Z   adding: data/flutter_assets/NOTICES.Z (stored 0%)
+2025-11-21T13:57:26.4654356Z   adding: data/flutter_assets/shaders/ (stored 0%)
+2025-11-21T13:57:26.4658973Z   adding: data/flutter_assets/shaders/stretch_effect.frag (deflated 80%)
+2025-11-21T13:57:26.4665433Z   adding: data/flutter_assets/shaders/ink_sparkle.frag (deflated 76%)
+2025-11-21T13:57:26.4666141Z   adding: data/flutter_assets/NativeAssetsManifest.json (stored 0%)
+2025-11-21T13:57:26.4666649Z   adding: data/flutter_assets/fonts/ (stored 0%)
+2025-11-21T13:57:26.5230174Z   adding: data/flutter_assets/fonts/MaterialIcons-Regular.otf (deflated 66%)
+2025-11-21T13:57:26.5231031Z   adding: data/flutter_assets/packages/ (stored 0%)
+2025-11-21T13:57:26.5231538Z   adding: data/flutter_assets/packages/cupertino_icons/ (stored 0%)
+2025-11-21T13:57:26.5232104Z   adding: data/flutter_assets/packages/cupertino_icons/assets/ (stored 0%)
+2025-11-21T13:57:26.5328465Z   adding: data/flutter_assets/packages/cupertino_icons/assets/CupertinoIcons.ttf (deflated 55%)
+2025-11-21T13:57:26.5329812Z   adding: data/flutter_assets/packages/window_manager/ (stored 0%)
+2025-11-21T13:57:26.5330594Z   adding: data/flutter_assets/packages/window_manager/images/ (stored 0%)
+2025-11-21T13:57:26.5331537Z   adding: data/flutter_assets/packages/window_manager/images/ic_chrome_maximize.png (deflated 1%)
+2025-11-21T13:57:26.5332354Z   adding: data/flutter_assets/packages/window_manager/images/ic_chrome_unmaximize.png (stored 0%)
+2025-11-21T13:57:26.5333124Z   adding: data/flutter_assets/packages/window_manager/images/ic_chrome_close.png (stored 0%)
+2025-11-21T13:57:26.5333876Z   adding: data/flutter_assets/packages/window_manager/images/ic_chrome_minimize.png (deflated 5%)
+2025-11-21T13:57:26.5334517Z   adding: data/flutter_assets/FontManifest.json (deflated 47%)
+2025-11-21T13:57:26.5335215Z   adding: data/flutter_assets/AssetManifest.bin (deflated 77%)
+2025-11-21T13:57:26.5335628Z   adding: data/flutter_assets/version.json (deflated 21%)
+2025-11-21T13:57:26.5696253Z   adding: data/icudtl.dat (deflated 42%)

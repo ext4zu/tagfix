@@ -1,0 +1,87 @@
+﻿2025-11-21T13:55:27.0708239Z ##[group]Run actions/checkout@v4
+2025-11-21T13:55:27.0709004Z with:
+2025-11-21T13:55:27.0709271Z   repository: k44yn3/tagfix
+2025-11-21T13:55:27.0710081Z   token: ***
+2025-11-21T13:55:27.0710343Z   ssh-strict: true
+2025-11-21T13:55:27.0710661Z   ssh-user: git
+2025-11-21T13:55:27.0711004Z   persist-credentials: true
+2025-11-21T13:55:27.0711303Z   clean: true
+2025-11-21T13:55:27.0711590Z   sparse-checkout-cone-mode: true
+2025-11-21T13:55:27.0711936Z   fetch-depth: 1
+2025-11-21T13:55:27.0712227Z   fetch-tags: false
+2025-11-21T13:55:27.0712502Z   show-progress: true
+2025-11-21T13:55:27.0712825Z   lfs: false
+2025-11-21T13:55:27.0713079Z   submodules: false
+2025-11-21T13:55:27.0713364Z   set-safe-directory: true
+2025-11-21T13:55:27.0714118Z ##[endgroup]
+2025-11-21T13:55:27.1838061Z Syncing repository: k44yn3/tagfix
+2025-11-21T13:55:27.1840139Z ##[group]Getting Git version info
+2025-11-21T13:55:27.1840752Z Working directory is '/home/runner/work/tagfix/tagfix'
+2025-11-21T13:55:27.1841563Z [command]/usr/bin/git version
+2025-11-21T13:55:27.1913559Z git version 2.51.2
+2025-11-21T13:55:27.1940666Z ##[endgroup]
+2025-11-21T13:55:27.1962574Z Temporarily overriding HOME='/home/runner/work/_temp/dd374053-567c-44ae-8d1a-0014540676df' before making global git config changes
+2025-11-21T13:55:27.1964093Z Adding repository directory to the temporary git global config as a safe directory
+2025-11-21T13:55:27.1967939Z [command]/usr/bin/git config --global --add safe.directory /home/runner/work/tagfix/tagfix
+2025-11-21T13:55:27.2006464Z Deleting the contents of '/home/runner/work/tagfix/tagfix'
+2025-11-21T13:55:27.2010063Z ##[group]Initializing the repository
+2025-11-21T13:55:27.2014028Z [command]/usr/bin/git init /home/runner/work/tagfix/tagfix
+2025-11-21T13:55:27.2157100Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-11-21T13:55:27.2158218Z hint: is subject to change. To configure the initial branch name to use in all
+2025-11-21T13:55:27.2158859Z hint: of your new repositories, which will suppress this warning, call:
+2025-11-21T13:55:27.2159500Z hint:
+2025-11-21T13:55:27.2160572Z hint: 	git config --global init.defaultBranch <name>
+2025-11-21T13:55:27.2161180Z hint:
+2025-11-21T13:55:27.2161923Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-11-21T13:55:27.2162866Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-11-21T13:55:27.2163602Z hint:
+2025-11-21T13:55:27.2164180Z hint: 	git branch -m <name>
+2025-11-21T13:55:27.2164507Z hint:
+2025-11-21T13:55:27.2164975Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-11-21T13:55:27.2165697Z Initialized empty Git repository in /home/runner/work/tagfix/tagfix/.git/
+2025-11-21T13:55:27.2173457Z [command]/usr/bin/git remote add origin https://github.com/k44yn3/tagfix
+2025-11-21T13:55:27.2209800Z ##[endgroup]
+2025-11-21T13:55:27.2210441Z ##[group]Disabling automatic garbage collection
+2025-11-21T13:55:27.2214092Z [command]/usr/bin/git config --local gc.auto 0
+2025-11-21T13:55:27.2244487Z ##[endgroup]
+2025-11-21T13:55:27.2245368Z ##[group]Setting up auth
+2025-11-21T13:55:27.2317115Z [command]/usr/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-11-21T13:55:27.2319880Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-11-21T13:55:27.2667460Z [command]/usr/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-11-21T13:55:27.2698229Z [command]/usr/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-11-21T13:55:27.2917863Z [command]/usr/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2025-11-21T13:55:27.2956590Z [command]/usr/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2025-11-21T13:55:27.3179854Z [command]/usr/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-11-21T13:55:27.3213748Z ##[endgroup]
+2025-11-21T13:55:27.3214368Z ##[group]Fetching the repository
+2025-11-21T13:55:27.3222101Z [command]/usr/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +8186f408067a4688abe1ee4ed097b34858743f2d:refs/tags/v1.0.1
+2025-11-21T13:55:27.9459317Z From https://github.com/k44yn3/tagfix
+2025-11-21T13:55:27.9460204Z  * [new ref]         8186f408067a4688abe1ee4ed097b34858743f2d -> v1.0.1
+2025-11-21T13:55:27.9487006Z ##[endgroup]
+2025-11-21T13:55:27.9487953Z ##[group]Determining the checkout info
+2025-11-21T13:55:27.9490071Z ##[endgroup]
+2025-11-21T13:55:27.9494977Z [command]/usr/bin/git sparse-checkout disable
+2025-11-21T13:55:27.9535546Z [command]/usr/bin/git config --local --unset-all extensions.worktreeConfig
+2025-11-21T13:55:27.9560422Z ##[group]Checking out the ref
+2025-11-21T13:55:27.9564614Z [command]/usr/bin/git checkout --progress --force refs/tags/v1.0.1
+2025-11-21T13:55:27.9719420Z Note: switching to 'refs/tags/v1.0.1'.
+2025-11-21T13:55:27.9720029Z 
+2025-11-21T13:55:27.9720391Z You are in 'detached HEAD' state. You can look around, make experimental
+2025-11-21T13:55:27.9721197Z changes and commit them, and you can discard any commits you make in this
+2025-11-21T13:55:27.9721985Z state without impacting any branches by switching back to a branch.
+2025-11-21T13:55:27.9722429Z 
+2025-11-21T13:55:27.9722698Z If you want to create a new branch to retain commits you create, you may
+2025-11-21T13:55:27.9723190Z do so (now or later) by using -c with the switch command. Example:
+2025-11-21T13:55:27.9723444Z 
+2025-11-21T13:55:27.9723969Z   git switch -c <new-branch-name>
+2025-11-21T13:55:27.9724303Z 
+2025-11-21T13:55:27.9724500Z Or undo this operation with:
+2025-11-21T13:55:27.9724806Z 
+2025-11-21T13:55:27.9724974Z   git switch -
+2025-11-21T13:55:27.9725229Z 
+2025-11-21T13:55:27.9725676Z Turn off this advice by setting config variable advice.detachedHead to false
+2025-11-21T13:55:27.9726232Z 
+2025-11-21T13:55:27.9726445Z HEAD is now at 8186f40 Workflow update
+2025-11-21T13:55:27.9728798Z ##[endgroup]
+2025-11-21T13:55:27.9762904Z [command]/usr/bin/git log -1 --format=%H
+2025-11-21T13:55:27.9784290Z 8186f408067a4688abe1ee4ed097b34858743f2d

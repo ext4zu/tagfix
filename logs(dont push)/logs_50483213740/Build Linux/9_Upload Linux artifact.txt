@@ -1,0 +1,24 @@
+﻿2025-11-21T13:57:26.5755559Z ##[group]Run actions/upload-artifact@v4
+2025-11-21T13:57:26.5755956Z with:
+2025-11-21T13:57:26.5756189Z   name: tagfix-linux
+2025-11-21T13:57:26.5756573Z   path: flutter_app/tagfix-linux.zip
+2025-11-21T13:57:26.5756880Z   if-no-files-found: warn
+2025-11-21T13:57:26.5757216Z   compression-level: 6
+2025-11-21T13:57:26.5757500Z   overwrite: false
+2025-11-21T13:57:26.5768444Z   include-hidden-files: false
+2025-11-21T13:57:26.5768788Z env:
+2025-11-21T13:57:26.5769173Z   FLUTTER_ROOT: /opt/hostedtoolcache/flutter/stable-3.38.2-x64
+2025-11-21T13:57:26.5769696Z   PUB_CACHE: /home/runner/.pub-cache
+2025-11-21T13:57:26.5770045Z ##[endgroup]
+2025-11-21T13:57:26.7886729Z With the provided path, there will be 1 file uploaded
+2025-11-21T13:57:26.7892475Z Artifact name is valid!
+2025-11-21T13:57:26.7894626Z Root directory input is valid!
+2025-11-21T13:57:26.9240237Z Beginning upload of artifact content to blob storage
+2025-11-21T13:57:27.3954074Z Uploaded bytes 8388608
+2025-11-21T13:57:27.6323165Z Uploaded bytes 16743047
+2025-11-21T13:57:27.6463981Z Finished uploading artifact content to blob storage!
+2025-11-21T13:57:27.6467746Z SHA256 digest of uploaded artifact zip is ad0bd1f272940e2f9e9d7b775e10e414d733647214315a101d49aface8e9fc1d
+2025-11-21T13:57:27.6469106Z Finalizing artifact upload
+2025-11-21T13:57:27.7366993Z Artifact tagfix-linux.zip successfully finalized. Artifact ID 4640728510
+2025-11-21T13:57:27.7368546Z Artifact tagfix-linux has been successfully uploaded! Final size is 16743047 bytes. Artifact ID is 4640728510
+2025-11-21T13:57:27.7377918Z Artifact download URL: https://github.com/k44yn3/tagfix/actions/runs/19572681823/artifacts/4640728510

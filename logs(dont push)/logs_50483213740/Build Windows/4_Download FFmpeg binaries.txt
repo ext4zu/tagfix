@@ -1,0 +1,27 @@
+﻿2025-11-21T13:57:16.3751908Z ##[group]Run bash download_ffmpeg.sh
+2025-11-21T13:57:16.3752307Z [36;1mbash download_ffmpeg.sh[0m
+2025-11-21T13:57:16.9664371Z shell: C:\Program Files\PowerShell\7\pwsh.EXE -command ". '{0}'"
+2025-11-21T13:57:16.9664752Z env:
+2025-11-21T13:57:16.9665069Z   FLUTTER_ROOT: C:\hostedtoolcache\windows\flutter\stable-3.38.2-x64
+2025-11-21T13:57:16.9665473Z   PUB_CACHE: C:\Users\runneradmin\AppData\Local\Pub\Cache
+2025-11-21T13:57:16.9665800Z ##[endgroup]
+2025-11-21T13:57:27.1984980Z === TagFix FFmpeg Platform-Aware Download Script ===
+2025-11-21T13:57:27.1987450Z 
+2025-11-21T13:57:27.2441006Z Detected platform: windows
+2025-11-21T13:57:27.2608783Z [Windows] Downloading ffmpeg...
+2025-11-21T13:57:27.2826978Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+2025-11-21T13:57:27.2827644Z                                  Dload  Upload   Total   Spent    Left  Speed
+2025-11-21T13:57:27.2828210Z 
+2025-11-21T13:57:27.3937837Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2025-11-21T13:57:27.6689610Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2025-11-21T13:57:27.6690126Z 
+2025-11-21T13:57:28.1173447Z  19  198M   19 39.3M    0     0   101M      0  0:00:01 --:--:--  0:00:01  101M
+2025-11-21T13:57:28.1189966Z 100  198M  100  198M    0     0   237M      0 --:--:-- --:--:-- --:--:--  354M
+2025-11-21T13:57:29.6608906Z [Windows] ffmpeg ready
+2025-11-21T13:57:29.6609314Z 
+2025-11-21T13:57:29.6609456Z Download completed.
+2025-11-21T13:57:29.6609819Z 
+2025-11-21T13:57:29.6609980Z Binary details:
+2025-11-21T13:57:29.6968939Z -rwxr-xr-x 1 runneradmin 197121 184M Nov 21 12:33 ffmpeg.exe
+2025-11-21T13:57:29.6975031Z 
+2025-11-21T13:57:29.6975474Z You can now build the Flutter app normally.

@@ -1,0 +1,29 @@
+﻿2025-11-21T13:56:52.2633070Z ##[group]Run chmod +x download_ffmpeg.sh
+2025-11-21T13:56:52.2633490Z [36;1mchmod +x download_ffmpeg.sh[0m
+2025-11-21T13:56:52.2633810Z [36;1m./download_ffmpeg.sh[0m
+2025-11-21T13:56:52.2952830Z shell: /bin/bash -e {0}
+2025-11-21T13:56:52.2953130Z env:
+2025-11-21T13:56:52.2953560Z   FLUTTER_ROOT: /Users/runner/hostedtoolcache/flutter/stable-3.38.2-arm64
+2025-11-21T13:56:52.2954010Z   PUB_CACHE: /Users/runner/.pub-cache
+2025-11-21T13:56:52.2954250Z ##[endgroup]
+2025-11-21T13:56:52.4015500Z === TagFix FFmpeg Platform-Aware Download Script ===
+2025-11-21T13:56:52.4015930Z 
+2025-11-21T13:56:52.4090130Z Detected platform: macos
+2025-11-21T13:56:52.4118610Z [macOS] Downloading ffmpeg...
+2025-11-21T13:56:52.4253200Z   % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+2025-11-21T13:56:52.4254170Z                                  Dload  Upload   Total   Spent    Left  Speed
+2025-11-21T13:56:52.4255120Z 
+2025-11-21T13:56:52.5669580Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2025-11-21T13:56:52.7955190Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2025-11-21T13:56:52.7956520Z   0     0    0     0    0     0      0      0 --:--:-- --:--:-- --:--:--     0
+2025-11-21T13:56:53.5180670Z 
+2025-11-21T13:56:54.3515470Z   3 24.6M    3  927k    0     0   848k      0  0:00:29  0:00:01  0:00:28  848k
+2025-11-21T13:56:54.3617850Z 100 24.6M  100 24.6M    0     0  12.8M      0  0:00:01  0:00:01 --:--:-- 28.5M
+2025-11-21T13:56:54.9652850Z [macOS] ffmpeg ready
+2025-11-21T13:56:54.9655000Z 
+2025-11-21T13:56:54.9655350Z Download completed.
+2025-11-21T13:56:54.9655550Z 
+2025-11-21T13:56:54.9655760Z Binary details:
+2025-11-21T13:56:54.9726860Z -rwxr-xr-x  1 runner  staff    77M Aug 22 18:02 ffmpeg
+2025-11-21T13:56:54.9727450Z 
+2025-11-21T13:56:54.9727750Z You can now build the Flutter app normally.

@@ -1,0 +1,71 @@
+﻿2025-11-21T13:55:26.4748580Z ##[group]Run actions/checkout@v4
+2025-11-21T13:55:26.4749270Z with:
+2025-11-21T13:55:26.4749520Z   repository: k44yn3/tagfix
+2025-11-21T13:55:26.4750020Z   token: ***
+2025-11-21T13:55:26.4750260Z   ssh-strict: true
+2025-11-21T13:55:26.4750490Z   ssh-user: git
+2025-11-21T13:55:26.4750750Z   persist-credentials: true
+2025-11-21T13:55:26.4751010Z   clean: true
+2025-11-21T13:55:26.4751260Z   sparse-checkout-cone-mode: true
+2025-11-21T13:55:26.4751560Z   fetch-depth: 1
+2025-11-21T13:55:26.4751970Z   fetch-tags: false
+2025-11-21T13:55:26.4752240Z   show-progress: true
+2025-11-21T13:55:26.4752490Z   lfs: false
+2025-11-21T13:55:26.4752780Z   submodules: false
+2025-11-21T13:55:26.4753020Z   set-safe-directory: true
+2025-11-21T13:55:26.4753630Z ##[endgroup]
+2025-11-21T13:55:26.8814590Z Syncing repository: k44yn3/tagfix
+2025-11-21T13:55:26.8815880Z ##[group]Getting Git version info
+2025-11-21T13:55:26.8816210Z Working directory is '/Users/runner/work/tagfix/tagfix'
+2025-11-21T13:55:26.8816640Z [command]/opt/homebrew/bin/git version
+2025-11-21T13:55:26.9133630Z git version 2.50.1
+2025-11-21T13:55:26.9163810Z ##[endgroup]
+2025-11-21T13:55:26.9176240Z Copying '/Users/runner/.gitconfig' to '/Users/runner/work/_temp/037fa9c5-8407-4bf9-850c-5e0ef1c05e32/.gitconfig'
+2025-11-21T13:55:26.9218150Z Temporarily overriding HOME='/Users/runner/work/_temp/037fa9c5-8407-4bf9-850c-5e0ef1c05e32' before making global git config changes
+2025-11-21T13:55:26.9254540Z Adding repository directory to the temporary git global config as a safe directory
+2025-11-21T13:55:26.9257010Z [command]/opt/homebrew/bin/git config --global --add safe.directory /Users/runner/work/tagfix/tagfix
+2025-11-21T13:55:26.9342460Z Deleting the contents of '/Users/runner/work/tagfix/tagfix'
+2025-11-21T13:55:26.9351020Z ##[group]Initializing the repository
+2025-11-21T13:55:26.9360130Z [command]/opt/homebrew/bin/git init /Users/runner/work/tagfix/tagfix
+2025-11-21T13:55:26.9580350Z hint: Using 'master' as the name for the initial branch. This default branch name
+2025-11-21T13:55:26.9581750Z hint: is subject to change. To configure the initial branch name to use in all
+2025-11-21T13:55:26.9582240Z hint: of your new repositories, which will suppress this warning, call:
+2025-11-21T13:55:26.9582630Z hint:
+2025-11-21T13:55:26.9582870Z hint: 	git config --global init.defaultBranch <name>
+2025-11-21T13:55:26.9583100Z hint:
+2025-11-21T13:55:26.9583330Z hint: Names commonly chosen instead of 'master' are 'main', 'trunk' and
+2025-11-21T13:55:26.9583730Z hint: 'development'. The just-created branch can be renamed via this command:
+2025-11-21T13:55:26.9584010Z hint:
+2025-11-21T13:55:26.9584170Z hint: 	git branch -m <name>
+2025-11-21T13:55:26.9584350Z hint:
+2025-11-21T13:55:26.9584610Z hint: Disable this message with "git config set advice.defaultBranchName false"
+2025-11-21T13:55:26.9601840Z Initialized empty Git repository in /Users/runner/work/tagfix/tagfix/.git/
+2025-11-21T13:55:26.9618780Z [command]/opt/homebrew/bin/git remote add origin https://github.com/k44yn3/tagfix
+2025-11-21T13:55:26.9743840Z ##[endgroup]
+2025-11-21T13:55:26.9744450Z ##[group]Disabling automatic garbage collection
+2025-11-21T13:55:26.9777600Z [command]/opt/homebrew/bin/git config --local gc.auto 0
+2025-11-21T13:55:26.9810480Z ##[endgroup]
+2025-11-21T13:55:26.9811200Z ##[group]Setting up auth
+2025-11-21T13:55:26.9815520Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp core\.sshCommand
+2025-11-21T13:55:26.9874160Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'core\.sshCommand' && git config --local --unset-all 'core.sshCommand' || :"
+2025-11-21T13:55:27.1120920Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp http\.https\:\/\/github\.com\/\.extraheader
+2025-11-21T13:55:27.1200140Z [command]/opt/homebrew/bin/git submodule foreach --recursive sh -c "git config --local --name-only --get-regexp 'http\.https\:\/\/github\.com\/\.extraheader' && git config --local --unset-all 'http.https://github.com/.extraheader' || :"
+2025-11-21T13:55:27.2071430Z [command]/opt/homebrew/bin/git config --local --name-only --get-regexp ^includeIf\.gitdir:
+2025-11-21T13:55:27.2150040Z [command]/opt/homebrew/bin/git submodule foreach --recursive git config --local --show-origin --name-only --get-regexp remote.origin.url
+2025-11-21T13:55:27.3131190Z [command]/opt/homebrew/bin/git config --local http.https://github.com/.extraheader AUTHORIZATION: basic ***
+2025-11-21T13:55:27.3218510Z ##[endgroup]
+2025-11-21T13:55:27.3219090Z ##[group]Fetching the repository
+2025-11-21T13:55:27.3220850Z [command]/opt/homebrew/bin/git -c protocol.version=2 fetch --no-tags --prune --no-recurse-submodules --depth=1 origin +8186f408067a4688abe1ee4ed097b34858743f2d:refs/tags/v1.0.1
+2025-11-21T13:55:28.0886450Z From https://github.com/k44yn3/tagfix
+2025-11-21T13:55:28.0887220Z  * [new ref]         8186f408067a4688abe1ee4ed097b34858743f2d -> v1.0.1
+2025-11-21T13:55:28.1016370Z ##[endgroup]
+2025-11-21T13:55:28.1016920Z ##[group]Determining the checkout info
+2025-11-21T13:55:28.1017420Z ##[endgroup]
+2025-11-21T13:55:28.1021020Z [command]/opt/homebrew/bin/git sparse-checkout disable
+2025-11-21T13:55:28.1192830Z [command]/opt/homebrew/bin/git config --local --unset-all extensions.worktreeConfig
+2025-11-21T13:55:28.1266300Z ##[group]Checking out the ref
+2025-11-21T13:55:28.1269100Z [command]/opt/homebrew/bin/git checkout --progress --force refs/tags/v1.0.1
+2025-11-21T13:55:28.1806350Z HEAD is now at 8186f40 Workflow update
+2025-11-21T13:55:28.1828000Z ##[endgroup]
+2025-11-21T13:55:28.1963470Z [command]/opt/homebrew/bin/git log -1 --format=%H
+2025-11-21T13:55:28.2060020Z 8186f408067a4688abe1ee4ed097b34858743f2d
