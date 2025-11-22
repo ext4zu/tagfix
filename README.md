@@ -1,6 +1,6 @@
 # TagFix
 
-### **[Android release is available here](https://github.com/k44yn3/tagfixandroid) !!!**
+### **Android release is available [here](https://github.com/k44yn3/tagfixandroid) !!!**
 
 A powerful audio metadata editor supporting FLAC, MP3, M4A, OGG, OPUS, WMA, and WAV formats. Available as a modern Desktop App, CLI tool, and Web Interface.
 
