@@ -74,9 +74,11 @@ class CoverArtWidget extends StatelessWidget {
     
     if (artist.isEmpty || album.isEmpty) {
       if (context.mounted) {
+        ScaffoldMessenger.of(context).clearSnackBars();
         ScaffoldMessenger.of(context).showSnackBar(
           const SnackBar(
             content: Text('Artist and Album metadata required for online search'),
+            duration: Duration(seconds: 2),
           ),
         );
       }
@@ -104,9 +106,10 @@ class CoverArtWidget extends StatelessWidget {
       final appState = Provider.of<AppState>(context, listen: false);
       appState.setPendingCover(file, bytes);
       
+      ScaffoldMessenger.of(context).clearSnackBars();
       ScaffoldMessenger.of(context).showSnackBar(
         const SnackBar(
-          content: Text('Cover art preview applied. Click main Save button to keep changes.'),
+          content: Text("Preview applied. Click 'Apply Changes' to save."),
           duration: Duration(seconds: 3),
         ),
       );
@@ -195,6 +198,7 @@ class CoverArtWidget extends StatelessWidget {
                     if (resizedBytes != null && context.mounted) {
                       await _applyCover(context, resizedBytes);
                       
+                      ScaffoldMessenger.of(context).clearSnackBars();
                       ScaffoldMessenger.of(context).showSnackBar(
                         const SnackBar(
                           content: Text('Cover resized to 500x500 (Preview)'),

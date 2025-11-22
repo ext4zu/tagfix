@@ -36,7 +36,9 @@ class _EditorPanelState extends State<EditorPanel> {
   @override
   void didUpdateWidget(covariant EditorPanel oldWidget) {
     super.didUpdateWidget(oldWidget);
-    if (oldWidget.file != widget.file) {
+    // Only reinitialize controllers if the file path has changed (different file selected)
+    // Don't reset on state changes like pending changes - that would wipe unsaved edits
+    if (oldWidget.file.path != widget.file.path) {
       _initControllers();
     } else if (oldWidget.file.hasPendingChanges != widget.file.hasPendingChanges) {
       _checkForChanges();
@@ -119,14 +121,21 @@ class _EditorPanelState extends State<EditorPanel> {
       discNumber: _discController.text,
     );
     
-    // Save pending changes (cover art and lyrics)
-    await context.read<AppState>().savePendingChanges(widget.file);
+    // Fetch the latest file state after updateTags (to avoid race condition)
+    final latestFile = context.read<AppState>().selectedFile;
+    if (latestFile == null) return;
+    
+    // Save pending changes (cover art and lyrics) with updated file
+    await context.read<AppState>().savePendingChanges(latestFile);
     
     if (mounted) {
+      ScaffoldMessenger.of(context).clearSnackBars();
       ScaffoldMessenger.of(context).showSnackBar(
-        const SnackBar(content: Text('All changes saved permanently to file')),
+        const SnackBar(
+          content: Text('All changes saved permanently to file'),
+          duration: Duration(seconds: 2),
+        ),
       );
-      // Reset change state (though reload will trigger initControllers anyway)
     }
   }
 

@@ -217,18 +217,21 @@ class _CoverSearchDialogState extends State<CoverSearchDialog> {
                     const SizedBox(height: 12),
                     
                     // Results List
-                    ...(_searchResults!.map((release) => Card(
-                      color: _selectedRelease?.id == release.id
-                          ? Theme.of(context).colorScheme.primaryContainer
-                          : null,
-                      child: ListTile(
-                        title: Text(release.title),
-                        subtitle: Text(release.displayName),
-                        leading: const Icon(Icons.album),
-                        selected: _selectedRelease?.id == release.id,
-                        onTap: () => _selectRelease(release),
+                    ..._searchResults!.map((release) => ClipRRect(
+                      borderRadius: BorderRadius.circular(12),
+                      child: Card(
+                        color: _selectedRelease?.id == release.id
+                            ? Theme.of(context).colorScheme.primaryContainer
+                            : null,
+                        child: ListTile(
+                          title: Text(release.title),
+                          subtitle: Text(release.displayName),
+                          leading: const Icon(Icons.album),
+                          selected: _selectedRelease?.id == release.id,
+                          onTap: () => _selectRelease(release),
+                        ),
                       ),
-                    ))),
+                    )),
                     
                     // Cover Preview
                     if (_selectedRelease != null) ...[

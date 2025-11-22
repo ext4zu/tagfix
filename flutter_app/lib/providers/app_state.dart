@@ -21,6 +21,27 @@ class AppState extends ChangeNotifier {
 
   AudioFile? _selectedFile;
   AudioFile? get selectedFile => _selectedFile;
+  
+  String? _searchQuery;
+  String? get searchQuery => _searchQuery;
+  
+  /// Get filtered files based on search query
+  List<AudioFile> get filteredFiles {
+    if (_searchQuery == null || _searchQuery!.isEmpty) {
+      return _files;
+    }
+    
+    final query = _searchQuery!.toLowerCase();
+    return _files.where((file) {
+      final title = file.tags?.title?.toLowerCase() ?? '';
+      final artist = file.tags?.trackArtist?.toLowerCase() ?? '';
+      final album = file.tags?.album?.toLowerCase() ?? '';
+      
+      return title.contains(query) || 
+             artist.contains(query) || 
+             album.contains(query);
+    }).toList();
+  }
 
   Future<void> scanDirectory(String path) async {
     _isLoading = true;
@@ -53,6 +74,11 @@ class AppState extends ChangeNotifier {
 
   void selectFile(AudioFile file) {
     _selectedFile = file;
+    notifyListeners();
+  }
+  
+  void setSearchQuery(String? query) {
+    _searchQuery = query;
     notifyListeners();
   }
 

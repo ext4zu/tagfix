@@ -13,14 +13,29 @@ class FileList extends StatelessWidget {
           return const Center(child: CircularProgressIndicator());
         }
 
+        final displayFiles = state.filteredFiles;
+        
         if (state.files.isEmpty) {
           return const Center(child: Text('No files found'));
         }
+        
+        if (displayFiles.isEmpty) {
+          return const Center(
+            child: Column(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Icon(Icons.search_off, size: 48, color: Colors.grey),
+                SizedBox(height: 16),
+                Text('No files match your search'),
+              ],
+            ),
+          );
+        }
 
         return ListView.builder(
-          itemCount: state.files.length,
+          itemCount: displayFiles.length,
           itemBuilder: (context, index) {
-            final file = state.files[index];
+            final file = displayFiles[index];
             final isSelected = state.selectedFile == file;
 
             return ListTile(

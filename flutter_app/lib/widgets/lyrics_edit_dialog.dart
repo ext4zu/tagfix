@@ -105,8 +105,12 @@ Future<bool?> _handleImport(BuildContext context, AudioFile file, String initial
     );
   } catch (e) {
     if (context.mounted) {
+      ScaffoldMessenger.of(context).clearSnackBars();
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text('Error reading file: $e')),
+        SnackBar(
+          content: Text('Error reading file: $e'),
+          duration: const Duration(seconds: 2),
+        ),
       );
     }
     return null;
@@ -240,22 +244,34 @@ Future<bool?> _showEditDialog(
                                 await File(sourceFile).copy(destPath);
 
                                 if (context.mounted) {
+                                  ScaffoldMessenger.of(context).clearSnackBars();
                                   ScaffoldMessenger.of(context).showSnackBar(
-                                    SnackBar(content: Text('Lyrics file copied to: $destPath')),
+                                    SnackBar(
+                                      content: Text('Lyrics file copied to: $destPath'),
+                                      duration: const Duration(seconds: 2),
+                                    ),
                                   );
                                 }
                               } else {
                                 // If paths are same, just notify user (no action needed)
                                 if (context.mounted) {
+                                  ScaffoldMessenger.of(context).clearSnackBars();
                                   ScaffoldMessenger.of(context).showSnackBar(
-                                    const SnackBar(content: Text('Lyrics file is already in the correct location')),
+                                    const SnackBar(
+                                      content: Text('Lyrics file is already in the correct location'),
+                                      duration: Duration(seconds: 2),
+                                    ),
                                   );
                                 }
                               }
                             } catch (e) {
                               if (context.mounted) {
+                                ScaffoldMessenger.of(context).clearSnackBars();
                                 ScaffoldMessenger.of(context).showSnackBar(
-                                  SnackBar(content: Text('Error copying file: $e')),
+                                  SnackBar(
+                                    content: Text('Error copying file: $e'),
+                                    duration: const Duration(seconds: 2),
+                                  ),
                                 );
                               }
                             }
@@ -266,9 +282,10 @@ Future<bool?> _showEditDialog(
                             final appState = Provider.of<AppState>(context, listen: false);
                             appState.setPendingLyrics(file, controller.text);
                             
+                            ScaffoldMessenger.of(context).clearSnackBars();
                             ScaffoldMessenger.of(context).showSnackBar(
                               const SnackBar(
-                                content: Text('Lyrics preview applied. Click main Save button to keep changes.'),
+                                content: Text("Preview applied. Click 'Apply Changes' to save."),
                                 duration: Duration(seconds: 3),
                               ),
                             );

@@ -78,8 +78,12 @@ class _LyricsSearchDialogState extends State<LyricsSearchDialog> {
     } catch (e) {
       if (mounted) {
         setState(() => _isSearching = false);
+        ScaffoldMessenger.of(context).clearSnackBars();
         ScaffoldMessenger.of(context).showSnackBar(
-          SnackBar(content: Text('Error searching lyrics: $e')),
+          SnackBar(
+            content: Text('Error searching lyrics: $e'),
+            duration: const Duration(seconds: 2),
+          ),
         );
       }
     }
@@ -218,45 +222,48 @@ class _LyricsSearchDialogState extends State<LyricsSearchDialog> {
                             ),
                             child: _results.isEmpty && !_isSearching
                                 ? const Center(child: Text('No results found'))
-                                : ListView.separated(
-                                    itemCount: _results.length,
-                                    separatorBuilder: (context, index) => const Divider(height: 1),
-                                    itemBuilder: (context, index) {
-                                      final result = _results[index];
-                                      final isSelected = _selectedResult?.id == result.id;
-                                      
-                                      return ListTile(
-                                        selected: isSelected,
-                                        selectedTileColor: Theme.of(context).colorScheme.primaryContainer,
-                                        title: Text(result.name, maxLines: 1, overflow: TextOverflow.ellipsis),
-                                        subtitle: Text(
-                                          '${result.artistName} • ${result.albumName}',
-                                          maxLines: 1,
-                                          overflow: TextOverflow.ellipsis,
-                                        ),
-                                        trailing: Row(
-                                          mainAxisSize: MainAxisSize.min,
-                                          children: [
-                                            if (result.syncedLyrics != null)
-                                              Container(
-                                                padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
-                                                margin: const EdgeInsets.only(right: 4),
-                                                decoration: BoxDecoration(
-                                                  color: Colors.green.withOpacity(0.2),
-                                                  borderRadius: BorderRadius.circular(4),
-                                                  border: Border.all(color: Colors.green),
+                                : ClipRRect(
+                                    borderRadius: BorderRadius.circular(8),
+                                    child: ListView.separated(
+                                      itemCount: _results.length,
+                                      separatorBuilder: (context, index) => const Divider(height: 1),
+                                      itemBuilder: (context, index) {
+                                        final result = _results[index];
+                                        final isSelected = _selectedResult?.id == result.id;
+                                        
+                                        return ListTile(
+                                          selected: isSelected,
+                                          selectedTileColor: Theme.of(context).colorScheme.primaryContainer,
+                                          title: Text(result.name, maxLines: 1, overflow: TextOverflow.ellipsis),
+                                          subtitle: Text(
+                                            '${result.artistName} • ${result.albumName}',
+                                            maxLines: 1,
+                                            overflow: TextOverflow.ellipsis,
+                                          ),
+                                          trailing: Row(
+                                            mainAxisSize: MainAxisSize.min,
+                                            children: [
+                                              if (result.syncedLyrics != null)
+                                                Container(
+                                                  padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                                                  margin: const EdgeInsets.only(right: 4),
+                                                  decoration: BoxDecoration(
+                                                    color: Colors.green.withOpacity(0.2),
+                                                    borderRadius: BorderRadius.circular(4),
+                                                    border: Border.all(color: Colors.green),
+                                                  ),
+                                                  child: const Text(
+                                                    'SYNCED',
+                                                    style: TextStyle(fontSize: 10, color: Colors.green, fontWeight: FontWeight.bold),
+                                                  ),
                                                 ),
-                                                child: const Text(
-                                                  'SYNCED',
-                                                  style: TextStyle(fontSize: 10, color: Colors.green, fontWeight: FontWeight.bold),
-                                                ),
-                                              ),
-                                            Text(_formatDuration(result.duration)),
-                                          ],
-                                        ),
-                                        onTap: () => _selectResult(result),
-                                      );
-                                    },
+                                              Text(_formatDuration(result.duration)),
+                                            ],
+                                          ),
+                                          onTap: () => _selectResult(result),
+                                        );
+                                      },
+                                    ),
                                   ),
                           ),
                         ),

@@ -5,65 +5,112 @@ import '../providers/app_state.dart';
 import '../widgets/file_list.dart';
 import '../widgets/editor_panel.dart';
 
-class MainScreen extends StatelessWidget {
+class MainScreen extends StatefulWidget {
   const MainScreen({super.key});
 
   @override
+  State<MainScreen> createState() => _MainScreenState();
+}
+
+class _MainScreenState extends State<MainScreen> {
+  bool _isSearching = false;
+  final TextEditingController _searchController = TextEditingController();
+
+  @override
+  void dispose() {
+    _searchController.dispose();
+    super.dispose();
+  }
+
+  @override
   Widget build(BuildContext context) {
+    final appState = context.watch<AppState>();
+    final hasSelectedFile = appState.selectedFile != null;
+    
     return Scaffold(
       appBar: AppBar(
-        title: Row(
-          children: [
-            const Text('TagFix'),
-            const SizedBox(width: 12),
-            Container(
-              padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
-              decoration: BoxDecoration(
-                color: Theme.of(context).colorScheme.surfaceContainerHighest,
-                borderRadius: BorderRadius.circular(12),
+        title: _isSearching
+            ? TextField(
+                controller: _searchController,
+                autofocus: true,
+                decoration: const InputDecoration(
+                  hintText: 'Search by title, artist, or album...',
+                  border: InputBorder.none,
+                ),
+                onChanged: (query) {
+                  context.read<AppState>().setSearchQuery(query);
+                },
+              )
+            : Row(
+                children: [
+                  const Text('TagFix'),
+                  const SizedBox(width: 12),
+                  Container(
+                    padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                    decoration: BoxDecoration(
+                      color: Theme.of(context).colorScheme.surfaceContainerHighest,
+                      borderRadius: BorderRadius.circular(12),
+                    ),
+                    child: Text(
+                      '@k44yn3 on Github',
+                      style: Theme.of(context).textTheme.labelSmall?.copyWith(
+                        fontWeight: FontWeight.bold,
+                        color: Theme.of(context).colorScheme.onSurfaceVariant,
+                      ),
+                    ),
+                  ),
+                ],
               ),
+        actions: [
+          if (!_isSearching) ...[
+            Center(
               child: Text(
-                '@k44yn3 on Github',
+                'Powered by MusicBrainz & LRCLIB',
                 style: Theme.of(context).textTheme.labelSmall?.copyWith(
-                  fontWeight: FontWeight.bold,
-                  color: Theme.of(context).colorScheme.onSurfaceVariant,
+                  color: Theme.of(context).colorScheme.outline,
                 ),
               ),
             ),
+            const SizedBox(width: 16),
           ],
-        ),
-        actions: [
-          Center(
-            child: Text(
-              'Powered by MusicBrainz & LRCLIB',
-              style: Theme.of(context).textTheme.labelSmall?.copyWith(
-                color: Theme.of(context).colorScheme.outline,
-              ),
+          // Hide search, open folder, and refresh buttons when editing a file
+          if (!hasSelectedFile) ...[
+            IconButton(
+              icon: Icon(_isSearching ? Icons.close : Icons.search),
+              onPressed: () {
+                setState(() {
+                  _isSearching = !_isSearching;
+                  if (!_isSearching) {
+                    _searchController.clear();
+                    context.read<AppState>().setSearchQuery(null);
+                  }
+                });
+              },
+              tooltip: _isSearching ? 'Close search' : 'Search files',
             ),
-          ),
-          const SizedBox(width: 16),
-          TextButton.icon(
-            icon: const Icon(Icons.folder_open),
-            label: const Text('Open Folder'),
-            onPressed: () async {
-              String? selectedDirectory = await FilePicker.platform.getDirectoryPath();
-              if (selectedDirectory != null) {
-                context.read<AppState>().scanDirectory(selectedDirectory);
+            TextButton.icon(
+              icon: const Icon(Icons.folder_open),
+              label: const Text('Open Folder'),
+              onPressed: () async {
+                String? selectedDirectory = await FilePicker.platform.getDirectoryPath();
+                if (selectedDirectory != null) {
+                  context.read<AppState>().scanDirectory(selectedDirectory);
+                }
               }
-            },
-          ),
-          const SizedBox(width: 8),
-          TextButton.icon(
-            icon: const Icon(Icons.refresh),
-            label: const Text('Refresh'),
-            onPressed: () {
-              final currentDir = context.read<AppState>().currentDirectory;
-              if (currentDir != null) {
-                context.read<AppState>().scanDirectory(currentDir);
-              }
-            },
-          ),
-          const SizedBox(width: 8),
+            ),
+            const SizedBox(width: 8),
+            TextButton.icon(
+              icon: const Icon(Icons.refresh),
+              label: const Text('Refresh'),
+              onPressed: () {
+                final currentDir = context.read<AppState>().currentDirectory;
+                if (currentDir != null) {
+                  context.read<AppState>().scanDirectory(currentDir);
+                }
+              },
+            ),
+            const SizedBox(width: 8),
+          ],
         ],
       ),
       body: Row(
