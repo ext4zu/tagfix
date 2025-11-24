@@ -52,7 +52,9 @@ flutter build windows --release # Windows
 
 ### CLI Version
 
-**Prerequisites**: Python 3.8+, FFmpeg
+**Prerequisites**
+- Python 3.8+
+- FFmpeg
 
 ```bash
 pip install -r requirements.txt
