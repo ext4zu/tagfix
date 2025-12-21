@@ -1,0 +1,18 @@
+{
+    "columns": {
+        "title": true,
+        "artist": true,
+        "album": false,
+        "albumartist": true,
+        "year": false,
+        "genre": false
+    },
+    "covers": {
+        "force_500px": true,
+        "source": "iTunes"
+    },
+    "lyrics": {
+        "strict_mode": true,
+        "save_lrc": true
+    }
+}
